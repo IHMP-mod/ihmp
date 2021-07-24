@@ -27,6 +27,8 @@ POR_historical_plan = {
 		POR_concordat_with_the_holy_see
 		POR_national_gold_reserves
 		POR_proudly_alone
+		POR_honor_anglo_portuguese_alliance
+		POR_research_sharing
 		POR_ogme
 		POR_portuguese_artillery
 		POR_military_research_facilities
@@ -66,9 +68,15 @@ POR_historical_plan = {
 		POR_the_eastern_menace = 0
 		POR_the_communist_threat = 0
 		POR_national_syndicalism = 0
-		POR_honor_anglo_portuguese_alliance = 0
 		POR_a_royal_wedding = 0
-	}				
+	}
+
+	research = {
+		synth_resources = -1000
+		concentrated_industry_category = 45
+		industry = -50
+		armor = -1000
+	}
 
 	ai_strategy = {
 	 	type = front_unit_request
@@ -92,6 +100,28 @@ POR_historical_plan = {
 		}
 	}
 
+}
+
+POR_No_Allies = {
+	name = "Don't join Allies willingly"
+	desc = ""
+
+	enable = {
+		tag = POR
+		has_game_rule = {
+			rule = POR_ai_behavior
+			option = POR_MP_1
+		}
+		NOT= { is_in_faction_with = ENG }
+	}
+
+	abort = {
+		is_in_faction_with = ENG
+	}
+	
+	focus_factors = {
+		POR_honor_anglo_portuguese_alliance = 0
+	}
 }
 
 POR_MP_Ideas = {
@@ -169,10 +199,14 @@ POR_MP_Garrision = {
 	 	type = front_unit_request
 		tag = SPR
 		value = -200
-	}	
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
 	ai_strategy = {
 		type = put_unit_buffers
-		ratio = 1.0
+		ratio = 5.0
 		states = { 
 			112
 			179
@@ -493,7 +527,10 @@ MP_Spy_Defense_0 = {
 			rule = POR_ai_behavior
 			option = POR_MP_1
 		}
-		has_completed_focus = POR_proudly_alone
+		OR = {
+			has_completed_focus = POR_proudly_alone
+			has_completed_focus = POR_honor_anglo_portuguese_alliance
+		}
 		has_capitulated = no
 		date < 1942.1.1
 	}
@@ -743,6 +780,6 @@ MP_Economy_2 = {
 	ideas = {
 		civilian_economy = 0
 		low_economic_mobilisation = 0
-		partial_economic_mobilisation = 0
+		partial_economic_mobilisation = -1000
 	}
 }
