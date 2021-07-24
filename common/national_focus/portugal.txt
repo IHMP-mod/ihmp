@@ -2411,6 +2411,13 @@ focus_tree = {
 		x = 9
 		y = 0
 
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
+
 		relative_position_id = POR_army_reorganization
 		cost = 10
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -4179,6 +4186,10 @@ focus_tree = {
 		x = 2		
 		y = 1
 
+		allow_branch = {
+			always = yes
+		}
+
 		relative_position_id = POR_join_the_allies
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -4961,6 +4972,13 @@ focus_tree = {
 		x = -1
 		y = 1
 
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
+
 		relative_position_id = POR_proudly_alone
 		cost = 10
 		completion_reward = { 
@@ -4994,6 +5012,13 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy2
 		x = 8	
 		y = 0
+
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
 
 		relative_position_id = POR_observation_mission
 		cost = 10
@@ -5703,6 +5728,13 @@ focus_tree = {
 		icon = GFX_focus_generic_royal_wedding
 		x = 13
 		y = 0
+
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
 
 		relative_position_id = POR_support_the_spanish_nationalists
 		cost = 10
