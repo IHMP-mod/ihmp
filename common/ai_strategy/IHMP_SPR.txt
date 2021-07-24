@@ -14,6 +14,76 @@
 # building_target
 
 
+SPR_MP_Anti_Guerilla_ArmyXP = {
+
+	enable = {
+		original_tag = SPR
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		has_global_flag = scw_over
+		OR = {
+			NOT = { 41 = { is_core_of = ROOT } }
+			NOT = { 165 = { is_core_of = ROOT } }
+			NOT = { 166 = { is_core_of = ROOT } }
+			NOT = { 167 = { is_core_of = ROOT } }
+			NOT = { 168 = { is_core_of = ROOT } }
+			NOT = { 169 = { is_core_of = ROOT } }
+			NOT = { 170 = { is_core_of = ROOT } }
+			NOT = { 171 = { is_core_of = ROOT } }
+			NOT = { 172 = { is_core_of = ROOT } }
+			NOT = { 173 = { is_core_of = ROOT } }
+			NOT = { 174 = { is_core_of = ROOT } }
+			NOT = { 175 = { is_core_of = ROOT } }
+			NOT = { 176 = { is_core_of = ROOT } }
+			#NOT = { 177 = { is_core_of = ROOT } }
+			NOT = { 178 = { is_core_of = ROOT } }
+			NOT = { 788 = { is_core_of = ROOT } }
+			NOT = { 789 = { is_core_of = ROOT } }
+			NOT = { 790 = { is_core_of = ROOT } }
+			NOT = { 791 = { is_core_of = ROOT } }
+			NOT = { 792 = { is_core_of = ROOT } }
+			NOT = { 793 = { is_core_of = ROOT } }
+			NOT = { 794 = { is_core_of = ROOT }	}
+		}
+	}
+	abort = {
+		OR = {
+			AND = {
+				41 = { is_core_of = ROOT }
+				165 = { is_core_of = ROOT }
+				166 = { is_core_of = ROOT }
+				167 = { is_core_of = ROOT }
+				168 = { is_core_of = ROOT }
+				169 = { is_core_of = ROOT }
+				170 = { is_core_of = ROOT }
+				171 = { is_core_of = ROOT }
+				172 = { is_core_of = ROOT }
+				173 = { is_core_of = ROOT }
+				174 = { is_core_of = ROOT }
+				175 = { is_core_of = ROOT }
+				176 = { is_core_of = ROOT }
+				#177 = { is_core_of = ROOT }
+				178 = { is_core_of = ROOT }
+				788 = { is_core_of = ROOT }
+				789 = { is_core_of = ROOT }
+				790 = { is_core_of = ROOT }
+				791 = { is_core_of = ROOT }
+				792 = { is_core_of = ROOT }
+				793 = { is_core_of = ROOT }
+				794 = { is_core_of = ROOT }
+			}
+		}
+	}
+
+
+	ai_strategy = {
+		type = template_xp_reserve
+		value = 120
+	}
+}
+
 SPR_MP_Anti_Guerilla_Production = {
 
 	enable = {
@@ -113,9 +183,5 @@ SPR_MP_Anti_Guerilla_Production = {
 		type = equipment_variant_production_factor
 		id = motorized_equipment
 		value = -1000
-	}
-	ai_strategy = {
-		type = template_xp_reserve
-		value = 100
 	}
 }
