@@ -788,6 +788,7 @@ MP_1_No_AirUnits = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
 		}
+		NOT = { tag = SPD }
 	}
 	
 	abort_when_not_enabled = yes

@@ -64,6 +64,12 @@ SPD_MP_1 = {
 		SPR_revive_the_republican_navy
 	}
 
+	focus_factors = {
+		SPR_petition_for_french_aid = 0
+		SPR_soviet_military_advisors = 0
+		SPR_soviet_technological_advancements = 0
+	}
+
 	research = {
 		air_equipment = -1000
 		synth_resources = -1000
@@ -93,6 +99,11 @@ SPD_MP_1 = {
 		SPR_diego_martinez_barrio = 0
 	}
 
+	ai_strategy = {
+		type = air_factory_balance
+		value = -1000
+	}
+
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
@@ -113,28 +124,6 @@ SPD_MP_Get_PP = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
 		}
-	}
-	abort = {
-		has_global_flag = scw_over
-	}
-
-	focus_factors = {
-		SPR_petition_for_french_aid = 0
-		SPR_soviet_military_advisors = 0
-		SPR_soviet_technological_advancements = 0
-	}
-}
-
-SPD_MP_No_Naval_Missions = {
-	name = "No Ship Missions in SCW"
-	desc = ""
-
-	enable = {
-		tag = SPD
-		has_game_rule = {
-			rule = SPR_ai_behavior 
-			option = SPR_MP_1
-		}
 		NOT = { has_global_flag = scw_over }
 	}
 
@@ -142,32 +131,8 @@ SPD_MP_No_Naval_Missions = {
 		has_global_flag = scw_over
 	}
 
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_PATROL
-		value = 1000000
+	ideas = {
 	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_CONVOY_ESCORT
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_CONVOY_RAIDING
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_MINES_PLANTING
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_MINES_SWEEPING
-		value = 1000000
-	}
-
 }
 
 SPD_German_Border = {
@@ -185,7 +150,9 @@ SPD_German_Border = {
 		SOV = { NOT = { has_country_flag = SOV_annexed_spanish_land } }
 	}
 
-	abort_when_not_enabled = yes
+	abort = {
+		SOV = { has_country_flag = SOV_annexed_spanish_land }
+	}
 
 	ai_strategy = {
 		type = front_unit_request
@@ -213,14 +180,18 @@ SPD_Vichy_Border = {
 		NOT = { GER = { controls_state = 31 } }
 	}
 
-	abort_when_not_enabled = yes
+	abort = {
+		GER = { controls_state = 31 }
+	}
 
 	ai_strategy = {
 		type = front_unit_request
-		state = 31
-		state = 462
+		strategic_region = 20
+		strategic_region = 182
 		state = 557
-		value = -200
+		state = 773
+		state = 539
+		value = -800
 	}
 }
 
@@ -388,5 +359,47 @@ SPD_War_With_SOV = {
 		SPR_francisco_largo_caballero = 2
 		SPR_augusto_barcia_trelles_vanilla = 0
 		SPR_diego_martinez_barrio_vanilla = 0
+	}
+}
+
+SPD_MP_No_Naval_Missions = {
+	name = "No Ship Missions in SCW"
+	desc = ""
+
+	enable = {
+		tag = SPD
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		NOT = { has_global_flag = scw_over }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_PATROL
+		value = 1000000
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_CONVOY_ESCORT
+		value = 1000000
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_CONVOY_RAIDING
+		value = 1000000
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_MINES_PLANTING
+		value = 1000000
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_MINES_SWEEPING
+		value = 1000000
 	}
 }
