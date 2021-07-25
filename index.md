@@ -1,5 +1,16 @@
 # Changelog:
 
+## 1.10.7.4
+Fixes:
+- Removed ahistorical branches Portuguese Focus branches on historical game_rule.
+- Made Honor Anglo-Portuguese Alliance focus pickable if UK already invited Portugal in Allies, this allows Portugal to remove the Unstable Republic modifier and join the Commonwealth Research group with the focus after.
+- Adjust division designer view to properly show up to 6 support companies.
+- Small tweak seperating Inf EQ production and saving up Army XP for fighting guerillas in two seperate ai_strategies with slightly different conditions.
+
+AI:
+- Made Portugal AI pick the honor Anglo alliance focus, if they are in a faction with UK.
+- Made sure Democractic Spain AI doesn't produce airplanes.
+
 ## 1.10.7.3
 Fixes:
 - Made sure certain ai_strategies are only active for Nationalist Spain, preventing various bugs.
