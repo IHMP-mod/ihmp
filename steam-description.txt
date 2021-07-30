@@ -1,4 +1,4 @@
-[url=https://alexbrunius.github.io/ihmp]Changelog[/url]
+[url=https://ihmp-mod.github.io/ihmp/changelog.html]Changelog[/url]
 
 Many thanks for CrouchingLemur for his great mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=710273161]More Unit Levels[/url].
 
