@@ -1247,10 +1247,7 @@ country_event = {
 	option = {
 		name = FRA_syria_intervention.1.a
 		event_target:free_france = {
-			transfer_state = 554
-			transfer_state = 680
-			transfer_state = 677
-			transfer_state = 553
+			FRA_transfer_syria_effect = yes
 		}
 	}
 }
@@ -1267,10 +1264,7 @@ country_event = {
 		name = FRA_syria_intervention.1.a
 		effect_tooltip = {
 			event_target:free_france = {
-				transfer_state = 554
-				transfer_state = 680
-				transfer_state = 677
-				transfer_state = 553
+				FRA_transfer_syria_effect = yes
 			}
 		}
 	}
@@ -1395,9 +1389,7 @@ country_event = {
 	option = {
 		name = FRA_indochina_intervention.1.a
 		event_target:free_france = {
-			transfer_state = 670
-			transfer_state = 671
-			transfer_state = 741
+			FRA_transfer_indochina_effect = yes
 		}
 	}
 }
@@ -1414,9 +1406,7 @@ country_event = {
 		name = FRA_indochina_intervention.1.a
 		effect_tooltip = {
 			event_target:free_france = {
-				transfer_state = 670
-				transfer_state = 671
-				transfer_state = 74
+				FRA_transfer_indochina_effect = yes
 			}
 		}
 	}
@@ -1539,19 +1529,8 @@ country_event = {
 	}
 	option = {
 		name = FRA_central_africa_intervention.1.a
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = CHA
-					is_core_of = CMR
-					is_core_of = CAR
-					is_core_of = RCG
-					is_core_of = GAB
-				}
-			}
-			event_target:free_france = {
-				transfer_state = PREV
-			}
+		event_target:free_france = {
+			FRA_transfer_central_africa_effect = yes
 		}
 	}
 }
@@ -1565,20 +1544,9 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = FRA_central_africa_intervention.1.a
-		effect_tooltip = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = CHA
-						is_core_of = CMR
-						is_core_of = CAR
-						is_core_of = RCG
-						is_core_of = GAB
-					}
-				}
-				event_target:free_france = {
-					transfer_state = PREV
-				}
+			effect_tooltip = {
+			event_target:free_france = {
+				FRA_transfer_central_africa_effect = yes
 			}
 		}
 	}
@@ -1701,22 +1669,8 @@ country_event = {
 	}
 	option = {
 		name = FRA_west_africa_intervention.1.a
-		every_state = {
-			limit = {
-				OR = {
-					state = 557
-					state = 272
-					state = 556
-					state = 780
-					state = 779
-					state = 778
-					state = 781
-					state = 776
-				}
-			}
-			event_target:free_france = {
-				transfer_state = PREV
-			}
+		event_target:free_france = {
+			FRA_transfer_western_africa_effect = yes
 		}
 	}
 }
@@ -1732,22 +1686,8 @@ country_event = {
 	option = {
 		name = FRA_west_africa_intervention.1.a
 		effect_tooltip = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 557
-						state = 272
-						state = 556
-						state = 780
-						state = 779
-						state = 778
-						state = 781
-						state = 776
-					}
-				}
-				event_target:free_france = {
-					transfer_state = PREV
-				}
+			event_target:free_france = {
+				FRA_transfer_western_africa_effect = yes
 			}
 		}
 	}
@@ -3791,22 +3731,7 @@ country_event = {
 			factor = 80
 		}
 		VIC = { country_event = LaR_france_vichy_notification_events.6 }
-		if = {
-			limit = {
-				MAD = {
-					exists = yes
-					is_subject = yes
-					OVERLORD = { original_tag = FRA }
-				}
-			}
-			puppet = MAD
-		}
-		else_if = {
-			limit = {
-				543 = { CONTROLLER = { original_tag = FRA } }
-			}
-			transfer_state = 543
-		}
+		FRA_transfer_madagascar_effect = yes
 	}
 }
 # north africa remains with Vichy France
@@ -4327,7 +4252,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		effect_tooltip = { FRA = { transfer_state = 543 } }
+		effect_tooltip = { FRA = { FRA_transfer_madagascar_effect = yes } }
 	}
 }
 
@@ -4435,6 +4360,6 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		effect_tooltip = { FRA = { transfer_state = 543 } }
+		effect_tooltip = { FRA = { FRA_transfer_madagascar_effect = yes } }
 	}
 }
