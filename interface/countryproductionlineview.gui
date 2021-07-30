@@ -2439,15 +2439,18 @@ guiTypes = {
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
-			position = { x = 238 y = 49 }
+			# position = { x = 10 y = 49 }
+			position = { x = 238 y = 72 }
 			scale = 0.5
 			alwaystransparent = yes
 		}
-
+		
 		iconType = {
 			name ="equipment_role"
 			spriteType = "GFX_naval_equipment_role_icons"
+			# position = { x = 238 y = 49 }
 			position = { x = 30 y = 49 }
+			scale = 0.8
 			alwaystransparent = yes
 		}
 
@@ -3073,15 +3076,18 @@ guiTypes = {
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
-			position = { x = 10 y = 49 }
+			# position = { x = 10 y = 49 }
+			position = { x = 238 y = 72 }
 			scale = 0.5
 			alwaystransparent = yes
 		}
-
+		
 		iconType = {
 			name ="equipment_role"
 			spriteType = "GFX_naval_equipment_role_icons"
-			position = { x = 238 y = 49 }
+			# position = { x = 238 y = 49 }
+			position = { x = 30 y = 49 }
+			scale = 0.8
 			alwaystransparent = yes
 		}
 
@@ -3434,6 +3440,26 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "increase_priority"
+			position = { x=4 y=34 }
+			quadTextureSprite = "GFX_arrow_up_small"
+			pdx_tooltip = "PRODUCTION_INCREASE_PRIORITY_LABEL"
+			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+			clicksound = click_default
+			scale = 0.8
+		}
+		
+		buttonType = {
+			name = "decrease_priority"
+			position = { x=23 y=34	 }
+			quadTextureSprite = "GFX_arrow_down_small"
+			pdx_tooltip = "PRODUCTION_DECREASE_PRIORITY_LABEL"
+			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+			clicksound = click_default
+			scale = 0.8
 		}
 		
 		buttonType = {
