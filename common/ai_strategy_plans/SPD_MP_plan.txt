@@ -99,11 +99,6 @@ SPD_MP_1 = {
 		SPR_diego_martinez_barrio = 0
 	}
 
-	ai_strategy = {
-		type = air_factory_balance
-		value = -1000
-	}
-
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
@@ -114,8 +109,8 @@ SPD_MP_1 = {
 	}
 }
 
-SPD_MP_Get_PP = {
-	name = "Spain get PP in SCW"
+SPD_No_Air = {
+	name = "Don't build planes"
 	desc = ""
 
 	enable = {
@@ -124,14 +119,34 @@ SPD_MP_Get_PP = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
 		}
-		NOT = { has_global_flag = scw_over }
 	}
 
-	abort = {
-		has_global_flag = scw_over
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = -1000
+	}
+}
+
+SPD_No_Relation_PP = {
+	name = "Don't spend PP improving relations"
+	desc = ""
+
+	enable = {
+		tag = SPD
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
 	}
 
-	ideas = {
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation	
+		value = -600
 	}
 }
 
@@ -293,6 +308,12 @@ SPD_Peaceful_Independence = {
 
 	focus_factors = {
 		SPR_enemies_of_our_enemy = 0
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ENG
+		value = 100
 	}
 
 	ideas = {
