@@ -302,8 +302,8 @@ SPD_Peaceful_Independence = {
 	ai_national_focuses = {
 		SPR_war_of_independence
 		SPR_those_who_would_not_help_us
-		SPR_foreign_industrial_aid
 		SPR_ideological_allies
+		SPR_foreign_industrial_aid
 	}
 
 	focus_factors = {
@@ -333,6 +333,49 @@ SPD_Peaceful_Independence = {
 		SPR_francisco_largo_caballero = 2
 		SPR_augusto_barcia_trelles_vanilla = 0
 		SPR_diego_martinez_barrio_vanilla = 0
+	}
+}
+
+SPD_Wait_Joining_Allies = {
+	name = "Spain wait till Germany is in war with Soviet Union before joining Allies"
+	desc = ""
+
+	enable = {
+		tag = SPD
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		NOT = { SOV = { has_war_with = GER } }
+	}
+
+	abort_when_not_enabled = yes
+
+	focus_factors = {
+		SPR_ideological_allies = 0
+	}
+}
+
+SPD_Joining_Allies = {
+	name = "Spain continues to try to join Allies"
+	desc = "Spain continues to try to join Allies after completing the Focus for it"
+
+	enable = {
+		tag = SPD
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		has_completed_focus = SPR_ideological_allies
+		ENG = { is_faction_leader = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = ENG
+		value = 200
 	}
 }
 
