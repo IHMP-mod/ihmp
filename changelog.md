@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.10.8.0
+Fixes:
+- Fix vanilla bug with wonky German army icons.
+- Improve clarity of naval theatre view when you have 10 TFs in a fleet.
+- Minor improvements to naval production view: better designer+role icon placement, priority arrows in all places.
+- Fixed territory transfer to France on winning the borderwar and appeal to overseas territory focus.
+- Moved the no_air script for Spain in an seperate always active ai_strategy_plan.
+
+AI:
+- Added more logic when AI Spain joins Allies, waiting till Germany is at war with Soviet.
+
 ## 1.10.7.4
 
 Fixes:
