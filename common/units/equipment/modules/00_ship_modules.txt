@@ -1990,7 +1990,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		add_stats = {
-			sub_detection = 9
+			sub_detection = 11
 			build_cost_ic = 30
 		}
 		multiply_stats = {
@@ -2004,7 +2004,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		add_stats = {
-			sub_detection = 15
+			sub_detection = 17
 			build_cost_ic = 40
 		}
 		multiply_stats = {
@@ -2022,7 +2022,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		add_stats = {
-			sub_detection = 23
+			sub_detection = 25
 			build_cost_ic = 50
 		}
 		multiply_stats = {
@@ -2040,7 +2040,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		add_stats = {
-			sub_detection = 29
+			sub_detection = 31
 			build_cost_ic = 60
 		}
 		multiply_stats = {
