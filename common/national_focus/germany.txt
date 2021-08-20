@@ -6755,6 +6755,19 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
+
+		offset = {
+			x = -1
+			y = -2
+			trigger = {
+				NOT = { has_game_rule = { rule = IHMP_HISTORY option = ALLOWED } }
+			}
+		}
+
+		allow_branch = {
+			always = yes
+		}
+
 		cost = 10
 		ai_will_do = {
 			factor = 10
