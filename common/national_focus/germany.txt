@@ -4873,11 +4873,11 @@ focus_tree = {
 		id = GER_plan_z
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GER_naval_effort }
-		mutually_exclusive = { focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
+		mutually_exclusive = { focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
 		x = -1
 		y = 3
 		relative_position_id = GER_naval_effort
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 0.25
 		}	
@@ -4937,6 +4937,63 @@ focus_tree = {
 				}
 				set_state_flag = GER_plan_z_dockyards
 			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_plan_z_dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_plan_z_dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_plan_z_dockyards
+			}
 			add_tech_bonus = {
 				name = bc_bonus
 				bonus = 1.0
@@ -4963,7 +5020,7 @@ focus_tree = {
 		id = GER_u_boat_effort
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = GER_naval_effort }
-		mutually_exclusive = { focus = GER_plan_z focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
+		mutually_exclusive = { focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
 		x = 1
 		y = 3
 		relative_position_id = GER_naval_effort
