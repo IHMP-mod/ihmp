@@ -4861,7 +4861,7 @@ focus_tree = {
 				congress_high_support_trigger = yes
 			}
 			else = {
-				congress_low_support_trigger = yes
+				congress_medium_support_trigger = yes
 			}
 		}
 		
@@ -4882,17 +4882,22 @@ focus_tree = {
 			else = {
 				add_political_power = 150
 			}
+			add_war_support = 0.1
+
 			if = {
 				limit = {
-					has_war_support < 0.1
+					has_war_support < 0.2 
 				}
-				set_war_support = 0.1
+				USA_congress_high_opposition = yes
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_war_support < 0.4 
 				}
 				USA_congress_medium_opposition = yes
+			}
+			else = {
+				USA_congress_small_opposition = yes
 			}
 		}
 	}
