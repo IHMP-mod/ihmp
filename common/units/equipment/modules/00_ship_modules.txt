@@ -1385,6 +1385,7 @@ equipment_modules = {
 			build_cost_ic = -2000
 			reliability = -0.2
 			max_strength = -100
+			sub_detection = 10
 		}
 		
 		multiply_stats = {
