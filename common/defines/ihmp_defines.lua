@@ -40,6 +40,10 @@ NDefines.NCountry.GIE_EXILE_AIR_START_EXPERIENCE = 300
 NDefines.NCountry.GIE_VETERAN_MANPOWER_NON_CORE_GAIN_FACTOR = 0.0025	-- was 0.005 -- Factor on amount of manpower gained from owned states that are controlled by an enemy. State manpower reduced by factor 1000 in code.
 NDefines.NCountry.GIE_VETERAN_MANPOWER_CORE_GAIN_FACTOR = 0.005	-- was 0.01 -- Factor on amount of manpower gained from owned states that are controlled by an enemy. State manpower reduced by factor 1000 in code.
 
+-- Resistance
+NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MIN = 0.0   -- min & max resistance target modifier resistance target modifier for exile countries. interpolated using legitimacy
+NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MAX = 10.0
+
 -- Technology
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 10.0		-- was 30		-- Base amount of research points a country can save per slot.
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3		-- was 2 -- Base year ahead penalty
