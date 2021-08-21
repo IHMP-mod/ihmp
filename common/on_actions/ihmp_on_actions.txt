@@ -889,12 +889,8 @@ on_actions = {
 				limit = {
 					ROOT = { tag = JAP }
 					has_dlc = "Waking the Tiger"
-					613 = { is_owned_by  = JAP }
 				}
 				JAP = {
-					613 = {
-						set_variable = { JAP.chi_compl = compliance }
-					}
 					every_state = {
 						limit = {
 							OR = {
@@ -912,7 +908,12 @@ on_actions = {
 						remove_core_of = YUN
 						remove_core_of = XSM
 						remove_core_of = SIK
-						set_compliance = JAP.chi_compl
+						if = {
+							limit = {
+								compliance < 40
+							}
+							set_compliance = 40
+						}
 					}
 				}
 			}
