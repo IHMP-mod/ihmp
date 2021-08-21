@@ -113,7 +113,37 @@ autonomous_occupation = {
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
 	
 	visible = {
-		has_government = democratic #? on design
+		OR = {
+			has_government = democratic #? on design
+			has_government = fascism
+		}
+
+		mild_occupation_allowed = yes
+	}
+
+	available = {
+		OR = {
+			has_government = democratic #? on design
+			AND = {
+				has_government = fascism
+				FROM = {
+					OR = {
+						original_tag = FRA
+						original_tag = SPR
+						original_tag = HOL
+						original_tag = BEL
+						original_tag = LUX
+						original_tag = DEN
+						original_tag = NOR
+						original_tag = ENG
+						original_tag = SWI
+						original_tag = POR
+
+						original_tag = CHI
+					}
+				}
+			}
+		}
 	}
 	
 	state_modifier = {
