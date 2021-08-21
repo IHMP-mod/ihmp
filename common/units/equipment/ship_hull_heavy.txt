@@ -586,7 +586,7 @@ equipments = {
 		
 		module_count_limit = {
 			category = ship_super_heavy_battery
-			count < 5
+			count < 4
 		}
 
 		naval_range = 4500
