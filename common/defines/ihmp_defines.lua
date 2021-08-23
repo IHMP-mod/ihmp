@@ -44,7 +44,8 @@ NDefines.NCountry.GIE_VETERAN_MANPOWER_CORE_GAIN_FACTOR = 0.005	-- was 0.01 -- F
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MIN = 0.0   --was 2 -- min & max resistance target modifier resistance target modifier for exile countries. interpolated using legitimacy
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MAX = 10.0 -- was 20
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.08	-- was 0.075 -- base compliance grow
-NDefines.NResistance.COMPLIANCE_DECAY_AT_MAX_COMPLIANCE = -0.08	-- was 0.083 -- as compliance increases, it gets a decay rate depending on its value. compliance should stabilize at some value until its growth changes 
+NDefines.NResistance.COMPLIANCE_DECAY_AT_MAX_COMPLIANCE = -0.08	-- was -0.083 -- as compliance increases, it gets a decay rate depending on its value. compliance should stabilize at some value until its growth changes 
+NDefines.NResistance.COMPLIANCE_DECAY_PER_EXILE_LEGITIMACY = -0.01 -- was -0.015-- higher legitimacy will give higher decay to compliance
 
 -- Technology
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 10.0		-- was 30		-- Base amount of research points a country can save per slot.
