@@ -174,6 +174,8 @@ NDefines.NNavy.COMBAT_BASE_CRITICAL_CHANCE = 0.03								-- was 0.1 -- Base chan
 NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 50.0								-- was 5.0 -- Multiplier for the critical damage. Scaled down with the ship reliability.
 NDefines.NNavy.COMBAT_DAMAGE_RANDOMNESS = 0.8								-- random factor in damage. So if max damage is fe. 10, and randomness is 30%, then damage will be between 7-10.
 
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM = 0.6			-- was 0.5				-- % of total Strength. When below, navy will go to home base to repair.
+
 NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.35									-- was 0.25
 
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE					= 0.46	-- was 0.2 -- received air damage is calculated using following: 1 - ( (ship_anti_air + fleet_anti_air * SHIP_TO_FLEET_ANTI_AIR_RATIO )^ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE ) * ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE
