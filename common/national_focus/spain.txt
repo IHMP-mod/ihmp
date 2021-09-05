@@ -3723,16 +3723,18 @@ focus_tree = {
 				mission = SPA_carlist_uprising_mission
 				days = 70
 			}
-			GER = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 70
+			hidden_effect = {
+				GER = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 70
+					}
 				}
-			}
-			ITA = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 70
+				ITA = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 70
+					}
 				}
 			}
 		}
@@ -3764,16 +3766,18 @@ focus_tree = {
 				mission = SPA_carlist_uprising_mission
 				days = 140
 			}
-			GER = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 140
+			hidden_effect = {
+				GER = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 140
+					}
 				}
-			}
-			ITA = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 140
+				ITA = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 140
+					}
 				}
 			}
 		}
@@ -4056,16 +4060,18 @@ focus_tree = {
 				mission = SPA_carlist_uprising_mission
 				days = 140
 			}
-			GER = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 140
+			hidden_effect = {
+				GER = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 140
+					}
 				}
-			}
-			ITA = {
-				add_days_mission_timeout = {
-					mission = SPA_carlist_uprising_mission
-					days = 140
+				ITA = {
+					add_days_mission_timeout = {
+						mission = SPA_carlist_uprising_mission
+						days = 140
+					}
 				}
 			}
 		}
@@ -9303,10 +9309,12 @@ focus_tree = {
 				mission = SPR_anarchist_uprising_mission
 				days = 420
 			}
-			SOV = {
-				add_days_mission_timeout = {
-					mission = SPR_anarchist_uprising_mission
-					days = 420
+			hidden_effect = {
+				SOV = {
+					add_days_mission_timeout = {
+						mission = SPR_anarchist_uprising_mission
+						days = 420
+					}
 				}
 			}
 		}
@@ -9341,7 +9349,7 @@ focus_tree = {
 				remove_idea = SPR_popular_front_1
 				add_idea = SPR_popular_front_2
 			}
-			custom_effect_tooltip = SPR_crush_the_revolution_tt #TODO Rewrite Tooltip, no uprising/civil war, but just retiring 10% of Army with 20% stockpile
+			custom_effect_tooltip = SPR_crush_the_revolution_tt
 			if = {
 				limit = {
 					NOT = { has_war_with = SPC }
