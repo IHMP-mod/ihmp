@@ -838,7 +838,7 @@ MP_Economy_2 = {
 	ideas = {
 		civilian_economy = 0
 		low_economic_mobilisation = 0
-		partial_economic_mobilisation = 0
+		partial_economic_mobilisation = -1000
 	}
 }
 
@@ -868,7 +868,7 @@ MP_Economy_3 = {
 	ideas = {
 		civilian_economy = 0
 		low_economic_mobilisation = 0
-		partial_economic_mobilisation = 0
-		war_economy = -300
+		partial_economic_mobilisation = -1000
+		war_economy = -1000
 	}
 }
