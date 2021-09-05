@@ -472,6 +472,16 @@ propaganda_efforts = {
 						has_war_with = ROOT
 						is_neighbor_of = ROOT
 					}
+					AND = {
+						NOT = { is_neighbor_of = ROOT }
+						OR = {
+							has_offensive_war_with = ROOT
+							AND = {
+								NOT = { has_government = ROOT }
+								has_added_tension_amount > 30
+							}
+						}
+					}
 					has_offensive_war = yes
 				}
 			}
