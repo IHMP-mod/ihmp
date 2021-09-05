@@ -2169,6 +2169,14 @@ focus_tree = {
 		prerequisite = { focus = TUR_democratic_capstone_focus }
 		x = -12
 		y = 1
+
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
+
 		relative_position_id = TUR_democratic_capstone_focus
 		cost = 10
 		ai_will_do = {
@@ -3221,6 +3229,14 @@ focus_tree = {
 		prerequisite = { focus = TUR_democratic_capstone_focus focus = TUR_abuse_the_office_of_soil_products focus = TUR_salt_the_scars_of_the_great_war }
 		x = 30
 		y = 1
+
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
+
 		relative_position_id = TUR_democratic_capstone_focus
 		cost = 10
 		ai_will_do = {
@@ -6803,10 +6819,13 @@ focus_tree = {
 		id = TUR_soviet_tank_factories
 		icon = GFX_goal_generic_soviet_construction
 		available = {
-			SOV = {
-				has_opinion = {
-					target = TUR
-					value > 74
+			OR = {
+				has_non_aggression_pact_with = SOV
+				SOV = {
+					has_opinion = {
+						target = TUR
+						value > 74
+					}
 				}
 			}
 		}
@@ -7731,6 +7750,14 @@ focus_tree = {
 		prerequisite = { focus = TUR_we_must_not_fall focus = TUR_victory_or_death_against_communism focus = TUR_restoring_our_nations_pride focus = TUR_foreign_brigades_for_the_revolution focus = TUR_issue_an_ultimatium_to_the_bulgarians }
 		x = 1
 		y = 13
+
+		allow_branch = {
+			has_game_rule = {
+				rule = IHMP_HISTORY
+				option = ALLOWED
+			}
+		}
+
 		relative_position_id = TUR_reconfigure_our_foreign_policy
 		cost = 10
 		ai_will_do = {
