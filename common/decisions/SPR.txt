@@ -9040,6 +9040,14 @@ SPR_civil_war_offensives = {
 					has_full_control_of_state = 171
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
+			}
 		}
 	}
 
@@ -9212,7 +9220,7 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 100
+				factor = 200
 				OR = {
 					tag = SPR
 					tag = SPA
@@ -9221,6 +9229,14 @@ SPR_civil_war_offensives = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -9372,6 +9388,14 @@ SPR_civil_war_offensives = {
 					has_full_control_of_state = 174
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
+			}
 		}
 	}
 
@@ -9521,6 +9545,14 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 791
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -9694,15 +9726,12 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 100
+				factor = 0
 				OR = {
-					tag = SPR
-					tag = SPA
+					tag = SPD
+					tag = SOV
 				}
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = SPR_MP_1
-				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -9876,7 +9905,7 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 200
+				factor = 4000
 				OR = {
 					tag = SPR
 					tag = SPA
@@ -9885,6 +9914,14 @@ SPR_civil_war_offensives = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -10058,7 +10095,7 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 100
+				factor = 10
 				OR = {
 					tag = SPR
 					tag = SPA
@@ -10067,6 +10104,14 @@ SPR_civil_war_offensives = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -10240,7 +10285,7 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 100
+				factor = 10
 				OR = {
 					tag = SPR
 					tag = SPA
@@ -10249,6 +10294,14 @@ SPR_civil_war_offensives = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -10399,6 +10452,25 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 794
 				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = SPR
+					tag = SPA
+				}
+				has_game_rule = {
+					rule = SPR_ai_behavior 
+					option = SPR_MP_1
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -10561,6 +10633,14 @@ SPR_civil_war_offensives = {
 					option = SPR_MP_1
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
+			}
 		}
 	}
 
@@ -10710,6 +10790,14 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 788
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -10862,7 +10950,7 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					tag = SPR
 					tag = SPA
@@ -10871,6 +10959,14 @@ SPR_civil_war_offensives = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -11022,6 +11118,14 @@ SPR_civil_war_offensives = {
 					has_full_control_of_state = 793
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
+			}
 		}
 	}
 
@@ -11171,6 +11275,14 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 167
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -11324,7 +11436,10 @@ SPR_civil_war_offensives = {
 			}
 			modifier = {
 				factor = 100
-				tag = SPD
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
 				has_game_rule = {
 					rule = SPR_ai_behavior 
 					option = SPR_MP_1
@@ -11480,6 +11595,14 @@ SPR_civil_war_offensives = {
 					has_full_control_of_state = 175
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
+			}
 		}
 	}
 
@@ -11629,6 +11752,14 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 168
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -12079,6 +12210,14 @@ SPR_civil_war_offensives = {
 				NOT = {
 					has_full_control_of_state = 173
 				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = SPD
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_expand_soviet_aid } }
 			}
 		}
 	}
@@ -14882,6 +15021,12 @@ political_actions = {
 					tag = SPD
 				}
 				NOT = { has_completed_focus = SPR_crush_the_revolution }
+			}
+			if = {
+				limit = {
+					tag = SOV
+				}
+				SPD = { NOT = { has_completed_focus = SPR_crush_the_revolution } }
 			}
 		}
 
