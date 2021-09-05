@@ -1893,6 +1893,21 @@ political_actions = {
 				original_tag = SPR
 				NOT = { has_global_flag = spanish_civil_war }
 			}
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					fascism > 0.2
+					OR = {
+						has_completed_focus = BUL_restore_the_bulgarian_patriarchate
+						has_idea = fascist_influence
+					}
+				}
+				add = 2
+			}
 		}
     }
 
@@ -1952,6 +1967,18 @@ political_actions = {
 				}
 				add = 3
 			}
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+					democratic > 0.2
+				}
+				add = 2
+			}
 		}
     }
 
@@ -2004,6 +2031,22 @@ political_actions = {
 					has_idea = henri_giraud
 				}
 				add = 1
+			}
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					has_completed_focus = BUL_illusions_of_a_non_partisan_system
+					communism > 0.2
+					has_active_mission = BUL_ff_impending_coup_mission
+					has_country_flag = BUL_fatherland_front_formed_flag
+					NOT = { has_country_flag = BUL_ff_destroyed_flag }
+					NOT = { has_country_flag = BUL_ff_civil_war_flag }
+				}
+				add = 2
 			}
 		}
     }
@@ -2074,6 +2117,20 @@ political_actions = {
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					OR = {
+						has_completed_focus = BUL_restore_the_bulgarian_patriarchate
+						has_idea = fascist_influence
+					}
+				}
+				add = 2
+			}
 		}
 	}
 
@@ -2214,6 +2271,20 @@ political_actions = {
 		
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					has_active_mission = BUL_ff_impending_coup_mission
+					has_country_flag = BUL_fatherland_front_formed_flag
+					NOT = { has_country_flag = BUL_ff_destroyed_flag }
+					NOT = { has_country_flag = BUL_ff_civil_war_flag }
+				}
+				add = 2
+			}
 		}
 	}
 	
