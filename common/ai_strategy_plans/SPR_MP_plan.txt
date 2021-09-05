@@ -3,29 +3,16 @@ SPR_MP_Pre_SCW = {
 	desc = "Multiplayer behavior for Nationalist Spain before SCW"
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		tag = SPR
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
 		}
+		NOT = { has_global_flag = spanish_civil_war }
 		NOT = { has_global_flag = scw_over }
 	}
 
-	abort = {
-		OR = {
-			tag = SPD
-			tag = SPC
-			OR = {
-				has_war_with = ENG
-				has_war_with = GER
-			}
-			has_global_flag = scw_over
-		}
-		
-	}
+	abort_when_not_enabled = yes
 
 	ai_national_focuses = {
 		#PreSCW
@@ -38,6 +25,113 @@ SPR_MP_Pre_SCW = {
 		SPA_unify_the_nationalist_front
 		#SCW
 		SPA_the_condor_legion
+	}
+
+	ideas = {
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 1
+		war_economy = 1
+		disarmed_nation = 0
+		volunteer_only = 0
+		limited_conscription = 0.1
+		SPA_ramon_serrano_suner = 100
+	}
+}
+
+SPR_MP_Electronics_1 = {
+	name = "Research Radio"
+	desc = "Research Radio for reinforcment chance"
+
+	enable = {
+		original_tag = SPR
+		has_game_rule = {
+			rule = SPR_ai_behavior
+			option = SPR_MP_1
+		}
+		NOT = { has_tech = radio }
+		NOT = { is_researching_technology = radio }
+	}
+	
+	abort = {
+		OR = {
+			has_tech = radio
+			is_researching_technology = radio
+		}
+	}
+
+	research = {
+		electronics = 10000
+	}
+}
+
+SPR_MP_BattlefieldSupport_0 = {
+	name = "Research Formation Flying"
+	desc = "Research Formation Flying for better Fighters"
+
+	enable = {
+		original_tag = SPR
+		has_game_rule = {
+			rule = SPR_ai_behavior
+			option = SPR_MP_1
+		}
+		NOT = { has_tech = formation_flying }
+		NOT = { is_researching_technology = formation_flying }
+	}
+	
+	abort = {
+	}
+
+	research = {
+		cat_battlefield_support = 1000
+	}
+}
+
+SPR_MP_BattlefieldSupport_1 = {
+	name = "Stop researching Air Doctrines"
+	desc = ""
+
+	enable = {
+		original_tag = SPR
+		has_game_rule = {
+			rule = SPR_ai_behavior
+			option = SPR_MP_1
+		}
+		OR = {
+			has_tech = formation_flying
+			is_researching_technology = formation_flying
+		}
+	}
+	
+	abort = {
+	}
+
+	research = {
+		cat_battlefield_support = -10000
+	}
+}
+
+SPR_MP_SCW = {
+	name = "Spanish while SCW plan"
+	desc = ""
+
+	enable = {
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		NOT = { has_global_flag = scw_over }
+		NOT = { has_war_with = ENG }
+		NOT = { has_war_with = GER }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_national_focuses = {
+		#SCW
+		SPA_the_condor_legion
 		SPA_the_corpo_truppe_volontarie
 		SPA_foment_a_carlist_split
 		SPA_save_the_alcazar
@@ -48,35 +142,8 @@ SPR_MP_Pre_SCW = {
 		SPA_banish_the_party_leaders
 		SPA_safeguard_the_freedom_of_worship
 		SPA_fuse_the_parties
-		#SPA_a_methodical_approach
-		SPA_tackle_the_vulnerable_fronts
 		#AfterSCW
 		SPA_national_recovery
-		SPA_expand_conscription
-		SPA_integrate_the_requetes
-		SPA_utilize_the_intellectuals
-		SPA_adopt_the_26_points
-		SPA_direct_the_universities
-		SPA_dictator_for_life
-		SPA_stamp_out_the_maquis
-		SPA_prepare_the_pyrenees_defenses
-		SPA_la_division_azul
-		SPA_the_tangiers_enclave
-		SPA_the_national_and_popular_army_of_spain
-		SPA_the_army_of_africa_model
-		SPA_invest_in_naval_infrastructure
-		SPA_expand_the_slipways
-		SPA_equipment_modernization
-		SPA_motorization
-		SPA_autarky
-		SPA_spanish_austerity
-		SPA_reduce_reliance_on_foreign_resources
-		SPA_restart_small_scale_shipbuilding
-		SPA_the_plan_imperial
-		SPA_artillery_modernization
-		SPA_defenses_against_strategic_bombing
-		SPA_defenses_against_invasion
-		#SPA_portuguese_aid
 	}
 
 	ideas = {
@@ -86,12 +153,9 @@ SPR_MP_Pre_SCW = {
 		war_economy = 1
 		disarmed_nation = 0
 		volunteer_only = 0
-		limited_conscription = 0
+		limited_conscription = 1
+		extensive_conscription = 1
 		SPA_ramon_serrano_suner = 100
-	}
-
-	research = {
-		cat_battlefield_support = 1000
 	}
 
 	ai_strategy = {
@@ -144,67 +208,6 @@ SPR_MP_Pre_SCW = {
 		id = relation	
 		value = -400
 	}
-
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
-}
-
-SPR_MP_Electronics_1 = {
-	name = "Research Radio"
-	desc = "Research Radio for reinforcment chance"
-
-	enable = {
-		original_tag = SPR
-		has_game_rule = {
-			rule = SPR_ai_behavior
-			option = SPR_MP_1
-		}
-		NOT = { has_tech = radio }
-		NOT = { is_researching_technology = radio }
-	}
-	
-	abort = {
-		OR = {
-			has_tech = radio
-			is_researching_technology = radio
-		}
-	}
-
-	research = {
-		electronics = 10000
-	}
-}
-
-SPR_MP_BattlefieldSupport = {
-	name = "Research Formation Flying"
-	desc = "Research Formation Flying for better Fighters"
-
-	enable = {
-		original_tag = SPR
-		has_game_rule = {
-			rule = SPR_ai_behavior
-			option = SPR_MP_1
-		}
-		OR = {
-			has_tech = formation_flying
-			is_researching_technology = formation_flying
-		}
-	}
-	
-	abort = {
-	}
-
-	research = {
-		cat_battlefield_support = -10000
-	}
 }
 
 SPR_MP_After_SCW = {
@@ -212,10 +215,8 @@ SPR_MP_After_SCW = {
 	desc = "Multiplayer behavior for Nationalist Spain after SCW"
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
@@ -295,7 +296,7 @@ SPR_MP_After_SCW = {
 		war_economy = 1
 		disarmed_nation = 0
 		volunteer_only = 0
-		limited_conscription = 0
+		limited_conscription = 1
 		SPA_ramon_serrano_suner = 100
 	}
 
@@ -310,15 +311,6 @@ SPR_MP_After_SCW = {
 		id = ENG
 		value = -200
 	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
 }
 
 SPR_MP_war_with_allies = {
@@ -326,10 +318,8 @@ SPR_MP_war_with_allies = {
 	desc = "Multiplayer behavior for Nationalist Spain at war with the Allies"
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
@@ -401,7 +391,7 @@ SPR_MP_war_with_allies = {
 		war_economy = 1
 		disarmed_nation = 0
 		volunteer_only = 0
-		limited_conscription = 0
+		limited_conscription = 1
 		SPA_ramon_serrano_suner = 100
 	}
 
@@ -410,16 +400,6 @@ SPR_MP_war_with_allies = {
 		id = GER
 		value = -200
 	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
 }
 
 SPR_MP_war_with_axis = {
@@ -427,10 +407,8 @@ SPR_MP_war_with_axis = {
 	desc = "Multiplayer behavior for Nationalist Spain at war with the Axis"
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
@@ -525,7 +503,7 @@ SPR_MP_war_with_axis = {
 		war_economy = 1
 		disarmed_nation = 0
 		volunteer_only = 0
-		limited_conscription = 0
+		limited_conscription = 1
 		SPA_ramon_serrano_suner = 100
 	}
 
@@ -534,16 +512,6 @@ SPR_MP_war_with_axis = {
 		id = GER
 		value = -200
 	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
 }
 
 SPR_MP_Neutrality = {
@@ -551,10 +519,8 @@ SPR_MP_Neutrality = {
 	desc = "Multiplayer behavior for Neutral Nationalist Spain after SCW"
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
@@ -630,7 +596,7 @@ SPR_MP_Neutrality = {
 		closed_economy = 0
 		disarmed_nation = 0
 		volunteer_only = 0
-		limited_conscription = 0
+		limited_conscription = 1
 		SPA_ramon_serrano_suner = 100
 	}
 
@@ -645,15 +611,6 @@ SPR_MP_Neutrality = {
 		id = ENG
 		value = -200
 	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
 }
 
 SPR_MP_1_No_Iberian_Pact_Ever = {
@@ -661,7 +618,8 @@ SPR_MP_1_No_Iberian_Pact_Ever = {
 	desc = "Never pick Iberian Pact or Restore Monarchy"
 
 	enable = {
-		tag = SPA
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior
 			option = SPR_MP_1
@@ -679,7 +637,8 @@ SPR_MP_1_Trade_Peace = {
 	desc = "Don't switch Tradelaws"
 
 	enable = {
-		tag = SPA
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior
 			option = SPR_MP_1
@@ -700,7 +659,8 @@ SPR_MP_1_Trade_Axis = {
 	desc = "Switch to Export Focus for Axis Tungsten"
 
 	enable = {
-		tag = SPA
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior
 			option = SPR_MP_1
@@ -721,7 +681,8 @@ SPR_MP_1_Theorist = {
 	desc = ""
 
 	enable = {
-		tag = SPA
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior
 			option = SPR_MP_1
@@ -740,7 +701,8 @@ SPR_MP_1_Carlist_Theorist = {
 	desc = ""
 
 	enable = {
-		tag = SPA
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior
 			option = SPR_MP_1
@@ -759,10 +721,8 @@ SPR_MP_Get_PP = {
 	desc = ""
 
 	enable = {
-		OR = {
-			tag = SPR
-			tag = SPA
-		}
+		original_tag = SPR
+		has_completed_focus = SPA_unify_the_nationalist_front
 		has_game_rule = {
 			rule = SPR_ai_behavior 
 			option = SPR_MP_1
