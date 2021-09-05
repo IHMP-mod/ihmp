@@ -5115,6 +5115,17 @@ BUL_macedonian_revolutionary_organizations = {
 
 		cost = 50
 
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+			}
+		}
+
 		complete_effect = {
 			hidden_effect = {
 				set_country_flag = { flag = BUL_support_imro_flag value = 4 }
@@ -8307,20 +8318,6 @@ prospect_for_resources = {
 			}
 		}
 
-		ai_will_do = {
-			base = 0.1
-			modifier = {
-				factor = 10
-				FROM = {
-					is_ai = no
-					strength_ratio = {
-						tag = ROOT
-						ratio > 1
-					}
-				}
-			}
-		}
-
 		available = {
 			FROM = { has_tech = atomic_research }
 		}
@@ -8334,9 +8331,25 @@ prospect_for_resources = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 1
+			base = 0.1
+			modifier = {
+				factor = 10
+				FROM = {
+					is_ai = no
+					strength_ratio = {
+						tag = ROOT
+						ratio > 1
+					}
+				}
+			}
 			modifier = {
 				has_political_power < 200
+				NOT = {
+					has_game_rule = {
+						rule = BUL_ai_behavior
+						option = BUL_MP_1
+					}
+				}
 				factor = 0
 			}
 		}
