@@ -72,8 +72,6 @@ USCA_MP_Join_Allies = {
 }
 
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = GUA
@@ -126,8 +124,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = HON
@@ -180,8 +176,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = ELS
@@ -234,8 +228,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = NIC
@@ -288,8 +280,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = COS
@@ -342,8 +332,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = PAN
@@ -396,8 +384,6 @@ USCA_MP_Join_Allies = {
 	}
 }
 USCA_MP_Garrision_Home = {
-	name = "Garrison the Homelands"
-	desc = ""
 
 	allowed = {
 		original_tag = CUB
