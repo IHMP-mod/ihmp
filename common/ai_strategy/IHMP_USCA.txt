@@ -1,0 +1,423 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+MEX_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		has_game_rule = {
+			rule = MEX_ai_behavior
+			option = MEX_MP_1
+		}
+		USA = { has_defensive_war = yes }
+		MEX = { has_completed_focus = MEX_focus_liberty_and_justice_for_all }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = MEX
+		value = 200
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = GUA
+		value = 200
+	}
+}
+
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = GUA
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			313
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = HON
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = HON
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			312
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = ELS
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = ELS
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			314
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = NIC
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = NIC
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			317
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = COS
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = COS
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			316
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = PAN
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = PAN
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			304
+		}
+	}
+}
+
+USCA_MP_Join_Allies = {
+
+	reversed = yes
+
+	enable = {
+		any_country = {
+			is_faction_leader = yes
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		USA = { has_defensive_war = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = CUB
+		value = 200
+	}
+}
+USCA_MP_Garrision_Home = {
+	name = "Garrison the Homelands"
+	desc = ""
+
+	allowed = {
+		original_tag = CUB
+	}
+
+	enable = {
+		#has_game_rule = {
+		#	rule = USCA_ai_behavior
+		#	option = UCSA_MP_1
+		#}
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 5.0
+		states = {
+			315
+		}
+	}
+}
