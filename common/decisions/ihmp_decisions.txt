@@ -511,6 +511,56 @@ operations = {
 }
 
 foreign_politics = {
+
+	Invite_Central_America_to_Allies = {
+
+		visible = {
+			has_global_flag = USA_Attacked
+			has_game_rule = {
+				rule = USCA_ai_behavior
+				option = USCA_MP_1
+			}
+			ROOT = {
+				OR = {
+					tag = USA
+					is_in_faction_with = USA
+				}
+				is_faction_leader = yes
+			}
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GUA
+					tag = HON
+					tag = ELS
+					tag = NIC
+					tag = COS
+					tag = PAN
+					tag = CUB
+				}
+				NOT = { is_in_faction_with = ROOT }
+				is_subject = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			ROOT = {
+				add_to_faction = FROM
+			}
+		}
+	}
+
 	GER_pressure_Sweden_for_ressources = {
 	
 		allowed = {
