@@ -159,36 +159,6 @@ SPR_MP_SCW = {
 	}
 
 	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_PATROL
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_NAVAL_INVASION_SUPPORT
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_CONVOY_ESCORT
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_CONVOY_RAIDING
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_MINES_PLANTING
-		value = 1000000
-	}
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_MINES_SWEEPING
-		value = 1000000
-	}
-	ai_strategy = {
 		type = befriend
 		id = GER
 		value = 100
@@ -760,36 +730,6 @@ MP_1_No_AirUnits = {
 	}
 	ai_strategy = {
 		type = air_factory_balance
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = naval_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = strategic_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = scout_plane
 		value = -1000
 	}
 	ai_strategy = {
