@@ -1903,7 +1903,7 @@ political_actions = {
 					fascism > 0.2
 					OR = {
 						has_completed_focus = BUL_restore_the_bulgarian_patriarchate
-						has_idea = fascist_influence
+						NOT = { has_idea = fascist_influence }
 					}
 				}
 				add = 2
@@ -1974,10 +1974,10 @@ political_actions = {
 					option = BUL_MP_1
 				}
 				BUL = {
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+					has_completed_focus = BUL_illusions_of_a_non_partisan_system
 					democratic > 0.2
 				}
-				add = 2
+				add = 1
 			}
 		}
     }
@@ -2041,12 +2041,26 @@ political_actions = {
 				BUL = {
 					has_completed_focus = BUL_illusions_of_a_non_partisan_system
 					communism > 0.2
+					NOT = {democratic > 0.0 }
+					NOT = {fascism > 0.0 }
+				}
+				add = 1
+			}
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					has_completed_focus = BUL_illusions_of_a_non_partisan_system
+					communism > 0.2
 					has_active_mission = BUL_ff_impending_coup_mission
 					has_country_flag = BUL_fatherland_front_formed_flag
 					NOT = { has_country_flag = BUL_ff_destroyed_flag }
 					NOT = { has_country_flag = BUL_ff_civil_war_flag }
 				}
-				add = 2
+				add = 1
 			}
 		}
     }
@@ -2201,6 +2215,17 @@ political_actions = {
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
+					has_completed_focus = BUL_illusions_of_a_non_partisan_system
+				}
+				add = 1
+			}
 		}
 	}
 	
@@ -2278,12 +2303,25 @@ political_actions = {
 					option = BUL_MP_1
 				}
 				BUL = {
+					has_completed_focus = BUL_illusions_of_a_non_partisan_system
+					NOT = {democratic > 0.0 }
+					NOT = {fascism > 0.0 }
+				}
+				add = 1
+			}
+			modifier = {
+				tag = BUL
+				has_game_rule = {
+					rule = BUL_ai_behavior
+					option = BUL_MP_1
+				}
+				BUL = {
 					has_active_mission = BUL_ff_impending_coup_mission
 					has_country_flag = BUL_fatherland_front_formed_flag
 					NOT = { has_country_flag = BUL_ff_destroyed_flag }
 					NOT = { has_country_flag = BUL_ff_civil_war_flag }
 				}
-				add = 2
+				add = 1
 			}
 		}
 	}
