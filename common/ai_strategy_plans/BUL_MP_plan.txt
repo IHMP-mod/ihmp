@@ -385,7 +385,7 @@ MP_Conscription_0 = {
 	}
 
 	ideas = {
-		disarmed_nation = 0
+		disarmed_nation = -100
 	}
 }
 
@@ -407,8 +407,8 @@ MP_Conscription_1 = {
 	}
 
 	ideas = {
-		disarmed_nation = 0
-		volunteer_only = 0
+		disarmed_nation = -100
+		volunteer_only = -100
 	}
 }
 
@@ -454,7 +454,7 @@ MP_Economy_0 = {
 	}
 
 	ideas = {
-		civilian_economy = 0
+		civilian_economy = -100
 	}
 }
 
@@ -476,8 +476,8 @@ MP_Economy_1 = {
 	}
 
 	ideas = {
-		civilian_economy = 0
-		low_economic_mobilisation = 0
+		civilian_economy = -100
+		low_economic_mobilisation = -100
 	}
 }
 
@@ -499,8 +499,8 @@ MP_Economy_2 = {
 	}
 
 	ideas = {
-		civilian_economy = 0
-		low_economic_mobilisation = 0
+		civilian_economy = -100
+		low_economic_mobilisation = -100
 		partial_economic_mobilisation = -1000
 	}
 }
