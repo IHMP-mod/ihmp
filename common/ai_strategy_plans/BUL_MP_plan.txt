@@ -33,6 +33,7 @@ BUL_historical_plan = {
 		#1937
 		BUL_illusions_of_a_non_partisan_system
 		BUL_strengthen_the_royal_dictatorship
+		BUL_form_a_regency_council #If Tsar Boris Dies before the Royal Dictatorship could be strengthend
 		BUL_liberalization_of_trade_policies
 		BUL_approach_germany
 		BUL_acquire_modern_tools
@@ -61,10 +62,11 @@ BUL_historical_plan = {
 		BUL_bulgarian_administration_of_the_balkans
 		BUL_restore_the_bulgarian_patriarchate
 		BUL_restore_the_tarnovo_constitution
-		BUL_freedom_of_press
+		BUL_mineral_extraction_in_the_rhodopes
+		BUL_uranium_prospecting
+		#BUL_freedom_of_press
 		#BUL_crush_the_communists
 		#1940
-		#BUL_mineral_extraction_in_the_rhodopes
 		#BUL_national_military_academy
 		#BUL_war_logistics
 		#BUL_cooperation_with_italy
