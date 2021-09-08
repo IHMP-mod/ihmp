@@ -14,6 +14,46 @@
 # building_target
 
 
+SPR_MP_No_Naval_Missions = {
+
+	enable = {
+		original_tag = SPR
+		has_game_rule = {
+			rule = SPR_ai_behavior 
+			option = SPR_MP_1
+		}
+		NOT = { has_global_flag = scw_over }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_PATROL
+		value = 99899
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_CONVOY_ESCORT
+		value = 99899
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_CONVOY_RAIDING
+		value = 99899
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_MINES_PLANTING
+		value = 99899
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_MINES_SWEEPING
+		value = 99899
+	}
+}
+
 SPR_MP_Anti_Guerilla_ArmyXP = {
 
 	enable = {
