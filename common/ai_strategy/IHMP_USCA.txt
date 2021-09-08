@@ -17,14 +17,12 @@
 MEX_MP_Join_Allies = {
 
 	reversed = yes
-
+	target_array = global.majors
+	
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
 		has_game_rule = {
 			rule = MEX_ai_behavior
@@ -39,27 +37,24 @@ MEX_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = MEX
-		value = 200
+		value = 400
 	}
 }
 
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
-		USA = { has_defensive_war = yes }
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -67,7 +62,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = GUA
-		value = 200
+		value = 400
 	}
 }
 
@@ -78,10 +73,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -99,20 +94,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
-		USA = { has_defensive_war = yes }
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -120,7 +112,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = HON
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -130,10 +122,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -151,19 +143,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		USA = { has_defensive_war = yes }
 	}
 
@@ -172,7 +162,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = ELS
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -182,10 +172,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -203,19 +193,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		USA = { has_defensive_war = yes }
 	}
 
@@ -224,7 +212,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = NIC
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -234,10 +222,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -255,19 +243,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		USA = { has_defensive_war = yes }
 	}
 
@@ -276,7 +262,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = COS
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -286,10 +272,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -307,19 +293,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		USA = { has_defensive_war = yes }
 	}
 
@@ -328,7 +312,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = PAN
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -338,10 +322,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
@@ -359,19 +343,17 @@ USCA_MP_Garrision_Home = {
 USCA_MP_Join_Allies = {
 
 	reversed = yes
+	target_array = global.majors
 
 	enable = {
-		any_country = {
-			is_faction_leader = yes
-			OR = {
-				tag = USA
-				is_in_faction_with = USA
-			}
+		OR = {
+			tag = USA
+			is_in_faction_with = USA
 		}
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		USA = { has_defensive_war = yes }
 	}
 
@@ -380,7 +362,7 @@ USCA_MP_Join_Allies = {
 	ai_strategy = {
 		type = alliance
 		id = CUB
-		value = 200
+		value = 400
 	}
 }
 USCA_MP_Garrision_Home = {
@@ -390,10 +372,10 @@ USCA_MP_Garrision_Home = {
 	}
 
 	enable = {
-		#has_game_rule = {
-		#	rule = USCA_ai_behavior
-		#	option = UCSA_MP_1
-		#}
+		has_game_rule = {
+			rule = USCA_ai_behavior
+			option = USCA_MP_1
+		}
 		NOT = { surrender_progress > 0 }
 	}
 
