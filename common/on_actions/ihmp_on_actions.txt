@@ -518,6 +518,13 @@ on_actions = {
 							tag = ALB
 							tag = MEX
 							tag = NZL
+							tag = GUA
+							tag = HON
+							tag = ELS
+							tag = NIC
+							tag = COS
+							tag = PAN
+							tag = CUB
 						}
 					}
 					add_ideas = western_agrarian_society
@@ -590,6 +597,16 @@ on_actions = {
 					set_major = yes
 				}
 			}			
+		}
+		effect = {
+			#Allied Central America
+			if = {
+				limit = {
+					ROOT = { is_major = yes }
+					FROM = { tag = USA }
+				}
+				set_global_flag = USA_Attacked
+			}		
 		}
 	}
 
