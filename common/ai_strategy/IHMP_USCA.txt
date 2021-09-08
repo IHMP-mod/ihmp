@@ -28,7 +28,7 @@ MEX_MP_Join_Allies = {
 			rule = MEX_ai_behavior
 			option = MEX_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 		MEX = { has_completed_focus = MEX_focus_liberty_and_justice_for_all }
 	}
 
@@ -55,6 +55,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -105,6 +106,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -154,7 +156,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -204,7 +206,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -254,7 +256,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -304,7 +306,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
@@ -354,7 +356,7 @@ USCA_MP_Join_Allies = {
 			rule = USCA_ai_behavior
 			option = USCA_MP_1
 		}
-		USA = { has_defensive_war = yes }
+		has_global_flag = USA_Attacked
 	}
 
 	abort_when_not_enabled = yes
