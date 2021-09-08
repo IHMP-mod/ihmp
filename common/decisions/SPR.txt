@@ -11596,6 +11596,17 @@ SPR_civil_war_offensives = {
 				}
 			}
 			modifier = {
+				factor = 0.1
+				OR = {
+					tag = SPR
+					tag = SPA
+				}
+				has_game_rule = {
+					rule = SPR_ai_behavior 
+					option = SPR_MP_1
+				}
+			}
+			modifier = {
 				factor = 0
 				OR = {
 					tag = SPD
