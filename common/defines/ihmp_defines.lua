@@ -130,6 +130,8 @@ NDefines.NMilitary.OUT_OF_FUEL_EQUIPMENT_MULT = 0.25				-- was 0.1 -- ratio of t
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 216              -- was 96 -- default capacity if not specified
 
 -- PLANE STUFF
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.0066 -- was 0.02					-- Global speed multiplier for airplanes (affects fe.transferring to another base)
+
 NDefines.NAir.COMBAT_MULTIPLANE_CAP = 2.0						-- was 3.0 - How many planes can shoot at each plane on other side ( if there are 100 planes we are atttacking COMBAT_MULTIPLANE_CAP * 100 of our planes can shoot )
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.10						-- was 0.05	- Base chance % (0 - 100) for accident to happen. Reduced with higher reliability stat.
 
