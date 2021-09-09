@@ -56,6 +56,9 @@ NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3		-- was 2 -- Base year a
 NDefines.NPolitics.ARMY_LEADER_COST = 2						-- was 5 -- cost for recruiting new leaders, 'this value' * number_of_existing_leaders_of_type
 
 -- MILITARY STUFF
+NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 4 -- was 2, this is means average roll is now 2.5 (was 1.5) meaning a 66.7% increase in strength losses (manpower+equipment)  -- nr of damage dice
+NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 4 -- was 2, changed in line with default strength damage with no armour bonuses. It is not extra but final number of rolls.   -- extra damage dice if our armor outclasses enemy
+
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 6			-- was 24 -- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.MAX_DIVISION_BRIGADE_WIDTH = 4			-- Max width of regiments in division designer.
 NDefines.NMilitary.MAX_DIVISION_BRIGADE_HEIGHT = 3			-- Max height of regiments in division designer.
