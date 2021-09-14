@@ -47,6 +47,7 @@ NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MAX = 10.0 -- 
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.08	-- was 0.075 -- base compliance grow
 NDefines.NResistance.COMPLIANCE_DECAY_AT_MAX_COMPLIANCE = -0.08	-- was -0.083 -- as compliance increases, it gets a decay rate depending on its value. compliance should stabilize at some value until its growth changes 
 NDefines.NResistance.COMPLIANCE_DECAY_PER_EXILE_LEGITIMACY = -0.01 -- was -0.015-- higher legitimacy will give higher decay to compliance
+NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.014	--was 0.18 	-- Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)
 
 -- Technology
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 10.0		-- was 30		-- Base amount of research points a country can save per slot.
