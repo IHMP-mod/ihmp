@@ -87,6 +87,7 @@ NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.04
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.02, 0.04, 0.06, 0.08, 0.1, 0.14, 0.18, 0.22, 0.26, 0.3, 0.36, 0.42, 0.48, 0.54, 0.6, 0.66, 0.72, 0.78, 0.84, 0.9} -- Experience needed to progress to the next level
 -- OLD NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.6, 0.9 }		-- was { 0.1, 0.3, 0.75, 0.9 } -- Experience needed to progress to the next level
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.4                -- was 1.00 -- percentage of experienced solders who die when manpower is removed
 
 NDefines.NMilitary.PLANNING_DECAY = 0.02						-- was 0.01
 NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.02				-- was 0.03 -- Amount of planning lost due to player manual order
