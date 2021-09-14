@@ -159,21 +159,37 @@ NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.7				-- was 0.8	-- Anti Air Gun D
 NDefines.NAir.BOMBING_TARGETING_RANDOM_FACTOR = 0.40						-- was 0.25	-- % of picking the wrong target
 NDefines.NAir.DISRUPTION_FACTOR_CARRIER = 4.0					-- was 8.0	-- multiplier on disruption damage to scale its effects on carrier vs carrier planes
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
-		0.0, -- AIR_SUPERIORITY
-		0.0, -- CAS		
-		0.0, -- INTERCEPTION	
-		0.0, -- STRATEGIC_BOMBER
-		0.0, -- NAVAL_BOMBER	
-		0.0, -- DROP_NUKE		
-		0.0, -- PARADROP		
-		0.0, -- NAVAL_KAMIKAZE	
-        0.0, -- PORT_STRIKE		
-		0.1, -- AIR_SUPPLY		was 0.3
-		0.0, -- TRAINING
-		0.0, -- NAVAL_MINES_PLANTING
-		0.0, -- NAVAL_MINES_SWEEPING
-		0.0, -- MISSION_RECON
-	}
+	0.0, -- AIR_SUPERIORITY
+	0.0, -- CAS		
+	0.0, -- INTERCEPTION	
+	0.0, -- STRATEGIC_BOMBER
+	0.0, -- NAVAL_BOMBER	
+	0.0, -- DROP_NUKE		
+	0.0, -- PARADROP		
+	0.0, -- NAVAL_KAMIKAZE	
+	0.0, -- PORT_STRIKE		
+	0.1, -- AIR_SUPPLY		was 0.3
+	0.0, -- TRAINING
+	0.0, -- NAVAL_MINES_PLANTING
+	0.0, -- NAVAL_MINES_SWEEPING
+	0.0, -- MISSION_RECON
+}
+NDefines.MISSION_FUEL_COSTS = {  -- fuel cost per plane for each mission
+	1.0, -- AIR_SUPERIORITY
+	1.0, -- CAS		
+	0.6, -- INTERCEPTION	
+	1.0, -- STRATEGIC_BOMBER
+	1.0, -- NAVAL_BOMBER	
+	1.0, -- DROP_NUKE		
+	1.0, -- PARADROP		
+	0.75, -- NAVAL_KAMIKAZE	
+	1.2, -- PORT_STRIKE		
+	1.0, -- AIR_SUPPLY		
+	0.8, -- TRAINING
+	1.0, -- NAVAL_MINES_PLANTING
+	1.0, -- NAVAL_MINES_SWEEPING
+	1.0, -- MISSION_RECON
+}
 NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.010 				-- was 0.005	--Factor on country Air XP gained from wing training
 
 NDefines.NAir.FUEL_COST_MULT = 0.45 	-- was 0.35 -- fuel multiplier for all air missions
