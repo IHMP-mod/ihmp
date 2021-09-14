@@ -41,6 +41,7 @@ NDefines.NCountry.GIE_VETERAN_MANPOWER_NON_CORE_GAIN_FACTOR = 0.0025	-- was 0.00
 NDefines.NCountry.GIE_VETERAN_MANPOWER_CORE_GAIN_FACTOR = 0.005	-- was 0.01 -- Factor on amount of manpower gained from owned states that are controlled by an enemy. State manpower reduced by factor 1000 in code.
 
 -- Resistance
+NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_CAPITULATED = 0.0 -- resistance target modifier when the enemy is capitulated
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MIN = 0.0   --was 2 -- min & max resistance target modifier resistance target modifier for exile countries. interpolated using legitimacy
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MAX = 10.0 -- was 20
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.08	-- was 0.075 -- base compliance grow
