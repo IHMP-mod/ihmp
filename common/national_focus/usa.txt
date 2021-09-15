@@ -4888,7 +4888,7 @@ focus_tree = {
 				limit = {
 					has_war_support < 0.2 
 				}
-				USA_congress_high_opposition = yes
+				USA_congress_large_opposition = yes
 			}
 			else_if = {
 				limit = {
