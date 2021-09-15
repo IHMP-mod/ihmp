@@ -1,236 +1,231 @@
 # Overview of IHMP Features and Changes
 
-## Military
+## MILITARY
 
 ### Goals
 
-- Slow down the war, make attrition more of a factor in war.
+- The goal of this mod is to slow down the pace of war and increase the role of attrition, logistics, and terrain in the conduct of the war.
 
 ### Changes
 
-- Soviet gets a Shock modifier decreasing org and plane combat effecntives when Germany attacks Soviet Union which makes it harder to initially defend.
-- Extensive Conscription just gives 4% recruitable population, service by requirement just 7%, and additional conscription level of massive draft was introduced which now gives 10%. Meaning more economic mali earlier if you up conscription law.
-- Changed all "recruitable population" modifiers beside conscription laws to "recruitable population ratio", reducing overall manpower for minors quite severly.
-- Various traits on generals decrease their comamnd limit, so your perfectly farmed general can in the end maybe just command 12 divisions.
-- Template size restricted to 4x3 batallion grid.
-- Support companies increased to 6.
-- Combat Width matters less by tactics modifing combat width more, being over combat width being less harsh (1.5% instead of 2%) and base front width numbers being weird numbers (90 width +40 for each attack direction) which can't be perfectly filled up for each scenario either way.
-- Lowered damage multiplier from attack surpassing DEF/BRK from x4 to x3.
-- Paratrooper batallions using half equipment and are half strength compared to regular batallions, just so they use more special forces cap.
-- Reduced stat increase from variant system for tanks, to always be under 100% reliabilty for tanks.
-- Decreased movement speed for all batallion roughly by 33%.
-- Increased local fuel consumption of tank battalions, even in perfect supply tanks lose local fuel and need to stop and refuel after a while of attacks. They stay fully fueled in defensive battles though.
-- Equipment reinforcement requests can now take up to 30 days if far away or in bad supply. Capital and good supply = 3 days.
-- Reworked weather and terrain attrition. Winter is harsher and there is more reliable mud in Soviet Union.
-- Military base production slightly reduced late-war equipment a bit mroe expensive.
-- Any form of Batallion level Artillery (Line Arty, Mot. Arty, Self Propelled Arty) has a additional scaling supply state increase.
-- Using the More Experience Level for divisions mod functionality.
-- Changed Force Atttack and Last Stand Abilities from -100% org damage to -90%, and increased strength damage taken to +90% Also increased their war support reduction effect by +50%.
-- Increased minimum training time to 40% instead of 20% and minimum manpower trainable decreased to 30k form 100k, to make expanding your army from a very small size less viable.
+- The USSR receives a shock modifier at the start of Barbarossa that reduces the organization of land units and the combat effectiveness of air units.
+- Recruitment laws have been changed to reduce the amount of manpower they produce. Extensive Conscription now raises recruitable population to 4% and Service by Requirement raises it to 7%. A new conscription level, "Massive Draft," has been added that yields 10% recruitable population, with more severe penalties to factory and dockyard production over those of Service by Requirement. The effect is to enforce more serious economic consequences for increasing conscription.
+- All "recruitable population" modifiers in national spirits or NFs have been changed to "recruitable population factor" percent additions or reduction. This reduces the manpower available to minors quite severely.
+- The mod changes the way that leaders' traits work so that as generals acquire more traits, their command limit becomes more restricted. A general with the maximum number of traits may only be able to command 12 divisions. Does not apply universally to all traits.
+- Divisional templates are restricted to a maximum of 12 battalions in a 4x3 grid. There are a maximum of 6 slots available for support companies.
+- Base combat width has been raised to 90 (+40 for each additional direction), compared to 80 in vanilla. The penalty from being over width has been reduced to 1.5% from 2%, so overall width overall matters less in comparison with tactics.
+- Lowered the damage multiplier resulting from a unit's attack value surpassing defense or breakthrough from x4 to x3. This lowers the overall damage that units suffer in combat.
+- Paratrooper battalion having only 50% equipment fight at half strength compared to regular battalions, but they continue to count as full battalions for the special forces cap.
+- Tanks always have less than 100% reliability, even when adding in the effect of tank designers, maintenance companies and specific buffs to reliability.
+- Decreased movement speed of all battalions by approximately 33%.
+- Increased the local fuel consumption of tank battalions. Even in perfect supply, tanks steadily lose local fuel and need to stop and refuel after attacking. This effect does not apply to situations where tanks are stationary in defense of a province.
+- Slowed the reinforcement of equipment, so that requests can now take up to 30 days if distant from a national source or in bad supply. If a unit is in the capital and in good supply, reinforcement requires 3 days.
+- The effects of weather and terrain have been reworked to increase the amount of attrition a unit suffers in unfavorable conditions. In the Soviet Union, winter is harsher and mud appears more reliably.
+- The base production rate of military equipment has been slightly reduced, to make late-war equipment a bit more expensive.
+- Each artillery (mot. artillery, self-propelled, etc.) battalion costs 0.16 in direct supply and adds 6% extra supply usage to the division as a whole.
+- Uses the More Unit Level Mod to provide for more differentiation in unit training and experience.
+- Changed the effects of "Force Attack" and "Last Stand" from -100% ORG damage to -90%, and increased the strength damage taken to +90%. Also increased their effect in reducing war support by +50%.
+- Increased the minimum training time of divisions to 40% from 20% and reduced the minimum manpower trainable to 30k from 100k. This effect is to reduce how fast an army can be expanded from a very small base.
 
-## Air
+## AIR
 
 ### Goals
 
-- Make the Airwar less devastating and powerful.
+- The overall goal of the mod is to make the air war less powerful and devastating when compared to vanilla.
 
 ### Changes
 
-- Reduced airbase capacity to 100 per level, from 200 per level in vanilla.
-- Added scaling airbase level cost, making building high level airbases quite expensive.
-- Somewhat reduced the stat differences between the various fighter levels, making fighter I somewhat more viable against fighter II.
-- Add meaningful XP modifiers to non-fighter wings.
-- Lowered max bonus from outnumbering the enemy in the air from 3:1 to 2:1 planes.
-- Lowered Air Superiority base full penalty on DEF/BRK to -40% instead of -50%.
-- Lowered Air Superiority base full penalty on speed to -30% instead of -50%.
-- Made regular Naval Bombers much more long range, similar to a tactical bomber, but more expensive. For short range you still have CV naval bombers.
-- Reduced the range gain by the variant system on high range plane like tactical bombers, strat bombers or (new) naval bombers.
-- Transport planes can use the variant system to increase their range.
-- Heavy Fighters are more viable by them having more agility and medium aircraft designer giving them even more agility.
-- Removed War Support gain/loss from aces.
+- Reduced airbase capacity to 100 planes per level of airbase.
+- Scaled the cost of adding additional levels to an airbase, so that each successive level become progressively more expensive.
+- Reduced the stat differences between the various fighter levels, making fighter I more viable in combat against fighter II.
+- Added meaningful XP modifiers to non-fighter wings.
+- Reduced the maximum bonus resulting from outnumbering the enemy in the air from 3:1 to 2:1 planes. This makes the maximum bonus easier to achieve and more realistic.
+- Reduced the penalty to land units' defense and breakthrough resulting from enemy air superiority to -40% instead of -50%. Reduced the penalty to a unit's speed to -30% from -50%. 
+- Greatly increased the range of regular naval bombers to make them more like tactical bombers, and made them more expensive to build. Carrier-based naval bombers can be used for short-range naval bombing.
+- Reduced the range gained from making variants of tactical bombers, strategic bombers, and naval bombers.
+- Introduced variants for transports planes to increase their range.
+- Made heavy fighters more viable by giving them more agility and a medium aircraft designer that gives them even more agility.
+- Removed the effects on War Support from gaining or losing aces.
 
-## Naval
+## NAVAL
 
 ### Goals
 
-- Make mixed fleets more viable, make smaller taskforces more viable, more historcial ships.
+- The goals of the mod are to make mixed fleets more advantageous, make smaller task forces more viable and punish the creation of "death star" fleets, and to add more historical ship models.
 
 ### Changes
 
-- Increased position penalty amount by bigger fleet in a naval battle.
-- introduced started ship rework from [this thread](https://forum.paradoxplaza.com/forum/threads/wrong-and-missing-ships-guide-to-improve-them.1363273/) into the mod.
-- Restricted a hull to only have a maximum of 3 Light-Medium Cruiser, 3 Medium, 3 Heavy or 3 Super Heavy Batteries. The rest needs to be filled with secondaries guns, AA or Light Destroyer Guns.
-- Changed Hit-Profile of Heavy guns to make them more accurate.
-- Made Carriers and capitals have a longer time of free shooting, before the other ships get into range.
-- Submarine Torpedo Modules are unlocked by torpedo tech, not submarine tech.
-- Removed the increased production cost for "Escort Fleet Designer" and reduced production cost decrease of "Coastal Designer".
-- Increased damage variance of shipguns quite a bit.
-- Made Ocean and Deep Ocean inviable for mines by removing movement speed penalty and severly reducing hitchance of hitting mines in those naval terrain types.
-- All majors start with more dockyards and get more dockyards by their foci. This should allow a more diverse naval production.
-- USA starts Isolatinist Navy Spirit, which decreases their dockyard output, naval experience gain and naval doctrine speed dramatically,.
-- the spirit can be reduced by Two Ocean Naval Act, which can only be picked by either Japan not paying panay, Germany being in an offensive war or as a fallback it being after 1940 and is removed if USA is in a war.
-- Halfed the amount of convoys of everything, and doubled the production cost. Tweaked supply, LL and transport need accordingly. Overall less convoys in battle to escort, but each convoy is more precious.
-- When various Allied nations (Poland, Netherlands, Belgium, France) capitulate to Germany, most of their merchant marine, so convoys, go to UK and only a small part to Germany. Less free convoys for Germany, but also stronger UK.
-- Added Emergency Convoy Building Program focus to some seafearing major nations, if they are low on convoys, which gives some convoys and decreases convoy consctruction cost considerably.
-- Max Shore bombardment is -35% instead of -25%.
+- Increased the positioning penalty assessed to the larger fleet in a naval battle.
+- Reworked starting 1936 fleets to conform more closely to historical ship classes and models, as proposed in this thread on the PDX forum:(https://forum.paradoxplaza.com/forum/threads/wrong-and-missing-ships-guide-to-improve-them.1363273/)
+- Restricted all hulls to a maximum of 3 Light/Medium Cruiser, 3 Medium, 3 Heavy or 3 Super Heavy Batteries. Other gun modules now can be filled with secondary batteries, AA or Light Destroyer Guns.
+- Changed the hit profile of heavy guns to make them more accurate.
+- Made the duration of free bombing by aircraft carriers and free shooting by capital ships longer, before the other ships can close to shooting range.
+- Additional submarine Torpedo Modules are unlocked by successive torpedo techs, not submarine techs.
+- Removed the increased production cost for "Escort Fleet Designer" and reduced the decrease to production cost from the "Coastal Designer".
+- Greatly increased the damage variability of hits received from guns and torpedoes from -15% in vanilla to -85%.
+- Greatly reduced the impact of mines by removing the speed penalty and severely reducing the hit chance in Ocean and Deep Ocean sea zones. The effect is to make mines useful only in shallow sea zones.
+- Added NIC to all majors at game start and increased the NIC yielded by completing NFs. This allows players to produce more diverse fleets.
+- Added an "Isolationist Navy" national spirit to the USA, which severely decreases dockyard output, naval experience gain from training and research speed of naval doctrines. The spirit is reduced by the "Two-Ocean Naval Act" NF.
+- Halved the amount of convoys required for transport of supplies, resources and troops, and doubled the production cost of convoys. These changes make fewer convoys necessary, but each one becomes more valuable.
+- Changed the effects of capitulation by Poland, Netherlands, Belgium and France so that most of their convoys go to the UK, not Germany.
+- Added "Emergency Convoy Building Program" national focus to some major nations, which yields some convoys and decreases convoy construction cost considerably. Comes into effect if the number of convoys falls below a specified level.
+- Raised the maximum effect of shore bombardment to -35% instead of -25%.
 
-## Economical
-
-### Goals
-
-- Reduce snowballing of the various economies, especially for Axis building early Civs.
-- Make USA economical stronger.
-
-### Changed
-
-- Increased overall consumer goods need by economic laws (total mob 20%, war eco 25%, partial mob 30%, early mob 35%, civilian 40%).
-- Total Mobilisation is restriced to only be pickable after 1941.
-- Partial Mobilisation needs atleast 30% War Support, not 25% WS.
-- Removed civilian factory construced speed modifier from economic laws.
-- Maximum of 10 Civ per construction line assignable.
-- Split Synthetic Refiniers into Synthetic Rubber Plant and Synthetic Oil Refinery building types.
-- Added Aluminium Facotry building, takes a Shared Factory Slot but gives 4 base aluminium.
-- USA and Soviet Union have special decisions to increase building slot limit in their land. The regular decision is also much cheaper and can be selected on map per state.
-- German Integrated War Economy also targets Bulgaria, gives even more factories, but in return you can only pick that focus and integrate the econmies if Germany and the Balkan are in a war. Stronger but alter focus.
-- Various minor nations, especially in Asia get a form of Agrarian society modifier, which decreases their recrutiable population factor and production output, so nation like Siam, Phillipines, the Middle East or New Zealand don't have to many guns and divisions.
-- Made sure that factory spawned by a focus or event only spawn in core territory, and preferably not in territory that is gonna be transfered in the future (Romanian Besserabia e.g.).
-- [Allied Construction Projects](https://steamcommunity.com/sharedfiles/filedetails/?id=1368202826) is implemented in the mod.
-
-## Technology
+## ECONOMIC
 
 ### Goals
 
-- Reduce effectivnes researching stuff ahead of time, in return allow more overall diverse research for majors. Nudge to more historical research.
+- To restrict the snowballing of the various economies, and especially to discourage Axis nations from building too many CICs at the start of the game.
+- To increase the economic strength of the USA, but to delay realizing its full potential until after the USA enters the war.
 
 ### Changes
 
-- Changed Ahead of time penalty from +200% per year, to +300% per year.
-- Changed research year of various tank variants to be later, to not have the Wespe (German LSPART2) for the SCW already.
-- Changed some reduced ahead of time penalty effects especially for minors.
-- Gave majors an additional research slot at the start, so they have an easier time to research naval techs. (Soviet Union is an exception, but they get an additional research slot from lessons of war focus).
-- Retouched Land and Air Doctrines to make the choices more interesting.
-- Major nations start with spyplane 1 to make it more viable to use them.
-- In air research tree splitted the cv variants from the regular planes, now you can research just cv planes without the need of researching the base model.
-- Level 2 Special forces tech gives 2% Special forces limit each.
-- Added additional 1940 and 1942 Sonar Tech to inrease sonar more to spot high tech subs.
-- Equipment conversion tech now also provides refit speed.
-- Concentrated industry has slightly more Max factories in a state modifier (+25% per level, vs +20% of dispersed per level).
+- Increased the overall consumer goods requirement with all economic laws: Civilian is now 40%, Early Mobilization 35%, Partial Mobilization 30%, War Economy 25%, and Total Mobilization 20%.
+- Limited Total Mobilization to become available beginning 1 January, 1941.
+- Raised the minimum war support threshold for Partial Mobilisation to 30% from 25%.
+- Removed the speed modifiers for construction of CIC from economic laws.
+- Set the maximum number of CIC that can be assigned to any one project to 10.
+- Split Synthetic Refineries into two building types: Synthetic Rubber Plant and Synthetic Oil Refinery.
+- Added a new "Aluminum Factory" building type. It yields 4 aluminum and occupies a factory slot.
+- The USA and Soviet Union now have special decisions which allow them to increase building slot limit in individual states.
+- Germany's "Integrated War Economy" NF now also includes Bulgaria, giving even more factories when completed. However, it can only be chosen when Germany and either Romania, Hungary, or Bulgaria are at war.
+- Added a national spirit, "Agrarian Society," to a number of countries that decreases their recruitable population percentage and production output. This reduces the size of the forces that nations such as Siam, the Philippines, New Zealand and some Middle Eastern states can deploy.
+- Made sure that factories spawned by a national focus or an event only spawn in core territory, and preferably not in territory that will be transferred to another country by events or NFs (Romanian Bessarabia, Sudetenland, etc)
+- Incorporated the Allied Construction Projects mod, which allows major countries to undertake construction projects in allied countries' territories. (https://steamcommunity.com/sharedfiles/filedetails/?id=1368202826)
 
-## Political
+## TECHNOLOGY
 
 ### Goals
 
-- Lots of tweaks to introduce historicy (Continuation war, Economic Benefits of MR Pact) and fix design oversights of Paradox (Influence Spain, Vichy Forming).
+- To Reduce the effectiveness of tech-rushing in the mod, and to allow more diverse research programs for majors. Another goal is to nudge players in the direction of more historical research.
 
 ### Changes
 
-- Swapping designers after you have picked the initial one is just 100 PP instead of paying the full 150 PP each time again.
-- Attache just gives 5% War Support instead of 10% and 5% XP instead of 20% XP, but in return just costs half as much.
-- Mongolia and Tannu Tuva start as dominion subjects of Soviet Union. Mostly to make drawing offensive fronts as Japan against Comintern simpler.
-- Molotiv Ribbentrop Pact also gives Germany increased trade benefits with Soviet Union, getting 16 ressources per Civ, instead of the regular 8.
-- Germany is forced to garrsion Soviet Union with Harsh Occupation, meaning either Forced Labour, Harsh Quotas or Brutal Opression. Meaning Germany needs lots of garrision for Soviet Union making it harsher to push into them.
-- Reworked influencing Nationalist Spain as Axis and Allies, one side picks a focus and a timer starts ticking, if the other side doesn't counter the influence intime, Spain is locked into join the respective faction. If both sides did the focus Nationalist Spain stays neutral. .
-- Anarchist Spain doesn't rise up as a seperate nation anymore, but instead 10% of republican divisions and stockpile are removed.
+- Increased ahead-of-time penalty for research from +200% per year to +300% per year.
+- Changed research year of various tank variants to come later, especially to prevent German from having LSPART1 in time for the Spanish Civil War.
+- Changed or eliminated some of the reduced ahead-of-time penalties for specific countries in vanilla. For example, Hungary no longer benefits from a reduced ahead-of-time penalty for fighters.
+- Gave all majors an additional research slot at the start, to make researching naval techs easier. USSR does not receive this slot, but they receive an extra research slot from completing the "Lessons of War" NF.
+- Modified Land and Air Doctrines to make the choices between branches more interesting.
+- Major nations start with scout aircraft 1 to make it more viable to use them.
+- In the air research tree, CV versions of FTR, NAV, and CAS are given their own separate paths. In this way, the CV models can be researched without having to research the corresponding land models.
+- The level 2 special forces techs (Marines II, etc.) now add 2% to overall special forces limits.
+- Added additional 1940 and 1942 Sonar Techs to give surface screening ships a better chance of spotting more advanced submarines.
+- Equipment conversion techs now also provide increased ship refit speed.
+- Increased the modifier for maximum factories in a state to 25% per tech level with Concentrated industry, versus 20% for Dispersed Industry.
+
+## POLITICAL
+
+### Goals
+
+- The mod has introduced a great many tweaks to improve historicity and fix design oversights of Paradox.
+
+### Changes
+
+- Swapping designers after an initial one has been chosen costs only 100 PP, instead of paying the full 150 PP each time again.
+- Sending an attache produces only +5% War Support instead of 10% and 5% of the host country's xp instead of 20%, but the cost of sending the attache is only 50% of vanilla.
+- Mongolia and Tannu Tuva start as dominion subjects of the Soviet Union. The effect of this is to make drawing offensive fronts by Japan simpler against Comintern nations.
+- Molotov-Ribbentrop Pact also gives Germany increased trade benefits with Soviet Union, yielding 16 resources per CIC, instead of the usual 8.
+- Germany is forced to garrison Soviet Union using either Forced Labour, Harsh Quotas or Brutal Oppression. The greatly increases the size of the garrisons required in Soviet states and makes it more difficult to push further into the USSR.
+- Reworked how influencing Nationalist Spain works for both Axis and Allies. One side completes a national focus and a timer starts ticking. If the other side doesn't counter the influence before the timer ticks down, Spain is locked into joining the respective faction. If both sides complete their focus, Nationalist Spain remains neutral and cannot be attacked.
+- During the Spanish Civil War, Anarchist Spain no longer appears as a separate nation and instead 10% of Republican divisions and stockpiles are removed.
 - Carlist Spain can in theory still revolt, but AI will always prevent that, since "Consolidate the North" isn't required to pacify the Carlists anymore.
-- If Republican Spain win the SCW , they likely will be a puppet of Soviet Union by the vanilla system. They will revolt after 1941, and Soviet can either fight them or let them go free so Rep. Spain can join the Allies.
-- Reworked French capitulation.
-    - If Paris falls immedatly Germany gets an event which ask if they form Vichy or not. If they want to form Vichy, France will surrender the next day.
-- When France capitulated and Vichy forming was selected it immedatly is released, no change for Germany to transfer territory to Italy before. If France capitulates without Paris ever falling then in this moment Germany gets asked if they wanna form Vichy either way.
-- Reduced randomness of transfering states to Free France when it does Appeal to Overseas territories. They are guaranteed to get Central Africa, and they have a decision to move their capital there for better supply.
-- Italy can ask for Vichy territory up to the Rhone river aslong as any territory still can be claimed with their focus to compensate.
-- Allowed various French main foci still to be picked even if France has capitulated. To not block France (with no Vichy) to not be able to pick any foci and/or remove their still existing penalties.
-- UK can start the borderwars for Free France against Vichy France, to have more control in player hands (if UK is played but not Free France).
-- UK starts with Military Access in Iraq, but if Axis conquers stuff in Africa they'll revolt becoming fascist and revoing Military Access to UK.
-- UK gets operations against Iraq and combined operation with Soviet Union against Iran to have war with them and conquer them. For gameplay purpose the operations makes that those nations attack the Allies, so Allies stay in a defensive war.
-- UK's focus Indian Autonomy doesn't directly make Raj a Dominion, instead it gives Raj some autonomy points upfront and ticking autonomy over time.
-- If Soviet Union annexed Finland instead of just taking border territory in a white peace, Germany can attack Sweden. Otherwise Sweden is not attackable.
-- If Germany conquers Norway they can pressure Sweden to give them ressource rights on the Tungsten mine.
-- If Finland still exists when Germany and Soviet Union are in a war, they will also attack the Soviet Union, trying to regain their lost territory. They won't join the Axis but give them Miltiary Access.
-- Lessons of War Focus for Soviet Union doesn't fully remove the Purge modifier, just decreases the effect considerably.
-- Introduced embargo decisions for UK and USA, to embargo Germany/Japan, so they have less access to worldwide ressources (neutral South America for both, or Allied ressources for Japan).
-- For USA the Focus Arsenal of Democracy is locked behind 30% War Support, Military Construction behind 35% WS, USACE Projects behind 40% WS and Giant Wakes behind 45% WS. Those foci in return are somewhat bufffed (more factories and Giants Wake directly gives Partial Mob).
-- Various War Plans Foci of USA are now 35 days foci.
-- To help Japan a bit, the Marco Polo Incident just creates level 3 spirit with -30% attack for Japan, instead -50%. They also just need to escalate the war 3 times to then get fully rid of the spirit.
-- Rearanged Canadian and Australian Focus slightly to be able to get rid of their bad modifiers a bit earlier, for more fun.
-- Canadia now can do both Steel Car and Zombies, but for a steep cost picking the second focus.
-- Bulgaria joins the Axis, but doesn't join the war until they get their promised territories in Macedonia and Thrace.
-- Various Fascist South American nations now are neutral instead, so they don't give the Axis Docking Rights.
+- If Republican Spain wins the SCW, they will become a puppet of Soviet Union. The mod adds a revolt to Republican Spain after 1941, and Soviet can either fight them or let them go free so they can join the Allies.
+- Reworked how French capitulation happens. If Paris is taken by the Axis, Germany gets an event asking if they want to form Vichy or not. If they choose Vichy, France will surrender the next day. If France capitulates without Paris having fallen, Germany will still get the choice to form Vichy.
+- If France capitulates and Vichy forms, Vichy is released immediately, with no chance for Germany to transfer territory to Italy in the time between the capitulation and Vichy's formation.
+- Reduced the randomness of transferring states to Free France when it does the "Appeal to Overseas Territories" NF. They are guaranteed to get Central Africa, together with a decision to move their capital there for better supply.
+- Italy's "Claims on France" NF now allows Italy to claim all Vichy territory up to the Rhône river, whether or not Italy took any of those states during the campaign in France.
+- Allowed various French main NF's still to be picked, even if France has capitulated. This prevents a situation where, with Vichy not having been formed by the Axis, France is unable to pick NF's and remove the penalties that are still put on them.
+- If the UK is played by a human player but Free France is not, then the UK has the option to begin the border wars on behalf of Free France against Vichy France.
+- The UK starts with Military Access in Iraq in 1936. However, if the Axis manage to capture the state of Matrouh in Egypt, a fascist coup in Iraq is enabled that will trigger at a random time. If the Axis take any provinces in the state of Alexandria, the coup happens immediately. After the coup takes place, the UK receives a decision that allows them to declare war on Iraq.
+- The UK and USSR have decisions to conduct a war against Iran, which the UK can only do jointly with the Soviets. The USSR can also conduct the war against Iran on its own.
+- The UK's "Indian Autonomy" NF does not immediately make the Raj a Dominion. Instead it gives the Raj some autonomy points upon completion of the NF and a steady number of autonomy points over time.
+- In the Winter War, if the Soviet Union annexes Finland instead of just taking border territory in a white peace, then Germany can attack Sweden. Otherwise Sweden cannot be attacked.
+- If Germany conquers Norway they can pressure Sweden to give them resource rights on the Tungsten mine.
+- If Finland still exists when Germany and Soviet Union are in a war, they will also attack the Soviet Union, trying to regain their lost territory. Finland will not join the Axis, but they give the Axis Military Access.
+- The Soviet Union's "Lessons of War" national focus doesn't fully remove the Purge modifier, although it decreases the effects considerably.
+- Introduced embargo decisions for UK and USA to embargo Germany and Japan, so they have less access to worldwide resources from South America and restricting Japanese access to Allied resources before going to war against them.
+- Locked several US national focuses behind minimum levels of war support. "Arsenal of Democracy" requires 30% war support, "Military Construction" requires 35%, "USACE Projects" 40%, and "The Giant Wakes" 45%. In compensation, each focus in this group has been buffed to produce more MIC and "the Giant Wakes" moves the USA directly to Partial Mobilization.
+- Changed various of the USA'S "War Plan" focuses to 35 days.
+- To help Japan in China, the Marco Polo Incident creates a level 3 national spirit with -30% attack for Japan, instead -50%. This means they only need to take the "Escalate the War in China" three times to fully remove the spirit.
+- Rearranged Canadian and Australian National Focus trees to allow them to get remove negative modifiers a little earlier in the game. The effect is to make those countries more appealing for human players.
+- Canada now can take both the Steel Car and Send in the Zombies NFs, but completing both costs Canada -150 Political Points and -0.3 in stability.
+- Bulgaria joins the Axis but will not join the war until they get their promised territories in Macedonia and Thrace.
+- Various Fascist South American nations now remain neutral so they don't give the Axis docking rights.
+- Added various Resource Rights for the Allies in Iraq, Iran and Venezuela at game start. The effect is to reduce the resources available to the Axis and it makes more oil available to the UK for naval operations.
 
-## Map
+## MAP
 
-- Various Airzone split, especially in North Africa and Soviet Union to make fighting there more intersting.
-- Broadend the front in North Africa, El-Alamein is now 2 provinces wide instead of 1.
-- Gibraltar has it's own air and seazone, making it easier for the Allies to give air cover and convoy escort, and harder for Axis to gain air superitory there.
-- Moved Gibraltar firmly inside the Mediterran.
-- Added impassable terrain in the Gobi Desert, reducing the frontwidth of Japan / Mandschukuo against Comintern / Soviet Union.
-- Various Ressource Rights added for Allies in Iraq, Iran and Venezuela. Less possible trade for Axis and more Oil especially for UK to use their Navy more effectivly.
+- Various divisions of air zones, especially in North Africa and the Soviet Union, to make fighting there more interesting.
+- Broadened the front in North Africa, with El-Alamein is now 2 provinces wide instead of 1.
+- Gibraltar has its own air and sea zone, making it easier for the Allies to give air cover and convoy escort, and harder for Axis to gain air superiority there.
+- Moved Gibraltar firmly inside the Mediterranean, which prevents use of shore bombardment from the Atlantic side.
+- Added impassable terrain in the Gobi Desert, reducing the front width that Japan must manage in fighting the Comintern.
 
-## Intel und Spy Operations
 
-- Made Poland, France and China AI build up Passive Defense, making collaberation operations on them more costly.
-- Decreased Naval Intel gain from Spynetwork.
-- Increased various minimum Intel levels for seeing enemy stuff.
-- Stopped the Exploit of tech stealing industry tech by using the loophole of mutually exclusive techs of concentrated and dispersed industry.
-- Spy-Defense stacking by multiple operatives on the mission counter-intelligence doesn#t give dimishing returns anymore, but instead each operative gives their full effect (+1 defense normally).
+## INTEL AND SPY OPERATIONS
+
+- Made Poland, France and China AI build up Passive Defense, making collaboration operations on them more costly.
+- Decreased the Naval Intel gain from establishing a spy network.
+- Increased various minimum levels needed for gaining specific intel on enemy civilian facilities and military branches.
+- Prevented the exploit of tech stealing industry tech by using the loophole of mutually exclusive techs of concentrated and dispersed industry.
+- Stacking of additional agents on counter-intelligence missions no longer suffers from diminishing returns. Each agent adds their full effect, normally +1 to passive defense.
 
 ## AI
 
 ### Goals
 
-- Make non-played minor less useless, but also stop them interfering with majors (using up supply and airbase space).
-- Have Poland, France and China AIs give atleast some resistance against a human player.
-- For Majors have a roughy multiplayer-like plan for testing purpose.
-- Note: The AI is scripted to work best under the assumption of a historical game, meaning historical factions and start of wars (Germany starts the world war with Danzig or War in roughly 1939). AI isn't well scripted to act dynamically if the players goes fully of the rails.
+- Make non-played minor nations less useless, and also stop them from interfering with majors by using up supply capacity and airbases.
+- Have AI-controlled Poland, France and China offer at least some resistance against a human player.
+- To create AI's for major powers that simulate a multiplayer environment for testing purpose.
+- Note: The AI is scripted to work best under the assumption of a historical game, meaning historical factions and wars that begin roughly when they did historically. The AI does not respond dynamically if players go fully off the rails.
 
 ### Changes
 
-- Restriced minor AI to not build any aircraft to not block airbases with their planes.
-- AI is much more willing to give controll of it's division to the faction leader (using requesting foreign troops for created order mechanic, after nation said yes you can remove order and use the divisions as you like).
-- Poland tries to build as many divisions with Support AA in them as possible, to delay German light tanks and air dominance. But letting their army be controleld by the faction leader UK, UK also can grind some army XP.
-- France researched AT2 guns ahead of time and tries to outfit their army with those to pierce German Medium Tanks. They place divisions on the Belgian border and guard Paris. If UK takes over their divisions and provides air cover they can delay Germany somewhat.
-- France also removes their Disjoined Goverment spirit to remove their reduced surrender limit. So if Germany takes Paris and does not form Vichy, they have to conquer all of France.
-- France doesn't build any factories in mainland France, they prefer to build factories in Algier (which gets cored by them) and other colonial areas.
-- Vichy France after roughly 1 year gives concessions to Germany, like -5% air production cost for Germany, or increased effiency gain speed.
-- Free France tries better to get back their lost colonial territory (with factories in them from before) and increase resistance and decrease compliance gain in occupied France.
-- If Japan Purges the Kodoha (historical path) China and PRC anticipate the coming war, and band together early.
-- China spams as many Infantry with Support AA divisions as they can to slow down Japan.
-- The Warlords should guard the naval bases on the coast decently enough.
-- Chinas surrenderlimit can't be decreased by collaberation goverment operation, and all of China needs to be conquered before they capitualte.
-- All the Warlords become majors if they are in a faction with China and are in a war with Japan, meaning Japan has to conquer everything to get to a peace confereince.
-- In return Japan reliable gets compliance on all of China after the peace conference, no wonkyness with the warlords.
-- Also Warlords build up infrastructure which helps Japan later for supply in South-East Asia and ressources like Aluminium from Yunnan.
-- Mandschukuo annexes Mengoku and gets cores there. They increase infrastructure and rush excavation tech to provide Japan with Aluminium and Oil.
-- Siam build up their infrastructure and goes to Free Trade to help Axis with rubber and Japan with supply against Malaysia later. They also build up their airbases.
-- Both Siam and Malaysia research Radar Tech, so their overlords Japan and UK can build radar stations in their territory.
-- The Spains try to fight their guerillas after the Civil War as fast as possible, saving up Army XP and Inf Equipment for that.
-- Tweaked the Spain to follow a given path if influenced by an outside power for nationalist spain, or prepare and start a revolt against the Soviet overlord as Republican Spain.
-- If Italiy puppets Ethopia they are more useful, by picking the fascist path for more manpower and industrialising as much as possible.
-- Hungary tries to get rid of Trianon as fast as possible and then claim Southern Slovakia so Germany can skip one focus.
-- Romania builds up their Oil with Infrastructure, Focus and going to Free Trade.
-- Bulgaria industrilies strongly and gets rid of their factions.
+- Restricted minor AIs to not build any aircraft. This prevents their air units from blocking airbases with their planes.
+- The AI is much more willing to give control of its divisions to the faction leader, using the light blue button on the interface for creating new armies. Push the button to open the "request expeditionaries" box, give the "army" a dummy order before requesting the units, and then ask for the divisions.
+- Poland now builds as many divisions with a support AA company as possible, to delay German light tanks and reduce the effects of close air support.
+- France researches AT2 guns ahead of time and tries to outfit their army with them to pierce German Medium Armor. 
+- France places divisions on the Belgian border and guards Paris.
+- France removes their "Disjoined Government" national spirit, which also removes their lower surrender threshold. The effect is that if Germany takes Paris and does not form Vichy, they have to conquer all of France in order to have France capitulate.
+- France does not build any factories in mainland France,. Instead it builds factories in Algeria, for which Free France receives a core when it is formed, and in other colonial areas.
+- Approximately one year after Vichy France forms, the AI will gives concessions to Germany, such -5% air production cost for Germany and increased speed for efficiency gain.
+- Free France is better at trying to regain lost colonial territories that have factories. The AI also acts to increase resistance and decrease compliance gain in occupied France.
+- If Japan Purges the Kodoha faction, China and Communist-controlled Shanxi anticipate the coming war and band together to form the United Front earlier than in vanilla.
+- China tries to produce as many divisions with AA support companies as possible, in order to slow down the Japanese.
+- China Warlords should defend naval bases on the coast decently.
+- China's surrender limit cannot be decreased by means of collaboration government operations. The effect is that all of China needs to be conquered before it capitulates.
+- All the Warlords become major powers if they are in a faction with China and at war with Japan. This means that Japan has to conquer everything to get to a peace conference.
+- After the peace conference that ends the war in China, Japan receives the same level of compliance on the warlords that it achieved in China itself.
+- The Chinese Warlords build up infrastructure, which helps Japan later for supply in South-East Asia and improves resource extraction.
+- Manchukuo annexes Mengkukuo and gets cores on it. The AI builds infrastructure and rushes excavation techs to provide Japan with aluminum and oil.
+- Siam builds infrastructure and switches to Free Trade to help Axis with rubber and Japan with supply against Malaysia later. The AI also builds up Siam's airbases.
+- Both Siam and Malaysia research Radar Tech so their overlords Japan and UK can build radar stations in their territory.
+- Whichever side wins the Spanish Civil War, it will try to fight the guerillas as quickly as possible, saving up army XP and infantry equipment for that purpose.
+- If Italy puppets Ethiopia, Ethiopia has been made more useful. Ethiopia's AI will pick the fascist path for more manpower and will build industries as much as possible.
+- Hungary will attempt to get to the "Renounce Trianon" event as fast as possible and then claim Southern Slovakia so Germany can skip one focus.
+- Romania uses various means to improve oil production, including building infrastructure, choosing national focuses, and moving to Free Trade.
+- Bulgaria industrializes strongly and removes their factions.
 - Yugoslavia goes for Pannonian Oil and together with Albania industrializes early to help Italy a bit when they get conquered.
-- Greece gets quite a bit of off-map civilian factories by doing Bedrock of Balkan Financal Stability, they use their industry to create a decent army which can delay Italy in the mountains somewhat. Aslong as UK guard their rear with air superioty against Paras and Naval Supremacy against invasions.
-- If the borders of Greece are threatend (Albania annexed and Yugoslavia in a war) they try to join the Allies (using a focus), but they won't join the war on their own, unless Italy is already invaded. They still wanna stay outside of the war, but they will allow Allied divisions and planes in their territory if they feel threatend enough.
-- Portugal and Norway gurad their ports against sneaky Axis invasions.
-- British Raj and the rest of the commonwealth minors have a decent buildup, and they follow UK in picking either dispersed or concentrated industry to share the research bonus.
-- For testing stuff in Singleplayer, UK and Italy research Fighter II ahead of time, which can be licensed by faction members, Germany and Soviet research MARM2 ahead of time.
-- Soviet Union is stopped from going Service by Requirment with their first PP, they have a decent buildup instead.
-- All the AI nations get a free single battalion cavalry battallion, to workaround a bug of Paradox, that AI always take the existing template with the lowest manpower requirment for garrision, which sometimes were tank templates..
-- If a nation is AI controlled at gamestart then for many nations their starting cavalary divisions are disbanded (disbanded means they get the manpower and equipment back). The AI works better if they just use 1~2 template types, mostly Infantry.
+- Greece receives a number of off-map CIC by doing "Bedrock of Balkan Financial Stability" NF. They use their industry to create a decent army which can delay Italy in the mountains somewhat.
+- If the borders of Greece are threatened (Albania is annexed and Yugoslavia is in a war) they try to join the Allies using a national focus and allow military access to the Allies. However, they won't join the war unless Italy invades them.
+- Portugal and Norway do a better job of guarding their ports against sneaky Axis invasions.
+- The Raj and the rest of the Commonwealth minors have a decent buildup, and they follow the UK in picking either dispersed or concentrated industry to share the research bonus.
+- For testing in single-player, the UK and Italy research Fighter II ahead of time, which can be licensed by faction members. For the same reason, Germany and the USSR research MARM2 ahead of time.
+- All AI nations have a free single battalion cavalry battalion at the start, as a workaround for a Paradox bug that allows the lowest manpower template always to be chosen for garrisons. In some cases, this leads to armored templates being used.
+- If a nation is AI controlled at the start, then in most cases their starting cavalry divisions are disbanded with the return of manpower and equipment to the stockpiles. The AI works better if they just use 1 or 2 template types, mostly infantry.
 
-## Small Tweaks
+## MISCELLANEOUS TWEAKS
 
-- Removed Ahistorical Focus Branches (limited by a game_rule) and compacted the focus trees.
-- World Tension on the mainscreen shows an additional digit, no need to calculate it yourself.
-- Changed Colour of fuel status and planning bonus, to discern them more easily.
-- introduced.
-- Coloured Button, Coloured Air and Naval Missions are intergrated in the mod.
+- Removed Ahistorical Focus Branches (limited by a game rule) and compacted the focus trees.
+- World Tension on the main screen shows an additional digit, so there is no need to calculate it separately.
+- Changed Color of fuel status and planning bonus, to discern them more easily.
+- Coloured Button, Coloured Air and Naval Missions are integrated in the mod.
 - Increased Naval Base Level in Nagasaki to Level 10.
 
-## Language
+## LANGUAGE
 
-- Mod is playable in English and German.
+- The mod is playable in English and German.
 
 ## Changelog
 - For a current and more in-depth changelog check [here](https://ihmp-mod.github.io/ihmp/changelog.html).
-- Note first 3 numbers just signify with which game version the mod is compatible, the last digit just counts up the version of the mod for that game version.
+- Note first 3 numbers just signify with which game version the mod is compatible, while the last digit just counts up the version of the mod for that game version.
