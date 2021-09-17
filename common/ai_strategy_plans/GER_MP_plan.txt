@@ -531,7 +531,7 @@ GER_MP_Fronts_4 = {
 	}
 }
 
-GER_MP_Fronts_4 = {
+GER_MP_Fronts_5 = {
 	name = "Prepare Troops on Soviet Front"
 	desc = ""
 
@@ -607,11 +607,11 @@ GER_MP_Attack_SOV_Later = {
 		OR = {
 			AND = {
 				date > 1939.7.1
-				date < 1940.5.1
+				date < 1940.5.15
 			}
 			AND = {
 				date > 1940.7.1
-				date < 1941.5.1
+				date < 1941.5.15
 			}
 		}
 	}
@@ -622,6 +622,38 @@ GER_MP_Attack_SOV_Later = {
 		type = declare_war
 		id = SOV
 		value = -999
+	}
+}
+
+MP_Spy_Defense_0 = {
+	name = "Initial Spy Defense"
+	desc = "Build up your Agency"
+
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = GER_ai_behavior
+			option = GER_MP_1
+		}
+		date < 1936.6.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -100    # -100% on the define
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -100    # -100% on the define
 	}
 }
 

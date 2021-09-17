@@ -60,28 +60,13 @@ ITA_MP_1 = {
 	}				
 
 	research = {
-		cat_mobile_warfare = 40
 		synth_resources = -100
+		concentrated_industry_category = 45
+		industry = -50
 		#cat_grand_battle_plan = -10000
 		cat_strategic_destruction = -10000
 	}
 
-	ideas = {
-		civilian_economy = 0
-		low_economic_mobilisation = 0
-		partial_economic_mobilisation = 0
-		war_economy = 1
-		free_trade = 0
-		export_focus = 0
-		limited_exports = 100
-		closed_economy = 0
-		ITA_luigi_einaudi = 20
-		macchi = 50
-		danieli = 50
-		rodolfo_graziani = 0
-	}
-	
-	
 	ai_strategy = {
 		type = pp_spend_priority
 		id = general
@@ -98,7 +83,79 @@ ITA_MP_1 = {
 	}
 }
 
+ITA_MP_Ideas = {
+	name = "ITA Ideas"
+	desc = ""
 
+	enable = {
+		tag = ITA
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ideas = {
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = 1
+		free_trade = 0
+		export_focus = 0
+		limited_exports = 1
+		closed_economy = 0
+		#PoliticalAdvisor
+		ITA_luigi_einaudi = 20
+		ITA_giacomo_acerbo = 1
+		ITA_junio_valerio_borghese = 0
+		ITA_paolo_thaon_di_revel = 0
+		italy_mario_roatta = 1
+		ITA_giovanni_marinelli = 0
+		ITA_gian_galeazzo_ciano = 0
+		ITA_roberto_farinacci = 0
+		ITA_dino_grandi = 0
+		ITA_serafino_mazzolini = 0
+		#MilitaryStaff
+		pietro_badoglio = 0
+		ugo_cavallero = 1
+		emilio_de_bono = 0
+		domenico_cavagnari = 0
+		arturo_riccardi = 0
+		inigo_campioni = 0.1
+		italo_balbo = 0
+		rino_corso_fougier = 0.2
+		francesco_pricolo = 0
+		mario_roatta = 0
+		vittorio_ambrosio = 0
+		alfredo_guzzoni = 1
+		ettore_muti = 2
+		marziale_cerutti = 0.1
+		silvio_scaroni = 0
+		alberto_da_zara = 0
+		carlo_bergamini = 0
+		luigi_mascherpa = 0
+		#Designer
+		beretta = 0
+		lancia = 0
+		breda = 1
+		macchi = 50
+		savoia_marchetti = 0
+		caproni = 0
+		piaggio = 0
+		danieli = 50
+		#Theorist
+		giovanni_messe = 0
+		rodolfo_graziani = 0
+		guiseppe_fioravanzo = 0
+		angelo_iachino = 0.1
+		amedeo_mecozzi = 0
+		renato_sandalli = 0
+		gaetano_crocco = 0
+	}
+}
 
 ITA_MP_1_Fighter1 = {
 	name = "Research Fighter 1 ASAP"
@@ -106,11 +163,11 @@ ITA_MP_1_Fighter1 = {
 
 	enable = {
 		tag = ITA
-			has_game_rule = {
-				rule = ITA_ai_behavior
-				option = ITA_MP_1
-				}
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_MP_1
 			}
+		}
 
 	abort = {
 		has_tech = fighter1
@@ -356,6 +413,38 @@ ITA_MP_No_Eth = {
 		state = 559 #Somaliland (ITA)
 		value = -600
 	}	
+}
+
+MP_Spy_Defense_0 = {
+	name = "Initial Spy Defense"
+	desc = "Build up your Agency"
+
+	allowed = {
+		tag = ITA
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_MP_1
+		}
+		date < 1936.6.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -100    # -100% on the define
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -100    # -100% on the define
+	}
 }
 
 MP_Conscription_0 = {

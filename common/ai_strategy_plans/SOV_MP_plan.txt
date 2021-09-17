@@ -53,6 +53,8 @@ SOV_MP_1 = {
 		armor = -1000
 		cat_medium_armor = 1000
 		cat_anti_tank = -10000
+		concentrated_industry_category = 40
+		industry = -50
 	}
 
 	ideas = {
@@ -652,6 +654,38 @@ SOV_MP_Attack_Finland = {
 		type = declare_war
 		id = FIN
 		value = 500
+	}
+}
+
+MP_Spy_Defense_0 = {
+	name = "Initial Spy Defense"
+	desc = "Build up your Agency"
+
+	allowed = {
+		tag = SOV
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = SOV_ai_behavior
+			option = SOV_MP_1
+		}
+		date < 1936.9.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -100    # -100% on the define
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -100    # -100% on the define
 	}
 }
 

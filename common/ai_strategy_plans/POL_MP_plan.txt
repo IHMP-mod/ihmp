@@ -216,7 +216,7 @@ No_PP_For_Relation = {
 		type = pp_spend_priority
 		id = relation	
 		value = -400
-	}	
+	}
 }
 
 POL_MP_Radio = {
@@ -358,41 +358,6 @@ POL_MP_1_AirUnits = {
 		value = -1000
 	}
 	ai_strategy = {
-		type = unit_ratio
-		id = fighter
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = naval_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = strategic_bomber
-		value = -1000
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = screen_ship
-		value = -100
-	}
-	ai_strategy = {
 		type = equipment_production_factor
 		id = screen_ship
 		value = -100
@@ -489,6 +454,26 @@ MP_Spy_Defense_0 = {
 	ai_strategy = {
 		type = agency_ai_per_upgrade_factories_factor
 		value = -100    # -100% on the define
+	}
+}
+
+MP_Spy_Gentlemen = {
+	name = "Initial Spy Defense"
+	desc = ""
+
+	enable = {
+		tag = POL
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = POL_MP_1
+		}
+		is_in_faction = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ideas = {
+		POL_jan_kowalewski = 0
 	}
 }
 

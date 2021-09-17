@@ -755,6 +755,38 @@ MP_Conscription_2 = {
 	}
 }
 
+MP_Spy_Defense_0 = {
+	name = "Initial Spy Defense"
+	desc = "Build up your Agency"
+
+	allowed = {
+		tag = JAP
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = JAP_ai_behavior
+			option = JAP_MP_1
+		}
+		date < 1936.6.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -100    # -100% on the define
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -100    # -100% on the define
+	}
+}
+
 MP_Economy_0 = {
 	name = "Economy Plan"
 	desc = ""
