@@ -26,14 +26,6 @@ ENG_unit_production = {
 		value = 7
 	}
 	
-	# Old garrison system against resistance
-	# ai_strategy = {
-	# 	type = role_ratio
-	# 	id = suppression
-	# 	value = 1
-	# }
-
-
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
@@ -131,48 +123,6 @@ ENG_unit_production = {
 		type = unit_ratio
 		id = convoy
 		value = 100
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = 90
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = infantry
-		value = 10
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 45
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
-		value = 10
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = -65
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = -80
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = naval_bomber
-		value = -30
 	}
 
 }	
@@ -886,59 +836,6 @@ ENG_please_stop_stomping_italy_so_hard_in_africa_ty = {
    	}
 }
 
-ENG_in_for_the_long_haul_bruv = {
-	allowed = { original_tag = ENG }
-	enable = {
-		has_government = democratic
-		date < 1937.10.1
-		has_war = no
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 49
-	}
-	ai_strategy = {
-		type = air_factory_balance
-		value = 20
-	} 
-}
-
-ENG_industry_we_on_an_island_bruv = {
-	allowed = { original_tag = ENG }
-	enable = {
-		has_government = democratic
-		has_war = no
-		date > 1937.10.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = -60
-	}
-	ai_strategy = {
-		type = air_factory_balance
-		value = 55
-	} 
-}
-
-ENG_growing_confidence_in_the_air = {
-	allowed = { original_tag = ENG }
-	enable = {
-		has_war = yes
-		has_government = democratic
-		date > 1938.1.1
-	}
-	abort_when_not_enabled = yes
- 
-	ai_strategy = {
-		type = air_factory_balance
-		value = 120
-	} 
-}
-
 ENG_allies_dont_ask_for_diplo_access_to_SOV = {
 	enable = {
 		ENG = {
@@ -986,5 +883,155 @@ ENG_allies_dont_ask_for_diplo_access_to_SOV = {
 		id = MON
 		target = docking_rights
 		value = -5000
+	}
+}
+
+#IHMP
+
+ENG_MP_No_CV_Fighter_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = cv_fighter2 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = cv_fighter_equipment
+		value = -10000
+	}
+}
+
+ENG_MP_Less_CV_Nav_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = cv_nav_bomber_equipment
+		value = -90
+	}
+}
+
+ENG_MP_No_CAS_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		num_of_military_factories < 60
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+}
+
+ENG_MP_No_Scouts_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		num_of_military_factories < 40
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = scout_plane_equipment
+		value = -1000
+	}
+}
+
+ENG_MP_No_Nav_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = naval_bomber2 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = nav_bomber_equipment
+		value = -1000
+	}
+}
+
+ENG_MP_Less_InfEQ_Production = {
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		has_capitulated = no
+		num_of_military_factories > 10
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = infantry_equipment
+		value = -91
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = artillery_equipment
+		value = -90
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = -81
 	}
 }
