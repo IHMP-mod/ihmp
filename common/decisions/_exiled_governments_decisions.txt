@@ -87,6 +87,14 @@ governments_in_exile = {
 					has_legitimacy > 60
 				}
 			}
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -125,6 +133,13 @@ governments_in_exile = {
 			modifier = {
 				has_legitimacy > 90
 				factor = 0
+			}
+			modifier = { 
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				add = 1
 			}
 		}
 	}
