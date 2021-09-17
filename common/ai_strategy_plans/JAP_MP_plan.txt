@@ -768,7 +768,7 @@ MP_Spy_Defense_0 = {
 			rule = JAP_ai_behavior
 			option = JAP_MP_1
 		}
-		date < 1936.6.1
+		date < 1936.7.1
 	}
 
 	abort_when_not_enabled = yes

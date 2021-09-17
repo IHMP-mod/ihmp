@@ -2,8 +2,11 @@ ITA_MP_1 = {
 	name = "ITA Mulitplayer Plan 1"
 	desc = "Focus on Fighter Research"
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -87,8 +90,11 @@ ITA_MP_Ideas = {
 	name = "ITA Ideas"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -161,13 +167,16 @@ ITA_MP_1_Fighter1 = {
 	name = "Research Fighter 1 ASAP"
 	desc = "Let the AI of Italy research Fighter 1 as his first research"
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
-			}
 		}
+	}
 
 	abort = {
 		has_tech = fighter1
@@ -183,8 +192,11 @@ ITA_MP_1_Fighter2 = {
 	name = "Research Fighter 2 ASAP"
 	desc = "Let the AI of Italy research Fighter 2 as soons as it is avaible"
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -207,8 +219,11 @@ ITA_MP_1_Fighter3 = {
 	name = "Research Fighter 3 ASAP"
 	desc = "Let the AI of Italy research Fighter 3 as it has Air Innovation II"
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -231,8 +246,11 @@ ITA_MP_1_No_IW_Fighter = {
 	name = "No Interwar Fighter Production"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -254,8 +272,11 @@ ITA_MP_1_NoBombers = {
 	name = "Produce no Bombers"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -285,8 +306,11 @@ ITA_MP_1_CivBuildup = {
 	name = "Italian Civ Buildup"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -301,12 +325,42 @@ ITA_MP_1_CivBuildup = {
 	}
 }
 
-ITA_MP_Befriend_Axis = {
-	name = "Befriend the Axis"
+ITA_MP_Join_Axis = {
+	name = "Join_Axis"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_MP_1
+		}
+		NOT = { has_war_with = ETH }
+		threat > 0.06
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = 200
+	}
+	
+}
+
+ITA_MP_Diplomacy = {
+	name = "Italian Diplomacy"
+	desc = ""
+
+	allowed = {
+		tag = ITA
+	}	
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -314,9 +368,13 @@ ITA_MP_Befriend_Axis = {
 	}
 
 	abort = {
-
 	}
 
+	ai_strategy = {
+		type = alliance
+		id = JAP
+		value = -200
+	}
 	ai_strategy = {
 		type = befriend
 		id = GER
@@ -383,8 +441,11 @@ ITA_MP_No_Eth = {
 	name = "No Troops in Ethopia"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ITA
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
@@ -428,7 +489,7 @@ MP_Spy_Defense_0 = {
 			rule = ITA_ai_behavior
 			option = ITA_MP_1
 		}
-		date < 1936.6.1
+		date < 1936.7.1
 	}
 
 	abort_when_not_enabled = yes

@@ -55,12 +55,10 @@ GER_MP_1 = {
 	}
 
 	research = {
-		infantry_weapons = 50.0
-		infantry_tech = 15.0
-		artillery = 8.0
-		support_tech = 6.5
 		armor = -1000
 		cat_medium_armor = 2000
+		dispersed_industry_category = 40
+		industry = -50
 	}
 
 	ideas = {
@@ -638,7 +636,7 @@ MP_Spy_Defense_0 = {
 			rule = GER_ai_behavior
 			option = GER_MP_1
 		}
-		date < 1936.6.1
+		date < 1936.7.1
 	}
 
 	abort_when_not_enabled = yes
