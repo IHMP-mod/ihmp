@@ -51,6 +51,8 @@ HUN_MP_1 = {
 		cat_strategic_destruction = -1000
 		cat_operational_integrity = -1000
 		synth_resources = -1000
+		concentrated_industry_category = 40
+		industry = -50
 	}
 
 	ideas = {

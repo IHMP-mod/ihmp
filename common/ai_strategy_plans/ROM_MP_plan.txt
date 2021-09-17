@@ -63,26 +63,16 @@ ROM_MP_1 = {
 		#ROM_the_maresal
 	}
 
-	ideas = {
-		ROM_gheorghe_argeseanu = 100
-		ROM_nicolae_malaxa = 15
-		ROM_ROMLOC = 10
-		ROM_mihail_sturdza = 2
-		ROM_armand_calinescu = 0
-		ROM_iuliu_maniu = 0
-		civilian_economy = 0
-		low_economic_mobilisation = 0
-		partial_economic_mobilisation = 50
-		war_economy = 200
-		free_trade = 200
-		export_focus = 0
-		limited_exports = 0
-		closed_economy = 0
-	}
-		
 	traits = {
 		captain_of_industry = 5
 		war_industrialist = 5
+	}
+
+	research = {
+		concentrated_industry_category = 40
+		industry = -50
+		armor = -1000
+		armor = -1000
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -98,6 +88,94 @@ ROM_MP_1 = {
 		
 	}
 
+}
+
+ROM_MP_Ideas = {
+	name = "ROM Ideas"
+	desc = ""
+
+	enable = {
+		tag = ROM
+		has_game_rule = {
+			rule = ROM_ai_behavior
+			option = ROM_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ideas = {
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 50
+		war_economy = 200
+		free_trade = 200
+		export_focus = 0
+		limited_exports = 0
+		closed_economy = 0
+		#PoliticalAdvisor
+		ROM_gheorghe_argeseanu = 100
+		ROM_nicolae_malaxa = 15
+		ROM_mihail_sturdza = 2
+		ROM_armand_calinescu = 0
+		ROM_petru_groza = 0
+		ROM_iuliu_maniu = 0
+		#MilitaryStaff
+		ROM_constantin_sanatescu = 0
+		ROM_ion_antonescu = 2
+		ROM_ermil_gheorghiu = 0.5
+		ROM_gheorghe_jienescu = 0
+		ROM_nicolae_sova = 0
+		ROM_horia_macellariu = 0.5
+		ROM_gheorghe_avramescu = 1
+		ROM_gheorghe_mihail = 1
+		ROM_paul_teodorescu = 0
+		ROM_gheorghe_vasiliu = 0
+		#Designer
+		ROM_ROMLOC = 10
+		generic_electronics_concern = 0
+		constanta_shipyard = 0
+		ROM_coastal_defense_navy_designer = 1
+		ROM_black_sea_dominance_designer = 0
+		ROM_vauxhall = 0
+		ROM_ford = 0
+		ROM_malaxa = 0
+		ROM_cugir = 0
+		ROM_resita = 1
+		ROM_opel = 0
+		iar = 1
+		ROM_iar = 0
+		ROM_ICAR = 0
+		ROM_SET = 1
+		#Theorist
+		ROM_gheorghe_potopeanu = 1
+		ROM_emanoil_ionescu = 0
+	}
+}
+
+ROM_MP_1_No_LT1 = {
+	name = "Don't build Light Tank 1"
+	desc = ""
+
+	allowed = {
+		tag = ROM
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ROM_ai_behavior
+			option = ROM_MP_1
+		}
+		NOT = { has_tech = improved_light_tank }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = -1000
+	}
 }
 
 ROM_MP_1_Infrastructure = {
