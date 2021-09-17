@@ -29,6 +29,7 @@ foreign_influence = {
 				is_puppet_of = ROOT
 				democratic < 0.99
 			}
+			always = no #IHMP
 		}
 
 		target_array = subjects
@@ -93,6 +94,7 @@ foreign_influence = {
 				is_puppet_of = ROOT
 				communism < 0.99
 			}
+			always = no #IHMP
 		}
 
 		target_array = subjects
@@ -158,6 +160,7 @@ foreign_influence = {
 				is_puppet_of = ROOT
 				fascism < 0.99
 			}
+			always = no #IHMP
 		}
 
 		target_array = subjects
@@ -206,6 +209,7 @@ foreign_influence = {
 				is_puppet_of = ROOT
 				neutrality < 0.99
 			}
+			always = no #IHMP
 		}
 
 		target_array = subjects
