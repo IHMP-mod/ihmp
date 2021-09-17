@@ -2,9 +2,11 @@ ENG_MP_1 = {
 	name = "United Kingdom MP1 plan"
 	desc = "Mulitplayer script behavior for United Kingdom"
 
+	allowed = {
+		tag = ENG
+	}
+
 	enable = {
-		original_tag = ENG
-		has_dlc = "Man the Guns"
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -17,12 +19,12 @@ ENG_MP_1 = {
 	ai_national_focuses = {
 		limited_rearmament_focus
 		general_rearmament_focus
-		air_rearmament_focus
-		fighter_command_focus
 		shadow_scheme_focus	
 		uk_industrial_focus
-		uk_extra_tech_slot
 		royal_ordinance_focus
+		air_rearmament_focus
+		fighter_command_focus
+		uk_extra_tech_slot
 		ENG_steady_as_she_goes
 		ENG_home_defence
 		ENG_issue_gasmasks
@@ -32,16 +34,16 @@ ENG_MP_1 = {
 		ENG_military_training_act
 		aircraft_production_focus
 		ENG_prepare_for_the_inevitable
-		uk_small_arms_focus
-		crypto_bomb_focus
-		tizard_mission_focus
-		air_defense_focus
-		radar_focus		
+		uk_small_arms_focus	
 		uk_commonwealth_focus
 		uk_india_focus
 		ENG_indian_autonomy
-		ENG_special_air_service
 		naval_rearmament_focus
+		crypto_bomb_focus
+		tizard_mission_focus
+		air_defense_focus
+		radar_focus
+		ENG_special_air_service
 		uk_destroyer_focus
 		uk_convoy_focus
 		ENG_chiefs_of_staff_committee
@@ -52,18 +54,13 @@ ENG_MP_1 = {
 		uk_amphibious_focus
 	}
 
-	ideas = {
-		ENG_philip_kerr = 100
-		free_trade = 0
-		export_focus = 600
-		limited_exports = 0
-		closed_economy = 0
-		civilian_economy = 0
-		low_economic_mobilisation = 100
-		partial_economic_mobilisation = 200
-		war_economy = 400
-		harold_alexander = 10
-		supermarine = 5
+	research = {
+		naval_air = -100
+		naval_bomber = 100
+		cat_strategic_bomber = -100
+		dispersed_industry_category = 50
+		concentrated_industry_category = -1000
+		industry = -50
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -74,50 +71,217 @@ ENG_MP_1 = {
 			factor = 1.0
 		}
 	}
+}
 
+ENG_MP_Ideas = {
+	name = "ENG Ideas"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ideas = {
+		free_trade = 0
+		export_focus = 1
+		limited_exports = 0
+		closed_economy = 0
+		civilian_economy = 0
+		low_economic_mobilisation = 100
+		partial_economic_mobilisation = 200
+		war_economy = 400
+		#PoliticalAdvisor
+		ENG_philip_kerr = 100
+		ENG_nevile_henderson = 0
+		ENG_maxwell_aitken = 1
+		ENG_leslie_hore_belisha = 0
+		ENG_ernest_bevin = 0
+		eng_stewart_menzies = 1
+		eng_alan_turing = 0
+		#MilitaryStaff
+		john_vereker = 1
+		edmund_ironside = 0
+		alan_brooke = 0.2
+		ernle_chatfield = 1
+		dudley_pound = 0
+		andrew_cunningham = 0
+		cyril_newall = 0.5
+		charles_portal = 0
+		edward_ellington = 0
+		archibald_wavell = 0
+		claude_auchinleck = 0
+		kenneth_anderson = 1
+		sholto_douglas = 0
+		trafford_leigh_mallory = 0
+		frederick_bowhill = 0
+		louis_mountbatten = 0
+		henry_harwood = 1
+		max_horton = 0
+		ENG_david_stirling = 1
+		#Designer
+		yarrow_shipbuilders = 2
+		harland_wolff = 0
+		cammell_laird = 0
+		john_brown_company = 0
+		supermarine = 50
+		hawker = 0
+		de_havilland = 0
+		avro = 0
+		fairey_aviation = 0
+		rsaf_enfield = 0
+		vauxhall = 0
+		royal_arsenal = 1
+		aioc = 1
+		english_electric = 0
+		vickers_armstrong_eng = 1
+		#Theorist
+		bernard_montgomery = 0
+		harold_alexander = 10
+		ENG_raymond_briggs = 1
+		james_somerville = 0
+		tom_phillips = 0
+		hugh_dowding = 0
+		arthur_harris = 0
+		james_chadwick = 0
+		frank_whittle = 0
+		ENG_jfc_fuller = 0
+	}
+}
+
+ENG_MP_Conscription = {
+	name = "ENG Conscription"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		OR = {
+			NOT = { has_idea = ENG_philip_kerr }
+			NOT = { has_idea = harold_alexander }
+			NOT = { has_idea = supermarine }
+			AND = {
+				NOT = { has_idea = low_economic_mobilisation }
+				NOT = { has_idea = partial_economic_mobilisation }
+				NOT = { has_idea = war_economy }
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ideas = {
+		limited_conscription = 0
+	}
 }
 
 ENG_MP_AirDoctrine = {
 	name = "Air Doctrine Research"
 	desc = ""
 
+	allowed = {
+		tag = ENG
+	}
+
 	enable = {
-		original_tag = ENG
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
 		}
-	has_tech = logistical_bombing
 	}
-	abort = { 
+	abort = {
 	}
 	
 	research = {
 		cat_strategic_destruction = -1000
+		cat_battlefield_support = -1000
 	}
 }
 
-ENG_MP_Buildup = {
-	name = ""
+ENG_MP_AirDoctrine = {
+	name = "Air Doctrine Research"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
 		}
-		date < 1938.1.1
+		has_tech = air_skirmish
+	}
+	abort_when_not_enabled = yes
+	
+	research = {
+		cat_operational_integrity = -1000
+	}
+}
+
+ENG_MP_Buildup = {
+	name = "Britain Industrial Buildup"
+	desc = ""
+
+	allowed = {
+		tag = ENG
 	}
 
-	abort = {
-		date > 1938.1.1 
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		date < 1937.9.1
 	}
+
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 80
+		value = 55
+	}
+}
+
+ENG_MP_1_No_LT1 = {
+	name = "Don't build Light Tank 1"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		NOT = { has_tech = improved_light_tank }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = -1000
 	}
 }
 
@@ -125,22 +289,53 @@ ENG_MP_1_No_IW_Fighter = {
 	name = "No Interwar Fighter Production"
 	desc = ""
 
+	allowed = {
+		tag = ENG
+	}
+
 	enable = {
-		original_tag = ENG
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
 		}
 		NOT = { has_tech = fighter1 }
 	}
-	abort = {
-		has_tech = fighter1
-	}
+	abort_when_not_enabled = yes
 	
+	ai_strategy = {
+		type = air_factory_balance
+		value = -1000
+	}
+}
+
+ENG_MP_Fighter_Production = {
+	name = "Fighter 1 production"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = FRA_MP_1
+		}
+		has_capitulated = no
+		has_tech = fighter1
+		num_of_military_factories > 20
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 300
+	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = -1000
+		value = 300
 	}
 }
 
@@ -148,8 +343,11 @@ ENG_MP_1_Fighter2 = {
 	name = "Research Fighter2"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -173,77 +371,55 @@ ENG_MP_1_Fighter2 = {
 	}
 }
 
-ENG_MP_1_No_IW_Tac = {
-	name = "No Interwar Tac Production"
+ENG_MP_Plane_Production = {
+	name = "Plane Production"
 	desc = ""
 
-	enable = {
-		original_tag = ENG
-		has_game_rule = {
-			rule = ENG_ai_behavior
-			option = ENG_MP_1
-		}
-		NOT = { has_tech = tactical_bomber1 }
-	}
-	abort = {
-		has_tech = tactical_bomber1
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = -10000
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = tactical_bomber
-		value = -1000
-	}
-}
-
-ENG_MP_1_No_Strat = {
-	name = "No Strat. Bomber Production"
-	desc = ""
-
-	enable = {
-		original_tag = ENG
-		has_game_rule = {
-			rule = ENG_ai_behavior
-			option = ENG_MP_1
-		}
-	}
-
-	abort = {
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = strategic_bomber
-		value = -10000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = strategic_bomber
-		value = -10000
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = scout_plane
-		value = -1000
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = scout_plane
-		value = -1000
-	}
-}
-
-ENG_MP_Ignore = {
-	name = "Ignore Baltic for Soviet"
-	desc = ""
-
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+	}
+
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -10
+	}
+}
+
+ENG_MP_Diplomacy = {
+	name = "British Diplomacy"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -253,6 +429,41 @@ ENG_MP_Ignore = {
 	abort = {
 	}
 
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation	
+		value = -400
+	}
+	ai_strategy = {
+		type = antagonize
+		id = GER
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = ITA
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = JAP
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = ROM
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = HUN
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = BUL
+		value = 200
+	}
 	ai_strategy = {
 		type = contain
 		id = SOV
@@ -261,11 +472,14 @@ ENG_MP_Ignore = {
 }
 
 ENG_MP_Fronts = {
-	name = "Fronts Plan"
+	name = "British Fronts"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -336,12 +550,47 @@ ENG_MP_Fronts = {
 	}
 }
 
+MP_Spy_Defense_0 = {
+	name = "Initial Spy Defense"
+	desc = "Build up your Agency"
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		date < 1936.9.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -100    # -100% on the define
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -100    # -100% on the define
+	}
+}
+
 MP_Conscription_0 = {
 	name = "Conscription Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -362,8 +611,11 @@ MP_Conscription_1 = {
 	name = "Conscription Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -385,8 +637,11 @@ MP_Conscription_2 = {
 	name = "Conscription Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -409,8 +664,11 @@ MP_Economy_0 = {
 	name = "Economy Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -431,8 +689,11 @@ MP_Economy_1 = {
 	name = "Economy Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -446,7 +707,7 @@ MP_Economy_1 = {
 
 	ideas = {
 		civilian_economy = 0
-		low_economic_mobilisation = 0
+		low_economic_mobilisation = -100
 	}
 }
 
@@ -454,8 +715,11 @@ MP_Economy_2 = {
 	name = "Economy Plan"
 	desc = ""
 
-	enable = {
+	allowed = {
 		tag = ENG
+	}
+
+	enable = {
 		has_game_rule = {
 			rule = ENG_ai_behavior
 			option = ENG_MP_1
@@ -469,7 +733,7 @@ MP_Economy_2 = {
 
 	ideas = {
 		civilian_economy = 0
-		low_economic_mobilisation = 0
+		low_economic_mobilisation = -100
 		partial_economic_mobilisation = -1000
 	}
 }
