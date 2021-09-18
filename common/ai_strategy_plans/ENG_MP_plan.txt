@@ -158,6 +158,36 @@ ENG_MP_Ideas = {
 	}
 }
 
+ENG_MP_Officers = {
+	name = "British Officers"
+	desc = "Don't recruit more Generals and Admirals, you need the PP"
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+		date < 1943.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = general
+		value = -1000
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = admiral
+		value = -1000
+	}
+}
+
 ENG_MP_Conscription = {
 	name = "ENG Conscription"
 	desc = ""
@@ -354,7 +384,7 @@ ENG_MP_1_Fighter2 = {
 		}
 		NOT = { has_tech = fighter3 }
 		OR = {
-			date > 1938.6.1
+			date > 1938.9.1
 			has_completed_focus = fighter_command_focus
 		}
 	}
@@ -471,6 +501,61 @@ ENG_MP_Diplomacy = {
 	}
 }
 
+ENG_MP_Seazones = {
+	name = "Allied Seazones"
+	desc = ""
+
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = ENG_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 48
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 49
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 51
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 56
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 58
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 232
+		value = 100
+	}
+}
+
 ENG_MP_Fronts = {
 	name = "British Fronts"
 	desc = ""
@@ -532,6 +617,58 @@ ENG_MP_Fronts = {
 		state = 772 #French Congo
 		state = 660 #French Congo
 		value = -200
+	}
+	ai_strategy = {
+		type = garrison
+		value = -999
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = { 
+			127
+			123
+			338
+			126
+			125
+			122
+			130
+			132
+			131
+			121
+			133
+			120
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = { 
+			447
+			446
+			454
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = { 
+			118
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = { 
+			116
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = { 
+			183
+		}
 	}
 	ai_strategy = {
 	 	type = front_unit_request #North Africa
@@ -687,7 +824,7 @@ MP_Economy_0 = {
 
 MP_Economy_1 = {
 	name = "Economy Plan"
-	desc = ""
+	desc = "Stay on Partial Mob"
 
 	allowed = {
 		tag = ENG
@@ -713,7 +850,7 @@ MP_Economy_1 = {
 
 MP_Economy_2 = {
 	name = "Economy Plan"
-	desc = ""
+	desc = "Stay on War Eco"
 
 	allowed = {
 		tag = ENG
@@ -733,7 +870,7 @@ MP_Economy_2 = {
 
 	ideas = {
 		civilian_economy = 0
-		low_economic_mobilisation = -100
-		partial_economic_mobilisation = -1000
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = -100
 	}
 }
