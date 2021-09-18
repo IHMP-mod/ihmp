@@ -2,10 +2,13 @@ state={
 	id=644
 	name="STATE_644"
 
+	state_category = wasteland
+	impassable = yes
+
 	history={
 		owner = SOV
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
 		add_core_of = SOV
 
@@ -16,5 +19,4 @@ state={
 	}
 	manpower=68364
 	buildings_max_level_factor=1
-	state_category="wasteland"
 }
