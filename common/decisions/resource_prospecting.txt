@@ -552,6 +552,15 @@ prospect_for_resources = {
 				has_war = no
 				factor = 0
 			}
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				date < 1945.1.1
+				factor = 0
+			}
 		}
 
 		remove_effect = {
@@ -1111,6 +1120,15 @@ prospect_for_resources = {
 				336 = { CONTROLLER = { is_in_faction_with = ROOT } }
 				factor = 0
 			}
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				date < 1945.1.1
+				factor = 0
+			}
 		}
 
 		remove_effect = {
@@ -1391,6 +1409,15 @@ prospect_for_resources = {
 				tag = ENG
 				has_war = no
 				date < 1938.1.1
+				factor = 0
+			}
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				date < 1945.1.1
 				factor = 0
 			}
 		}
@@ -2688,6 +2715,15 @@ prospect_for_resources = {
 			modifier = {
 				tag = ENG
 				has_war = no
+				factor = 0
+			}
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				date < 1945.1.1
 				factor = 0
 			}
 		}
@@ -4597,6 +4633,15 @@ prospect_for_resources = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				tag = ENG
+				has_game_rule = {
+					rule = ENG_ai_behavior
+					option = ENG_MP_1
+				}
+				date < 1945.1.1
+				factor = 0
+			}
 		}
 
 		remove_effect = {
