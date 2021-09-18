@@ -102,6 +102,51 @@ SAF_MP_1 = {
 	}
 }
 
+SAF_MP_Seazones = {
+	name = "Allied Seazones"
+	desc = ""
+
+	allowed = {
+		tag = SAF
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = SAF_ai_behavior
+			option = SAF_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 49
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 51
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 56
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 58
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 232
+		value = 100
+	}
+}
+
 SAF_MP_Concentrated_Industry = {
 	name = "No Dispersed"
 	desc = ""

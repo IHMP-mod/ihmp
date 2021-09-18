@@ -127,6 +127,56 @@ RAJ_MP_1 = {
 
 }
 
+RAJ_MP_Seazones = {
+	name = "Allied Seazones"
+	desc = ""
+
+	allowed = {
+		tag = RAJ
+	}
+
+	enable = {
+		has_game_rule = {
+			rule = RAJ_ai_behavior
+			option = RAJ_MP_1
+		}
+	}
+
+	abort = {
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 49
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 51
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 56
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 58
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 232
+		value = 100
+	}
+}
+
 RAJ_MP_Concentrated_Industry = {
 	name = "No Dispersed"
 	desc = ""
