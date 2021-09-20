@@ -26,7 +26,7 @@ RAJ_MP_1 = {
 		RAJ_indian_institute_of_science
 		RAJ_east_india_railways								
 		RAJ_integrate_princely_railways						
-		RAJ_clamp_down_on_corruption
+		# RAJ_clamp_down_on_corruption
 		RAJ_princely_state_donations
 		RAJ_imperial_service_troops
 		RAJ_lessons_of_the_great_war
