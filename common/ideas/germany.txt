@@ -1719,6 +1719,26 @@ ideas = {
 				intelligence_agency_defense = 0.5
 			}
 		}
+
+		GER_enigma = {
+			
+			picture = "GFX_idea_GER_enigma"
+			
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				crypto_strength = 4
+			}
+		}
 	}
 	
 	political_advisor = {

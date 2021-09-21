@@ -303,6 +303,7 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 	disloyal_abwehr
+	GER_enigma
 }
 add_ideas = GER_mefo_bills_1
 
