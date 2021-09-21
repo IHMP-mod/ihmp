@@ -302,6 +302,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+	disloyal_abwehr
 }
 add_ideas = GER_mefo_bills_1
 

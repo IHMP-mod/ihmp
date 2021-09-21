@@ -627,6 +627,46 @@ political_actions = {
 			set_global_flag = GER_air_safety_regulations_flag
 		}
 	}
+
+	GER_purge_abwehr = {
+		icon = generic_political_discourse
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			has_idea = disloyal_abwehr
+			has_idea = tot_economic_mobilisation
+		}
+		
+		available = {
+			has_idea = tot_economic_mobilisation
+		}
+		
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+		
+		days_remove = 90
+		is_good = yes
+		modifier = {
+			political_power_gain = -1
+			intel_network_gain_factor = -0.5
+			intel_from_operatives_factor = -0.5
+			intelligence_agency_defense = -1
+		}
+		
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = disloyal_abwehr
+				add_idea = reich_security_main_office
+			}
+		}
+	}
 }
 
 foreign_politics = {

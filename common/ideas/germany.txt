@@ -1680,6 +1680,45 @@ ideas = {
 				trade_cost_for_target_factor = -0.5
 			}
 		}
+
+		disloyal_abwehr = {
+			picture = generic_spy_intel
+		
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				intel_network_gain_factor = -0.25
+				intel_from_operatives_factor = -0.25
+				intelligence_agency_defense = -2			
+			}
+		}
+
+		reich_security_main_office = {
+			picture = generic_spy_intel
+		
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				intelligence_agency_defense = 0.5
+			}
+		}
 	}
 	
 	political_advisor = {
@@ -2018,6 +2057,7 @@ ideas = {
 		
 			available = {
 				has_intelligence_agency = yes
+				has_idea = disloyal_abwehr
 			}
 			
 			allowed = {
