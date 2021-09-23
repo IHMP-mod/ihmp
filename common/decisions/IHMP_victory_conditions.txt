@@ -1,0 +1,126 @@
+Axis_victory_conditions_category = {
+	# If Axis capitulate Soviets and UK, they earn a decisive victory. Or Allies can choose to surrender in chat (current victory conditions). We could make it Soviets only, but then this would exclude any USA led late comeback games, however rare. 
+	axis_decisive_victory = {
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+				original_tag = JAP
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = SOV
+				country_exists = ENG
+			}
+		}
+		activation = {
+			controls_state = 64
+		}
+		is_good = yes
+	}
+	axis_major_victory = {
+		# If Germany survives until 1 Jan 46, Axis earn a major victory                      
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+				original_tag = JAP
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = GER
+			}
+		}
+		activation = {
+			country_exists = GER
+		}
+		is_good = yes
+		days_mission_timeout = 3654
+	}
+	axis_minor_victory = {
+		# If Germany survives until 1 Jan 45, Axis earn a minor victory                      
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+				original_tag = JAP
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = GER
+			}
+		}
+		activation = {
+			country_exists = GER
+		}
+		is_good = yes
+		days_mission_timeout = 3289
+	}
+}
+
+Allied_victory_conditions_category = {
+	# Inverse of above 
+	allied_decisive_victory = {
+		# If Germany is defeated before 1 Jan 43, Allies earn a decisive victory                    
+		allowed = {
+			OR = {
+				original_tag = ENG
+				original_tag = SOV
+				original_tag = USA
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = GER
+			}
+		}
+		activation = {
+			country_exists = GER
+		}
+		is_good = no
+		days_mission_timeout = 2558
+	}
+	allied_major_victory = {
+		# If Germany is defeated before 1 Jan 44, Allies earn a major victory                      
+		allowed = {
+			OR = {
+				original_tag = ENG
+				original_tag = SOV
+				original_tag = USA
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = GER
+			}
+		}
+		activation = {
+			country_exists = GER
+		}
+		is_good = no
+		days_mission_timeout = 2923
+	}
+	allied_minor_victory = {
+		# If Germany is defeated before 1 Jan 45, Allies earn a minor victory                      
+		allowed = {
+			OR = {
+				original_tag = ENG
+				original_tag = SOV
+				original_tag = USA
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = GER
+			}
+		}
+		activation = {
+			country_exists = GER
+		}
+		is_good = yes
+		days_mission_timeout = 3288
+	}
+}

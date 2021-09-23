@@ -1,0 +1,23 @@
+Axis_victory_conditions_category = {
+	icon = ger_mefo_bills
+
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = ITA
+			original_tag = JAP
+		}
+	}
+}
+
+Allied_victory_conditions_category = {
+	icon = ger_mefo_bills
+
+	allowed = {
+		OR = {
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+		}
+	}
+}
