@@ -154,6 +154,8 @@ NDefines.NAir.ACE_EARN_CHANCE_BASE = 0.000						-- was 0.003, disabled -- Base c
 NDefines.NAir.FIELD_EXPERIENCE_MAX_PER_DAY = 1.5					-- was 2 -- Most xp you can gain per day
 NDefines.NAir.CLOSE_AIR_SUPPORT_EXPERIENCE_SCALE = 0.0004			-- was 0.0005-- How much the experinence gained by CAS is scaled
 
+NDefines.NAir.NO_SEARCH_MISSION_DETECT_FACTOR = -0.25			-- was -0.5	-- value of planes not on active search missions for detection
+
 NDefines.NAir.DETECT_CHANCE_FROM_RADARS = 0.3							-- was 0.5 -- How much the radars in area affects detection chance.
 NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT = 2000 		-- was 3000 -- Max amount of aircrafts in region to give full detection bonus.
 
