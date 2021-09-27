@@ -1,5 +1,87 @@
 # Changelog
 
+## 1.10.8.1
+
+New features:
+- Added decision to invite Historically Allied Central American Nations (and Cuba) into the faction that USA is part of, if USA is in a defensive war against a major.
+- Japanese Carrier Warfare Experiments now gives bonuses to carrier doctrines regardless of the chosen doctrine trees.
+- Made Influence Puppet decisions invisible, so you won't accidently press on them anymore.
+- Added missions presenting victory conditions for each faction, divided into three categories: Decisive, major, and minor.
+
+Balance:
+- Changed air transfer multiplier from 0.02 -> 0.0066, tripling the time it takes to rebase aircraft.
+- Lowered total infra in NW Iran facing Baku supply zone from 12 -> 6, lowering the default Axis supply limit from 32 -> 21, in the event the Middle East is taken.
+- Infantry weapons 3 steel cost 4->3.
+- Reduced division design cost 7/14->6/12.
+- Halved costs for designing ships.
+- Camelry suppression 2 -> 1.5.
+- Removed sub detection from all non-CV base hulls, increased all sonar modules' sub detection by 2, to 11/17/25/37.
+- Ultimate Battleship NF now gives a SHBB empty design with engine 3 and 25 naval XP, but requires SHBB to be researched.
+- Japanese Modern Excorts NF now gives 25 naval xp.
+- Plan Z NF now takes 140 days, gives 8 NIC (from 2) and is not mutually exclusive with U-Boat Effort.
+- Reenabled Crossing the Atlantic NF for Germany.
+- Selective training act always gives 10 WS, but is more costly congress wise if done on low WS.
+- Removed collaboration government operation.
+- Add 4 CIC to Germany to offset occupation changes.
+- Add 4 CIC to Japan to offset occupation changes.
+- Add 2 CIC to Italy to offset occupation changes.
+- Changed resistance scaling from GiE legitimacy from 2-20 to 0-10.
+- COMPLIANCE_GROWTH_BASE 0.075 -> 0.08.
+- COMPLIANCE_DECAY_AT_MAX_COMPLIANCE -0.083 -> -0.08.
+- COMPLIANCE_DECAY_PER_EXILE_LEGITIMACY-0.015 -> -0.01.
+- Japan gets 40 compliance in all Chinese states after China capitulates.
+- Interception mission fuel cost 0.2->0.6 (air superiority is at 1.0).
+- Mechanized IC cost 6/7/8->7.5/8/8.5.
+- Removed 10 resistance target from capitulated enemy.
+- Increased land combat dice roll for strength losses 2 -> 4, increasing average strength losses by 66%.
+- GARRISON_MANPOWER_LOST_BY_ATTACK 0.18 -> 0.14.
+- GARRISON_EQUIPMENT_LOST_BY_ATTACK 0.2 -> 0.14.
+- NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR 0 -> 0.4.
+- Removed India's Clamp Down on Corruption focus, guaranteeing the famine.
+- India must now be fully independent to switch to war economy or better.
+- Added a total of 6 airbase levels between Moscow and Stalingrad, so the Soviets actually have a few airfields still when pushed back.
+- Large parts of Siberia made impassable because combat wasn't fun and made no sense for naval invasions.
+- Added disloyal Abwehr spirit for Germany (with ways to remove it when on total mobilisation).
+- Added enigma spirit to Germany, increasing encryption.
+- Master Interrogator trait, operative nationality and skill level all give bonuses to rooting out resistance.
+- NDefines.NAir.NO_SEARCH_MISSION_DETECT_FACTOR -0.5 -> -0.25.
+- Floatplane modules now give 15% sub visibility penalty.
+
+Fixes:
+- Fixed AI swapping between Partial Mobilisation and War Economy for all scripted nations.
+- Removing vanilla ai_strategy for collaberation goverment, just to clean the error.log.
+- Expanded the capitulation convoy transfer script to include more potential nations like Noway, Greece, the Iberian nations or the Middle Eastern nations.
+- Should fix the bug of aborted war propaganda missions when losing neighbor status, and then being stuck with the country flag not being able to start a new campaign.
+- Made Soviet Tank Factories Focus also available if Turkey has a Non-Aggression-Pact with Soviet instead of more than 75 opinion.
+- Japan's Secure the Philippines focus now correctly warns the USA they are being justified on.
+- Removed Counter Intelligence mission ai_strategy from files, didn't really work well, could be source of lost tokens in save aswell.
+- Moved Counter Intelligence behaviour into scorer file instead of ai_strategy.
+- Fixed vanilla missing ai_will_do entries.
+- Enabled Bulgarian AI to pick Regency Council Focus, if Tsar Boris died before his Royal Dictatorship was strengthend, so AI isn't stuck with the unplanned regency government.
+- Cleaned up Focus tooltip for Spain.
+- Improved Spanish offensive planning decision AI for both Nationalist and Republicans/Soviets.
+- Changed enable and abort conditions for Nationalist Spain scripts so hopefully it cleans up itself correctly now.
+- Moved Naval mission treshold into a general ai_strategy active for all Spains till the SCW is over.
+- Fixed concrete unit template view to properly show 6 support battalions.
+- Fixed SHBB being able to mount 4 turrets instead of 3.
+- Crazily increase AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT/HEAVY_SHIPS to try and get strike force TFs to stop sortieing against pure sub TFs.
+- CAS/AS/INT MHC not working modifiers changed to correctly working mission combat modifiers.
+
+AI:
+- Added scripts for Mexico aswell as Central America and Cuba to historically join the Allies if USA is attacked.
+- Added ability for Bulgarian AI to raid and ban various parties to stay Tsarist.
+- Allowed Nationalist Spain AI to improve workers condition in the Spanish Civil War, if they completed all their foci.
+- Improved some advisor picks for Republican Spain and fixed conscription idea weights.
+- Small Tweaks to Romanian and Hungarian AI. Improved idea picks and research.
+- AI of Britain now can take Early Mobilisation, a war is coming after all.
+- Made England AI stop improving legitimacy of goverment in exiles, they need to keep their PP. In return made GiE themselfs much more likely to improve legitimacy on their own..
+- Improved British Production AI, stopped the bug where the produced CV Fighters instead of regular Fighters.
+- Modernised Britain AI script, improving its focus, idea and research picks. Nudged them building a spy agency with passive defense early..
+- Stopped British AI picking non-necassary ressource prospecting decisions, wasting PP and Civs.
+- Added typical naval avoidance zones (Central Atlantic) for the Allied minor AIs. Now they should all use zones that UK typically defends with convoy escort..
+- Increased priority for Passive Defense for majors, so now there should be more realistic spying in single player testgames.
+- Major nations now all build an agency first thing in a new game, and build up their passive defense..
+
 ## 1.10.8.0
 Fixes:
 - Fix vanilla bug with wonky German army icons.
