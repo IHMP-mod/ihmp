@@ -1,7 +1,10 @@
 # Changelog
 
-## 1.10.8.1
+## 1.10.8.2
+Fixes:
+- Update naval aggression defines to prevent DDs from running away from weaker subs.
 
+## 1.10.8.1
 New features:
 - Added decision to invite Historically Allied Central American Nations (and Cuba) into the faction that USA is part of, if USA is in a defensive war against a major.
 - Japanese Carrier Warfare Experiments now gives bonuses to carrier doctrines regardless of the chosen doctrine trees.
