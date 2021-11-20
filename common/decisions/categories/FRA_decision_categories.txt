@@ -41,16 +41,21 @@ VIC_concessions_to_the_germans = {
 FRA_intervention_in_overseas_territories = {
 	allowed = {
 		OR = {
-			AND = {
-				tag = FRA
-				NOT = { has_government = fascism }
-				NOT = { is_subject_of = GER }
-			}
+			original_tag = FRA
 			tag = ENG
 		}
 	}
 	visible = {
-		FRA = { has_completed_focus = FRA_intervention_in_syria }
+		FRA = {
+			OR = {
+				has_completed_focus = FRA_intervention_in_north_africa
+				has_completed_focus = FRA_intervention_in_west_africa
+				has_completed_focus = FRA_intervention_in_syria
+				has_completed_focus = FRA_intervention_in_indochina
+				has_completed_focus = FRA_intervention_in_central_africa
+				has_completed_focus = FRA_intervention_in_madagascar
+			}
+		}
 		OR = {
 			AND = {
 				tag = FRA
