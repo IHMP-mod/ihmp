@@ -1655,3 +1655,34 @@ MP_Economy_2 = {
 		partial_economic_mobilisation = -1000
 	}
 }
+
+MP_Economy_3 = {
+	name = "Economy Plan"
+	desc = ""
+
+	enable = {
+		original_tag = FRA
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = FRA_MP_1
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = FRA_MP_2
+			}
+		}
+		has_idea = tot_economic_mobilisation
+	}
+
+	abort = {
+		NOT = { has_idea = tot_economic_mobilisation }
+	}
+
+	ideas = {
+		civilian_economy = 0
+		low_economic_mobilisation = 0
+		partial_economic_mobilisation = 0
+		war_economy = -100
+	}
+}
