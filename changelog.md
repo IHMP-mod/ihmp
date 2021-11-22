@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.10.8.3
+Fixes:
+- Make intervention in overseas territories decision category visible in correct situations.
+- Stopped French AI to flip-flop between Total Moblisation and War Economy.
+
 ## 1.10.8.2
 Fixes:
 - Update naval aggression defines to prevent DDs from running away from weaker subs.
