@@ -290,6 +290,19 @@ NDefines.NNavy.AGGRESSION_HEAVY_GUN_EFFICIENCY_ON_LIGHT_SHIPS = 100 -- was 0.25 
 
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2.0	-- was 3.0 -- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 
+NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types
+	0.0, -- HOLD
+	1.0, -- PATROL		
+	1.0, -- STRIKE FORCE 
+	0.5, -- CONVOY RAIDING
+	1, -- was 0.5, CONVOY ESCORT
+	0.3, -- MINES PLANTING	
+	0.3, -- MINES SWEEPING	
+	0.0, -- TRAIN
+	0.0, -- RESERVE_FLEET
+	0.5, -- was 1.0, NAVAL_INVASION_SUPPORT
+}
+
 -- PRODUCTION STUFF
 NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 10					-- was 15 -- Max number of factories that can be assigned a single production line.
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 30						-- was 15
