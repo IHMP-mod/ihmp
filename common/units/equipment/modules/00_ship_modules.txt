@@ -135,7 +135,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 	
 		add_stats = {
-			lg_attack = 3
+			lg_attack = 2.4 --was 3
 			anti_air_attack = 3
 			build_cost_ic = 300
 			surface_visibility = 0.5
@@ -463,7 +463,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {	
-			lg_attack = 3.5
+			lg_attack = 2.8 --was 3.5
 			build_cost_ic = 225
 			surface_visibility = 1
 		}
@@ -491,7 +491,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {	
-			lg_attack = 4.5
+			lg_attack = 3.6 --was 4.5
 			build_cost_ic = 275
 			surface_visibility = 1
 		}
@@ -523,7 +523,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		
 		add_stats = {
-			lg_attack = 5.5
+			lg_attack = 4.4 --was 5.5
 			build_cost_ic = 325
 			surface_visibility = 1
 		}
@@ -554,7 +554,7 @@ equipment_modules = {
 		gui_category = ship_light_battery
 		parent = ship_light_medium_battery_3
 		add_stats = {
-			lg_attack = 6.5
+			lg_attack = 5.2 --was 6.5
 			build_cost_ic = 375
 			surface_visibility = 1
 		}
@@ -594,7 +594,7 @@ equipment_modules = {
 
 		
 		add_stats = {
-			lg_attack = 3
+			lg_attack = 2.4 --was 3
 			build_cost_ic = 180
 		}
 		
@@ -620,7 +620,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			lg_attack = 4
+			lg_attack = 3.2 --was 4
 			build_cost_ic = 240
 		}
 		multiply_stats = {
@@ -644,7 +644,7 @@ equipment_modules = {
 		gfx = ship_secondaries_3
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 4.5
+			lg_attack = 3.6 --was 4.5
 			anti_air_attack = 2.5
 			build_cost_ic = 290
 		}
