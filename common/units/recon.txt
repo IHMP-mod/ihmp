@@ -1,5 +1,6 @@
 sub_units = {
 	recon = { #mounted cav
+		abbreviation = "CREC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -88,6 +89,7 @@ sub_units = {
 	}
 
 	mot_recon = { #trucks, motorcyles, ill-placed cars
+		abbreviation = "MREC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -177,6 +179,7 @@ sub_units = {
 	}
 
 	armored_car_recon = { #armored_cars
+		abbreviation = "AREC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -211,8 +214,8 @@ sub_units = {
 		weight = 0.1
 		supply_consumption = 0.02
 		suppression = 1
-		recon = 1.5
-		can_be_parachuted = no
+		recon = 2
+		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
 		breakthrough 	= -0.5
@@ -262,6 +265,7 @@ sub_units = {
 	}
 
 	light_tank_recon = { #light tanks
+		abbreviation = "TREC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -312,11 +316,11 @@ sub_units = {
 		entrenchment = 1
 		
 		essential = {
-			light_tank_equipment
+			light_tank_chassis
 		}
 
 		need = {
-			light_tank_equipment = 24
+			light_tank_chassis = 24
 		}
 
 		forest = {

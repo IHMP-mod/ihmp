@@ -1,6 +1,7 @@
 sub_units = {
 
 	light_sp_anti_air_brigade = {
+		abbreviation = "LAA"
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 301
@@ -22,7 +23,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			light_tank_aa_equipment = 15
+			light_tank_aa_chassis = 36
 		}
 		manpower = 500
 		max_organisation = 0
@@ -30,11 +31,9 @@ sub_units = {
 		max_strength = 0.6
 		training_time = 180
 		weight = 1
-		
 		supply_consumption = 0.1
 
-		#Tanks are awesome
-		#soft_attack = 0.5
+		breakthrough = -0.55
 
 		suppression = 0.75
 
@@ -70,6 +69,7 @@ sub_units = {
 	}
 	
 	medium_sp_anti_air_brigade = {
+		abbreviation = "MAA"
 		sprite = medium_armor
 		map_icon_category = armored
 		priority = 301
@@ -91,7 +91,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			medium_tank_aa_equipment = 12
+			medium_tank_aa_chassis = 36
 		}
 		manpower = 500
 		max_organisation = 0
@@ -101,10 +101,9 @@ sub_units = {
 		weight = 1.25
 		supply_consumption = 0.1
 
-		#Tanks are awesome
-		#soft_attack = 0.5
+		breakthrough = -0.53
 
-		suppression = 0.6
+		suppression = 0.8
 
 		forest = {
 		    attack = -0.3
@@ -142,6 +141,7 @@ sub_units = {
 	}
 	
 	heavy_sp_anti_air_brigade = {
+		abbreviation = "HAA"
 		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 301
@@ -164,7 +164,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			heavy_tank_aa_equipment = 8
+			heavy_tank_aa_chassis = 36
 		}
 		manpower = 500
 		max_organisation = 0
@@ -173,10 +173,9 @@ sub_units = {
 		weight = 1.5
 		supply_consumption = 0.1
 
-		#Tanks are awesome
-		#soft_attack = 0.5
+		breakthrough = -0.35
 
-		suppression = 0.5
+		suppression = 0.75
 
 		forest = {
 		    attack = -0.40
@@ -216,6 +215,7 @@ sub_units = {
 	}
 	
 	super_heavy_sp_anti_air_brigade = {
+		abbreviation = "SAA"
 		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 301
@@ -236,7 +236,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			super_heavy_tank_aa_equipment = 4
+			super_heavy_tank_aa_chassis = 36
 		}
 		manpower = 500
 		max_organisation = 0
@@ -246,10 +246,9 @@ sub_units = {
 		weight = 1.75
 		supply_consumption = 0.1
 
-		#Tanks are awesome
-		#soft_attack = 0.5
+		breakthrough = -0.35
 
-		suppression = 0.66
+		suppression = 0.75
 
 		forest = {
 		    attack = -0.5
@@ -289,6 +288,7 @@ sub_units = {
 	}
 	
 	modern_sp_anti_air_brigade = {
+		abbreviation = "OAA"
 		sprite = medium_armor
 		map_icon_category = armored
 		priority = 301
@@ -310,7 +310,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			modern_tank_aa_equipment = 12
+			modern_tank_aa_chassis = 36
 		}
 		manpower = 500
 		max_organisation = 0
@@ -320,10 +320,9 @@ sub_units = {
 		weight = 1.5
 		supply_consumption = 0.1
 
-		#Tanks are awesome
-		#soft_attack = 0.5
+		breakthrough = -0.53
 
-		suppression = 0.6
+		suppression = 2
 
 		forest = {
 		    attack = -0.3
@@ -359,4 +358,7 @@ sub_units = {
 			attack = -0.7
 		}
 	}
+
+
+	
 }
