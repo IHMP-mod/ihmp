@@ -101,6 +101,11 @@ GRE_1936_election_category = {
 					}
 					has_game_rule = {
 						rule = GRE_ai_behavior 
+						option = HISTORICAL
+					}
+					has_country_flag = GRE_AI_NEUTRALITY_HISTORICAL
+					has_game_rule = {
+						rule = GRE_ai_behavior 
 						option = MONARCHIST
 					}
 					has_game_rule = {
@@ -206,7 +211,9 @@ crisis = {
 		}
 
 		highlight_states = { 
+			highlight_states_trigger = { 
 			state = 184
+		}
 		}
 
 		on_map_mode = map_only
@@ -249,7 +256,9 @@ crisis = {
 		}
 
 		highlight_states = { 
+			highlight_states_trigger = { 
 			state = 187
+		}
 		}
 
 		on_map_mode = map_only
@@ -292,7 +301,9 @@ crisis = {
 		}
 
 		highlight_states = { 
+			highlight_states_trigger = { 
 			state = 731
+		}
 		}
 
 		on_map_mode = map_only
@@ -335,8 +346,11 @@ crisis = {
 		}
 
 		highlight_states = { 
+			highlight_states_trigger = { 
 			state = 186
 		}
+		}
+		
 
 		on_map_mode = map_only
 
@@ -908,7 +922,7 @@ GRE_investment_decisions_category = {
 				is_in_faction_with = ENG
 				has_completed_focus = GRE_british_docking_rights
 				has_country_leader = {
-    				name = "Eleftherios Venizelos"
+    				character = GRE_eleftherios_venizelos
     				ruling_only = yes
 				}
 			}
@@ -952,7 +966,7 @@ GRE_investment_decisions_category = {
 					has_completed_focus = GRE_recruit_the_fascists
 					has_completed_focus = GRE_depose_the_reactionaries
 					has_country_leader = {
-						name = "Georgios Kosmidis"
+						character = GRE_georgios_kosmidis
 						ruling_only = yes
 					}
 				}
@@ -1225,7 +1239,7 @@ GRE_investment_decisions_category = {
 				is_puppet_of = FRA
 				is_in_faction_with = FRA
 				has_country_leader = {
-    				name = "Eleftherios Venizelos"
+    				character = GRE_eleftherios_venizelos
     				ruling_only = yes
 				}
 			}
@@ -1260,7 +1274,7 @@ GRE_investment_decisions_category = {
 					has_completed_focus = GRE_recruit_the_fascists
 					has_completed_focus = GRE_the_right_to_rule
 					has_country_leader = {
-						name = "Georgios Kosmidis"
+						character = GRE_georgios_kosmidis
 						ruling_only = yes
 					}
 				}
@@ -1309,7 +1323,7 @@ GRE_investment_decisions_category = {
 				ITA = {
 					has_capitulated = yes 
 					is_puppet = yes
-					has_completed_focus = ITA_greece_war_goal
+					has_completed_focus = ITA_war_with_greece
 				}
 			}
 		}
@@ -1383,7 +1397,7 @@ GRE_investment_decisions_category = {
 				ITA = {
 					has_capitulated = yes 
 					is_puppet = yes
-					has_completed_focus = ITA_greece_war_goal
+					has_completed_focus = ITA_war_with_greece
 				}
 			}
 		}
@@ -1485,7 +1499,7 @@ GRE_investment_decisions_category = {
 					has_completed_focus = GRE_use_the_military
 					has_completed_focus = GRE_bring_home_the_exiled_republicans
 					has_country_leader = {
-						name = "Georgios Kosmidis"
+						character = GRE_georgios_kosmidis
 						ruling_only = yes
 					}
 				}
@@ -1543,20 +1557,21 @@ GRE_investment_decisions_category = {
 		available = {
 			date < 1943.1.1
 			NOT = {
-				has_war_with = SOV
+				has_war_with = SOU
 				has_country_flag = GRE_soviets_rebuffed
-				SOV = {
+				SOU = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_claim_on_the_straits
+					has_completed_focus = SOV_demand_balkan_submission
 				}
 			}
 		}
 
 		target_trigger = {
 			FROM = {
-				tag = SOV
+				tag = SOU
+				has_government = communism
 			}
 		}
 
@@ -1597,7 +1612,7 @@ GRE_investment_decisions_category = {
 		}
 
 		remove_effect = {
-			SOV = {
+			SOU = {
 				country_event = { id = bftb_greece.190 days = 10 }
 			}
 		}
@@ -1620,7 +1635,7 @@ GRE_investment_decisions_category = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_claim_on_the_straits
+					has_completed_focus = SOV_demand_balkan_submission
 				}
 			}
 		}
@@ -1667,6 +1682,7 @@ GRE_investment_decisions_category = {
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = GRE_host_soviet_bureaucrats_in_greece_tt
 			custom_effect_tooltip = GRE_soviet_influence_tt
 		}
 
@@ -1693,7 +1709,7 @@ GRE_investment_decisions_category = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_claim_on_the_straits
+					has_completed_focus = SOV_demand_balkan_submission
 				}
 			}
 		}
@@ -1734,7 +1750,6 @@ GRE_investment_decisions_category = {
 		}
 
 		complete_effect = {
-
 		}
 
 		remove_effect = {
@@ -1786,7 +1801,7 @@ GRE_investment_decisions_category = {
 					has_completed_focus = GRE_the_kings_government
 					has_completed_focus = GRE_compromise_with_the_monarchists
 					has_country_leader = {
-						name = "Georgios Kosmidis"
+						character = GRE_georgios_kosmidis
 						ruling_only = yes
 					}
 				}
@@ -2061,8 +2076,8 @@ GRE_pay_back_debt_to_the_ifc_category = {
 				factor = 0
 				ITA = { 
 					OR = { 
-						has_completed_focus = ITA_greece_war_goal
-						has_completed_focus = ITA_turkey_friend
+						has_completed_focus = ITA_war_with_greece
+						has_completed_focus = ITA_befriend_turkey
 					}
 				}
 			}
@@ -2357,9 +2372,8 @@ GRE_pay_back_debt_to_the_ifc_category = {
 				factor = 0
 				ITA = { 
 					OR = { 
-						has_completed_focus = ITA_greece_war_goal
-						has_completed_focus = ITA_turkey_friend
-					}
+						has_completed_focus = ITA_war_with_greece
+						has_completed_focus = ITA_befriend_turkey
 				}
 				NOT = {
 					has_game_rule = {
@@ -3109,7 +3123,7 @@ GRE_faction_management_category = {
 				AND = {
 					has_government = neutrality
 					has_country_leader = {
-						name = "Emmanouil Tsouderos"
+						character = GRE_emmanouil_tsouderos
 						ruling_only = yes
 					}
 				}
@@ -3748,19 +3762,19 @@ political_actions = {
 						name_group = GRE_BB_HISTORICAL
 						parent_version = 0
 						modules = { 
-							fixed_ship_battery_slot = ship_heavy_battery_2
+							fixed_ship_battery_slot = ship_heavy_battery_1
 							fixed_ship_anti_air_slot = ship_anti_air_1 
 							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 							fixed_ship_radar_slot = empty
 							fixed_ship_engine_slot = heavy_ship_engine_1 
 							fixed_ship_secondaries_slot = ship_secondaries_1
-							fixed_ship_armor_slot = ship_armor_bb_2 
+							fixed_ship_armor_slot = ship_armor_bb_1
 							front_1_custom_slot = ship_anti_air_1
 							front_2_custom_slot = empty 
 							mid_1_custom_slot = ship_secondaries_1 
 							mid_2_custom_slot = empty
 							mid_3_custom_slot = empty 
-							rear_1_custom_slot = ship_heavy_battery_1 
+							rear_1_custom_slot = empty
 							rear_2_custom_slot = empty 
 						} 
 					}	

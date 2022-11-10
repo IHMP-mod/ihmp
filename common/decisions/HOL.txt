@@ -381,13 +381,14 @@ HOL_prepare_the_inundation_lines = {
 
 		days_remove = 14
 
+		highlight_states = {
 		highlight_state_targets = { state = 7 }
-
 		highlight_provinces = {
 			9498
 			391
 			11456
 			6241
+		}
 		}
 
 		modifier = {
@@ -493,13 +494,14 @@ HOL_prepare_the_inundation_lines = {
 
 		days_remove = 14
 
+		highlight_states = {
 		highlight_state_targets = { state = 7 }
-
 		highlight_provinces = {
 			9498
 			391
 			11456
 			6241
+		}
 		}
 
 		modifier = {
@@ -565,7 +567,6 @@ HOL_war_on_pacifism = {
 		available = {
 			NOT = { has_country_flag = hol_war_on_pacifism_in_progress }
 			OR = {
-				has_war_support < 0.8
 				has_idea = HOL_shell_shocked_spectator_1
 				hidden_trigger = {
 					has_idea = HOL_shell_shocked_spectator_2
@@ -625,7 +626,6 @@ HOL_war_on_pacifism = {
 		available = {
 			NOT = { has_country_flag = hol_war_on_pacifism_in_progress }
 			OR = {
-				has_war_support < 0.8
 				has_idea = HOL_shell_shocked_spectator_1
 				hidden_trigger = {
 					has_idea = HOL_shell_shocked_spectator_2
@@ -686,7 +686,6 @@ HOL_war_on_pacifism = {
 		available = {
 			NOT = { has_country_flag = hol_war_on_pacifism_in_progress }
 			OR = {
-				has_war_support < 0.8
 				has_idea = HOL_shell_shocked_spectator_1
 				hidden_trigger = {
 					has_idea = HOL_shell_shocked_spectator_2
@@ -1007,9 +1006,9 @@ HOL_secret_staff_talks = {
 			FROM = { country_event = { id = mtg_netherlands.41 hours = 6 } }
 			FROM = { army_experience = -5 }
 			effect_tooltip = {
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 					name = HOL_secret_staff_talks
-					bonus = 1.0
+					cost_reduction = 0.5
 					uses = 1
 					category = land_doctrine
 				}
@@ -1491,7 +1490,10 @@ HOL_gateway_to_europe_hol_category = {
 		}
 
 		remove_effect = {
-			ENG = { add_to_variable = { var = eng_gateway_to_europe_influence value = 5 } }
+			ENG = { 
+				custom_effect_tooltip = gateway_to_europe_hol_tt
+				add_to_variable = { var = eng_gateway_to_europe_influence value = 5 } 
+			}
 			set_variable = { var = eng_temp_trade_influence value = ENG.eng_gateway_to_europe_influence }
 			subtract_from_variable = { var = eng_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
 			set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
@@ -1627,7 +1629,10 @@ HOL_gateway_to_europe_hol_category = {
 		}
 
 		remove_effect = {
-			GER = { add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } }
+			GER = { 
+				custom_effect_tooltip = gateway_to_europe_hol_tt
+				add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } 
+			}
 			set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
 			subtract_from_variable = { var = ger_temp_trade_influence value = ENG.eng_gateway_to_europe_influence }
 			set_variable = { var = eng_temp_trade_influence value = ENG.eng_gateway_to_europe_influence }
@@ -1814,10 +1819,25 @@ HOL_request_allied_favors = {
 		}
 
 		remove_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
 			add_equipment_to_stockpile = {
-			    type = fighter_equipment
+				    type = fighter_equipment_1
 			    amount = 50
 			    producer = ENG
+			}
+		}
+			else = {
+				add_equipment_to_stockpile = {
+				    type = small_plane_airframe_0
+				    amount = 50
+				    producer = ENG
+				    variant_name = "Gloster Gladiator"
+				}	
 			}
 		}
 
@@ -2094,7 +2114,7 @@ political_actions = {
 				}
 				add_compliance = 70
 			}
-			set_capital = 335
+			set_capital = { state = 335 }
 			hidden_effect = { news_event = { id = mtg_news.46 days = 1 } }
 		}
 	}

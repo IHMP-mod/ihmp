@@ -33,6 +33,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -70,6 +71,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -101,6 +103,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -143,6 +146,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -174,6 +178,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -206,6 +211,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -248,6 +254,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -280,6 +287,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -369,10 +377,6 @@ technologies = {
 		research_cost = 2
 		start_year = 1937
 		
-		XOR = {  #EOUH
-			dispersed_industry2
-		}
-		
 		folder = {
 			name = industry_folder
 			position = { x = 4 y = 4 }
@@ -412,10 +416,6 @@ technologies = {
 		research_cost = 2
 		start_year = 1939
 		
-		XOR = {  #EOUH
-			dispersed_industry3
-		}
-		
 		folder = {
 			name = industry_folder
 			position = { x = 4 y = 6 }
@@ -454,10 +454,6 @@ technologies = {
 		research_cost = 2
 		start_year = 1941
 		
-		XOR = {  #EOUH
-			dispersed_industry4
-		}
-		
 		folder = {
 			name = industry_folder
 			position = { x = 4 y = 8 }
@@ -490,10 +486,6 @@ technologies = {
 		
 		research_cost = 2
 		start_year = 1943
-		
-		XOR = {  #EOUH
-			dispersed_industry5
-		}
 		
 		folder = {
 			name = industry_folder
@@ -531,7 +523,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		equipment_conversion_speed = 0.20
-		industry_air_damage_factor = -0.12
+		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -605,7 +597,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.12
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -615,10 +607,6 @@ technologies = {
 		
 		research_cost = 2
 		start_year = 1937
-		
-		XOR = {  #EOUH
-			concentrated_industry2
-		}
 		
 		folder = {
 			name = industry_folder
@@ -650,7 +638,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.12
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -660,10 +648,6 @@ technologies = {
 		
 		research_cost = 2
 		start_year = 1939
-		
-		XOR = {  #EOUH
-			concentrated_industry3
-		}
 		
 		folder = {
 			name = industry_folder
@@ -695,7 +679,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.12
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -705,10 +689,6 @@ technologies = {
 		
 		research_cost = 2
 		start_year = 1941
-		
-		XOR = {  #EOUH
-			concentrated_industry4
-		}
 		
 		folder = {
 			name = industry_folder
@@ -740,16 +720,12 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.12
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		
 		research_cost = 2
 		start_year = 1943
-		
-		XOR = {  #EOUH
-			concentrated_industry5
-		}
 		
 		folder = {
 			name = industry_folder
@@ -1162,6 +1138,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = {
@@ -1219,6 +1196,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = {
@@ -1273,6 +1251,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = {
@@ -1337,6 +1316,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = {
@@ -1386,6 +1366,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = {
@@ -1436,6 +1417,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_rubber
 		}
 		
 		ai_will_do = {
@@ -1495,6 +1477,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_rubber
 		}
 		
 		ai_will_do = {
@@ -1551,6 +1534,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_rubber
 		}
 		
 		ai_will_do = {
@@ -1605,6 +1589,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_rubber
 		}
 		
 		ai_will_do = {

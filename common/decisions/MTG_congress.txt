@@ -11,7 +11,7 @@ USA_congress = {
 			}
 			OR = {
 				political_power_daily > 0.3
-				has_political_power > 20
+				has_political_power > 10
 			}
 		}
 		cost = 0
@@ -51,7 +51,7 @@ USA_congress = {
 			}
 			OR = {
 				political_power_daily > 0.75
-				has_political_power > 50
+				has_political_power > 35
 			}
 		}
 		cost = 0
@@ -248,9 +248,13 @@ USA_congress = {
 				}
 			}
 		}
+
 		highlight_states = {
+			highlight_states_trigger = {
 			has_state_flag = USA_congress_build_factory
 		}
+		}
+
 		days_mission_timeout = 360
 		is_good = no
 		activation = {
@@ -296,9 +300,14 @@ USA_congress = {
 				}
 			}
 		}
+
 		highlight_states = {
+			highlight_states_trigger = {
 			has_state_flag = USA_congress_build_arms_factory
 		}
+		}
+
+
 		days_mission_timeout = 360
 		is_good = no
 		activation = {
@@ -344,9 +353,13 @@ USA_congress = {
 				}
 			}
 		}
+
 		highlight_states = {
+			highlight_states_trigger = {
 			has_state_flag = USA_congress_build_dockyard
 		}
+		}
+
 		days_mission_timeout = 360
 		is_good = no
 		activation = {
@@ -391,7 +404,9 @@ USA_congress = {
 			}
 		}
 		highlight_states = {
+			highlight_states_trigger = {
 			has_state_flag = USA_congress_build_infrastructure
+			}
 		}
 		days_mission_timeout = 360
 		is_good = no

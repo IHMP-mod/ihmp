@@ -1685,6 +1685,7 @@ technologies = {
 
 		enable_equipments = {
 			strat_bomber_equipment_1
+			
 		}
 	
 		path = {
@@ -1728,6 +1729,7 @@ technologies = {
 
 		enable_equipments = {
 			strat_bomber_equipment_2
+			
 		}
 	
 		path = {
@@ -1771,6 +1773,7 @@ technologies = {
 
 		enable_equipments = {
 			strat_bomber_equipment_3
+			
 		}
 		
 		path = {

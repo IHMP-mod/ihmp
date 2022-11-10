@@ -120,7 +120,7 @@ strategic_region={
 		}
 		period={
 			between={ 0.0 29.0 }
-			temperature={ 3.0 0.0 }
+			temperature={ 0.0 3.0 }
 			temperature_day_night={ 10.0 -10.0 }
 			no_phenomenon=0.350
 			rain_light=0.450

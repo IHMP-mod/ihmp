@@ -1718,6 +1718,7 @@ political_actions = {
 	visible = {
             NOT = { has_government = fascism }
             NOT = { has_government = communism }
+			is_government_in_exile = no
 	}
 
         cost = 100
@@ -1790,6 +1791,7 @@ political_actions = {
 		visible = {
             NOT = { has_government = fascism }
             NOT = { has_government = communism }
+			is_government_in_exile = no
         }
         cost = 100
         fire_only_once = yes
@@ -1893,6 +1895,21 @@ political_actions = {
 				original_tag = SPR
 				NOT = { has_global_flag = spanish_civil_war }
 			}
+			modifier = {
+				add = 10
+				original_tag = ITA
+				has_completed_focus = ITA_convene_the_grand_council
+				OR = {
+					ITA_is_monarchist_ai = yes
+					ITA_is_christian_democracy_ai = yes
+				}
+			}
+			modifier = {
+				add = 40
+				original_tag = ITA
+				has_completed_focus = ITA_monarchia_d_italia
+			}
+		}
 			modifier = {
 				tag = BUL
 				has_game_rule = {
@@ -2123,6 +2140,7 @@ political_actions = {
 					var = ban_ideology_var
 					value = 0.66
 				}				
+				set_country_flag = banned_fascism_flag
 			}
 			remove_fascist_spirits_effect = yes
 			custom_effect_tooltip = ban_fascist_party_tt
@@ -2288,6 +2306,15 @@ political_actions = {
 					value = 0.66
 				}
 				set_country_flag = banned_communism_flag
+				if = {#NSB -> If country has Trotskyist Revolutionary Uprisings NS, swap it with the weakened version
+					limit = {
+						has_idea = SOV_trotskyist_revolutionary_agitation
+					}
+					swap_ideas = {
+						remove_idea = SOV_trotskyist_revolutionary_agitation
+						add_idea = SOV_trotskyist_revolutionary_agitation_weakened
+					}
+				}
 			}
 			remove_communist_spirits_effect = yes
 			custom_effect_tooltip = ban_communist_party_tt

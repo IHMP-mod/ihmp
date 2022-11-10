@@ -16,7 +16,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_command_power = 5
+				max_command_power = 10
 			}
 		}
 
@@ -155,93 +155,29 @@ ideas = {
 
 	}
 
-	army_chief = {
+	political_advisor = {
 		
-		CHI_alexander_von_falkenhausen = {
+	}
 			
-			picture = generic_army_europe_2 
+	army_chief = {
 
-			available = {
-				has_completed_focus = CHI_give_falkenhausen_citizenship
-				NOT = { has_global_flag = falkenhausen_recalled }
 			}
 			
-			allowed = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				}
-				has_dlc = "Waking the Tiger"
-			}
+	navy_chief = {
 			
-			traits = { army_chief_offensive_2 }
 			
-			ai_will_do = {
-				factor = 2
-			}
-		}
 	}
 
 	air_chief = {
 		
-		CHI_claire_lee_chennault_air_chief = {
-
-			name = claire_lee_chennault
-			
-			picture = CHI_claire_chennault
-
-			available = {
-				has_completed_focus = CHI_hire_chennault
-				NOT = { has_idea = CHI_claire_lee_chennault_air_theorist }
-				NOT = { has_war_with = USA }
 			}
 			
-			allowed = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				}
-				has_dlc = "Waking the Tiger"
-			}
-			cost = 75
-			traits = { air_chief_ground_support_2 }
+	high_command = {
 			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	
 	}
 	
 	theorist = {
-
-		CHI_claire_lee_chennault_air_theorist = {
-			ledger = air
-			
-			name = claire_lee_chennault
-
-			picture = CHI_claire_chennault		
-			
-			available = {
-				has_completed_focus = CHI_hire_chennault
-				NOT = { has_idea = CHI_claire_lee_chennault_air_chief }
-				NOT = { has_war_with = USA }
-			}
-			
-			allowed = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				}
-				has_dlc = "Waking the Tiger"
-			}
-			cost = 75
-			research_bonus = {
-				air_doctrine = 0.10
-			}
-			
-			traits = { air_warfare_theorist }
-		}
 
 	}
 
@@ -523,7 +459,7 @@ ideas = {
 			}
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_agility = 0.05
 					air_attack = 0.1
 				}
@@ -557,15 +493,15 @@ ideas = {
 			}
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_agility = 0.05
 					air_attack = 0.1
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.1
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.1
 				}

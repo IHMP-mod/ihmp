@@ -309,7 +309,6 @@ war_measures = {
 
 CHI_industrial_evacuations = {
 
-
 	CHI_industrial_evacuations_from_gansu = { #283 #gansu
 		icon = generic_scorched_earth
 		available = {
@@ -320,9 +319,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_state_targets = {
+		highlight_states = {
+ highlight_state_targets = {
 			state = 283
-		}
+		} 
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			283 = { #283 #gansu
@@ -543,9 +544,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 591
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			591 = { #591 #hainan
@@ -767,9 +770,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 592
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -992,9 +997,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 593
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -1217,9 +1224,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 594
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -1442,9 +1451,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 595
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -1667,9 +1678,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 596
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -1892,9 +1905,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 597
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -2117,9 +2132,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 598
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			598 = { #598 #jiangsu
@@ -2341,9 +2358,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 599
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -2566,9 +2585,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 600
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -2791,9 +2812,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}	
+		highlight_states = {
 		highlight_state_targets = {
 			state = 602
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			602 = { #602 #hunan
@@ -3022,9 +3045,11 @@ CHI_industrial_evacuations = {
 				is_controlled_by = ROOT
 			}			
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 606
 		}
+}
 
 		fire_only_once = yes
 
@@ -3240,9 +3265,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 607
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			607 = { #607 #henan
@@ -3464,9 +3491,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 608
 		}
+}
 
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
@@ -3689,9 +3718,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 613
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			613 = { #613 #shanghai
@@ -3913,9 +3944,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 614
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			614 = { #614 #hebei
@@ -4137,9 +4170,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 616
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			616 = { #616 #ningxia
@@ -4361,9 +4396,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 620
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			620 = { #620 #hubei
@@ -4585,9 +4622,11 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 743
 		}
+}
 		visible = {
 			has_completed_focus = CHI_industrial_evacuations
 			743 = { #743 #qingdao
@@ -4871,15 +4910,18 @@ CHI_integrate_the_warlords = {
 							}
 						}
 					}
-					create_corps_commander = {
-						name = "Li Zongren"
-						gfx = GFX_portrait_li_zongren
+					GXC = {
+						add_corps_commander_role = {
+							character = GXC_li_zongren
+							traits = { }
 						skill = 3
 						attack_skill = 3
 						defense_skill = 3
 						planning_skill = 2
 						logistics_skill = 2
 					}
+				}
+					
 				}
 				FROM = {
 					every_unit_leader = {
@@ -4897,14 +4939,19 @@ CHI_integrate_the_warlords = {
 							}
 						}
 					}
-					create_corps_commander = {
-						name = "Long Yun"
-						gfx = GFX_portrait_yun_long_yun				
-						skill = 3
+					YUN = {
+						YUN_long_yun = {
+							add_corps_commander_role = {
+								traits = { }
 						attack_skill = 2
 						defense_skill = 3
 						planning_skill = 3
 						logistics_skill = 2
+								skill = 3
+								legacy_id=-1
+							}					
+						
+						}
 					}
 				}
 				FROM = {
@@ -4923,14 +4970,18 @@ CHI_integrate_the_warlords = {
 							}
 						}
 					}
-					create_corps_commander = {
-						name = "Yan Xishan"
-						gfx = GFX_portrait_yan_xishan
-						skill = 3
+					SHX = {
+						SHX_yan_xishan = {
+							add_corps_commander_role = {
+								traits = { }
 						attack_skill = 2
 						defense_skill = 3
 						planning_skill = 3
 						logistics_skill = 2
+								skill = 3
+								legacy_id=-1
+							}
+						}
 					}
 				}
 				FROM = {
@@ -4949,14 +5000,18 @@ CHI_integrate_the_warlords = {
 							}
 						}
 					}
-					create_corps_commander = {
-						name = "Ma Bufang"
-						gfx = GFX_portrait_xsm_ma_bufang
-						skill = 3
+					XSM = {
+						XSM_ma_bufang = {
+							add_corps_commander_role = {
+								traits = { }
 						attack_skill = 4
 						defense_skill = 2
 						planning_skill = 2
 						logistics_skill = 2
+								skill = 3
+								legacy_id=-1
+							}
+						}
 					}
 				}
 				FROM = {
@@ -4975,15 +5030,20 @@ CHI_integrate_the_warlords = {
 							}
 						}
 					}
-					create_corps_commander = {
-						name = "Sheng Shicai"
-						gfx = GFX_portrait_sheng_shicai
-						skill = 3
+					SIK = {
+						SIK_sheng_shicai = {
+							add_corps_commander_role = {
+								traits = { }
 						attack_skill = 2
 						defense_skill = 4
 						planning_skill = 2
 						logistics_skill = 2
+								skill = 3
+								legacy_id=-1
+							}
+						}
 					}
+					
 				}
 				FROM = {
 					every_unit_leader = {
@@ -5213,9 +5273,11 @@ CHI_communist_infiltration = {
 			has_equipment = { infantry_equipment > 999 }
 		}
 
+		highlight_states = {
 		highlight_state_targets = {
 			state = 283
 		}
+}
 		
 		visible = {
 			283 = {
@@ -5275,9 +5337,11 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 597
 		}
+}
 		
 		visible = {
 			597 = {
@@ -5337,9 +5401,11 @@ CHI_communist_infiltration = {
 			has_equipment = { infantry_equipment > 999 }
 		}
 
+		highlight_states = {
 		highlight_state_targets = {
 			state = 598
 		}
+}
 		
 		visible = {
 			598 = {
@@ -5408,9 +5474,11 @@ CHI_communist_infiltration = {
 				}
 			}
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 607
 		}
+}
 
 		
 		modifier = {
@@ -5459,9 +5527,11 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 608
 		}
+}
 		
 		visible = {
 			608 = {
@@ -5520,9 +5590,11 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 614
 		}
+}
 		
 		visible = {
 			614 = {
@@ -5581,9 +5653,11 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 615
 		}
+}
 		
 		visible = {
 			615 = {
@@ -5642,9 +5716,11 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 621
 		}
+}
 		
 		visible = {
 			621 = {
@@ -5703,8 +5779,10 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 744
+		}
 		}
 		
 		visible = {
@@ -5764,8 +5842,10 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
+		highlight_states = {
 		highlight_state_targets = {
 			state = 746
+		}
 		}
 		
 		visible = {
@@ -5825,8 +5905,11 @@ CHI_communist_infiltration = {
 foreign_support = {
 	CHI_flying_tigers = {
 		icon = generic_air
+		allowed = {
+			original_tag = USA
+		}
 		available = {
-			has_equipment = { fighter_equipment > 149 }
+			has_equipment = { small_plane_airframe > 99 }
 		}
 		visible = {
 			has_country_flag = CHI_flying_tigers
@@ -5844,11 +5927,35 @@ foreign_support = {
 				}
 				custom_effect_tooltip = flying_tigers_tt
 				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_dlc = "By Blood Alone" }
+						}
+						add_equipment_to_stockpile = {
+							producer = USA
+							type = fighter_equipment_1
+							amount = 100
+						}
+					}
+					else = {
 					USA = {
-						send_equipment = {
-							target = PREV
-							type = fighter_equipment
-							amount = 150
+							create_equipment_variant = {
+								name = "P-40" #
+								type = small_plane_airframe_2
+								modules = {
+									fixed_main_weapon_slot = heavy_mg_4x
+									fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
+									fixed_auxiliary_weapon_slot_2 = bomb_locks
+									engine_type_slot = engine_3_1x
+									special_type_slot_1 = drop_tanks
+								}
+							}
+						}
+						add_equipment_to_stockpile = {
+							producer = USA
+							type = small_plane_airframe_2
+							amount = 100
+							variant_name = "P-40"
 						}
 					}
 				}
@@ -5856,15 +5963,18 @@ foreign_support = {
 			add_war_support = 0.05
 		}
 		modifier = {
-			air_volunteer_cap = 100
+			air_volunteer_cap = 1
 		}
 	}
 
 	CHI_soviet_volunteer_group = {
 		icon = generic_air
+		allowed = {
+			original_tag = SOV
+		}
 		available = {
-			has_equipment = { fighter_equipment > 99 }
-			has_equipment = { tac_bomber_equipment > 49 }
+			has_equipment = { small_plane_airframe > 99 }
+			has_equipment = { medium_plane_airframe > 49 }
 		}
 		visible = {
 			has_country_flag = CHI_soviet_volunteer_group
@@ -5882,18 +5992,35 @@ foreign_support = {
 				}
 				custom_effect_tooltip = soviet_volunteers_tt
 				hidden_effect = {
-					SOV = {
-						send_equipment = {
-							target = PREV
-							type = fighter_equipment
+					if = {
+						limit = {
+							NOT = {
+								has_dlc = "By Blood Alone"
+							}
+						}
+						add_equipment_to_stockpile = {
+							producer = SOV
+							type = fighter_equipment_1
 							amount = 100
 						}
-					}
-					SOV = {
-						send_equipment = {
-							target = PREV
-							type = tac_bomber_equipment
+						add_equipment_to_stockpile = {
+							producer = SOV
+							type = tac_bomber_equipment_1
 							amount = 50
+						}	
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							producer = SOV
+							type = small_plane_airframe_1
+							amount = 100
+							variant_name = "I-16"
+						}
+						add_equipment_to_stockpile = {
+							producer = SOV
+							type = medium_plane_airframe_0
+							amount = 50
+							variant_name = "DB-3"
 						}
 					}
 				}
@@ -5901,7 +6028,7 @@ foreign_support = {
 			add_war_support = 0.05	
 		}
 		modifier = {
-			air_volunteer_cap = 100
+			air_volunteer_cap = 1
 		}
 	}
 
@@ -6194,8 +6321,10 @@ foreign_support = {
 		complete_effect = {
 			if = {
 				limit = {
+					AND = {
 					has_war = no
 					has_war_support < 0.6
+				}
 				}
 				add_war_support = 0.05
 			}
@@ -6430,6 +6559,12 @@ CHI_xian_incident = {
 				NOT = {
 					has_war_with = PRC
 				}
+				NOT = {
+					OR = {
+						has_completed_focus = CHI_foreign_threats
+						has_completed_focus = CHI_prioritize_the_interior
+					}
+				}
 			}
 			PRC = {
 				NOT = {
@@ -6475,6 +6610,11 @@ CHI_xian_incident = {
 			modifier = {
 				threat > 0.1
 				factor = 2
+			}
+			modifier = { #If influenced by Soviets, Sinkiang has no interest in this.
+				factor = 0
+				original_tag = SIK
+				is_in_faction_with = SOV
 			}
 			modifier = {
 				NOT = { 	
@@ -6567,4 +6707,87 @@ prestigious_projects = {
 		
 		}
 	}
+}
+
+CHI_occupation_actions = { 
+
+
+	CHI_breach_the_yellow_river = { 
+		icon = GFX_decision_hol_inundate_water_lines
+		
+		available = {
+			controls_state = 607
+			has_war_with = JAP
+			OR = {
+				NOT = { controls_state = 608 }
+				NOT = { controls_state = 614 }
+				NOT = { controls_state = 597 }
+				NOT = { controls_state = 598 }
+				NOT = { controls_state = 606 }
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 607
+			} 
+		}
+		
+		visible = {
+			controls_state = 607
+			is_literally_china = yes
+			NOT = { has_global_flag = chi_yellow_river_blown } #So warlords don't do this too
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+
+		ai_will_do = {
+			base = 0
+			#Pretty damn important
+			modifier = {
+				add = 25
+				NOT = { controls_state = 608 }
+			}
+			modifier = {
+				add = 25
+				NOT = { controls_state = 614 }
+			}
+			modifier = {
+				add = 25
+				NOT = { controls_state = 597 }
+			}
+			modifier = {
+				add = 25
+				NOT = { controls_state = 598 }
+			}
+			modifier = {
+				add = 25
+				NOT = { controls_state = 606 }
+			}
+		}
+		
+		complete_effect = {
+			add_war_support = -0.05
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 606
+						state = 607
+						state = 598
+						state = 597
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = yellow_river_blown
+					days = 730 
+				}
+			}
+			hidden_effect = { 
+				news_event = { id = news.409 } 
+				set_global_flag = chi_yellow_river_blown
+			}
+		}
+	}
+	
 }

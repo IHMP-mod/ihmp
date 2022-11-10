@@ -365,6 +365,10 @@ GER_case_anton_category = {
 				any_country_with_original_tag = {
 					original_tag_to_check = FRA
 					has_government = fascism
+					OR = {
+						is_subject_of = GER
+						has_focus_tree = vichy_french_focus
+					}
 					NOT = { has_war_with = GER }
 					NOT = { has_country_flag = case_anton }
 					has_global_flag = {
@@ -373,14 +377,14 @@ GER_case_anton_category = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = GER_case_anton_tt2
-						AND = {
+					count_triggers = {
+						amount = 3 # lost control of ca half french north africa
+						458 = { CONTROLLER = { has_war_with = ROOT } }
+						459 = { CONTROLLER = { has_war_with = ROOT } }
+						460 = { CONTROLLER = { has_war_with = ROOT } }
+						461 = { CONTROLLER = { has_war_with = ROOT } }
 							462 = { CONTROLLER = { has_war_with = ROOT } }
-							461 = { CONTROLLER = { has_war_with = ROOT } }
 							513 = { CONTROLLER = { has_war_with = ROOT } }
-							462 = { CONTROLLER = { has_war_with = ROOT } }
-							459 = { CONTROLLER = { has_war_with = ROOT } }
-							460 = { CONTROLLER = { has_war_with = ROOT } }
-							458 = { CONTROLLER = { has_war_with = ROOT } }
 							665 = { CONTROLLER = { has_war_with = ROOT } }
 						}
 					}
@@ -420,6 +424,7 @@ GER_case_anton_category = {
 						25  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
 						33  = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
 						1   = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
+						851   = { CONTROLLER = { has_war_with = ROOT } owner = { tag = VIC } }
 					}
 				}
 				# Spain is fucked
@@ -438,6 +443,7 @@ GER_case_anton_category = {
 			divisions_in_state = { state = 25 size < 1 }
 			divisions_in_state = { state = 22 size < 1 }
 			divisions_in_state = { state = 21 size < 1 }
+			divisions_in_state = { state = 851 size < 1 }
 			divisions_in_state = { state = 32 size < 1 }
 			divisions_in_state = { state = 22 size < 1 }
 			divisions_in_state = { state = 26 size < 1 }
@@ -573,9 +579,9 @@ political_actions = {
 		}
 		visible = {
 			OR = {
-				has_country_leader = { ruling_only = yes name = "Wilhelm II" }
-				has_country_leader = { ruling_only = yes name = "Wilhelm III" }
-				has_country_leader = { ruling_only = yes name = "Victoria" }
+				has_country_leader = { ruling_only = yes character = GER_wilhelm_ii }
+				has_country_leader = { ruling_only = yes character = GER_wilhelm_iii }
+				has_country_leader = { ruling_only = yes character = GER_victoria }
 			}
 		}
 		cost = 25
@@ -807,7 +813,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {
@@ -829,7 +835,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {
