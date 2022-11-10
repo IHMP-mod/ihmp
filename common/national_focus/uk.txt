@@ -1171,6 +1171,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
 			air_experience = 25
 			add_tech_bonus = {
 				name = fighter_command_focus
@@ -1178,6 +1182,26 @@ focus_tree = {
 				uses = 2
 				category = light_fighter
 				category = cat_heavy_fighter
+			}
+		}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				air_experience = 25
+				add_tech_bonus = {
+					name = fighter_command_focus
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+					category = cat_heavy_fighter
+				}
+				add_doctrine_cost_reduction = {
+					name = ENG_fighter_command_focus #land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
 			}
 		}
 	}
@@ -1196,6 +1220,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
 			air_experience = 25
 			add_tech_bonus = {
 				name = bomber_command_focus
@@ -1203,6 +1231,26 @@ focus_tree = {
 				uses = 2
 				category = cat_strategic_bomber
 				category = tactical_bomber
+			}
+		}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				air_experience = 25
+				add_tech_bonus = {
+					name = bomber_command_focus
+					bonus = 1.0
+					uses = 1
+					category = cat_strategic_bomber
+					category = tactical_bomber
+				}
+				add_doctrine_cost_reduction = {
+					name = ENG_bomber_command_focus #land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
 			}
 		}
 	}
@@ -1221,13 +1269,37 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
 			air_experience = 25
 			add_tech_bonus = {
 				name = coastal_command_focus
 				bonus = 1.0
 				uses = 2
-				category = naval_air
+					category = naval_bomber
+					category = cas_bomber
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				air_experience = 25
+				add_tech_bonus = {
+					name = coastal_command_focus
+					bonus = 1.0
+					uses = 1
+					category = naval_bomber
 				category = cas_bomber
+			}
+				add_doctrine_cost_reduction = {
+					name = ENG_coastal_command_focus #land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
 			}
 		}
 	}
@@ -1565,9 +1637,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ENG_anti_submarine_training_school
-				bonus = 1.0
+				cost_reduction = 0.35
 				uses = 2
 				category = convoy_defense_tree
 			}
@@ -1590,9 +1662,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = uk_waves_focus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 3
 				category = naval_doctrine
 			}
@@ -1772,11 +1844,11 @@ focus_tree = {
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
 					fixed_ship_radar_slot = ship_radar_3
 					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_secondaries_slot = dp_ship_secondaries_3
 					fixed_ship_armor_slot = ship_armor_bb_3
 					front_1_custom_slot = ship_heavy_battery_3
 					mid_1_custom_slot = ship_anti_air_4
-					mid_2_custom_slot = dp_ship_secondaries
+					mid_2_custom_slot = dp_ship_secondaries_3
 					mid_3_custom_slot = ship_airplane_launcher_2
 					rear_1_custom_slot = ship_heavy_battery_3
 				}
@@ -1943,9 +2015,7 @@ focus_tree = {
 	focus = {
 		id = uk_rock_focus 
 		prerequisite = { focus = uk_mediterranean_focus }
-		mutually_exclusive = {
-			focus = uk_spain_focus
-		}
+		mutually_exclusive = { focus = uk_spain_focus }
 		available = {
 			118 = { is_owned_and_controlled_by = ENG }
 		} 
@@ -2556,7 +2626,7 @@ focus_tree = {
 				OR = {
 					has_completed_focus = ENG_global_defense
 					has_country_leader = {
-					    name = "Winston Churchill"
+					    character = ENG_winston_churchill
 					    ruling_only = yes
 					}
 				}
@@ -3037,6 +3107,7 @@ focus_tree = {
 				has_full_control_of_state = 331
 				has_full_control_of_state = 119
 				has_full_control_of_state = 118
+				has_full_control_of_state = 906
 			}
 		}
 		bypass = {
@@ -3048,6 +3119,7 @@ focus_tree = {
 					owns_state = 331
 					owns_state = 119
 					owns_state = 118
+					owns_state = 906
 				}
 			}
 		}
@@ -3073,6 +3145,20 @@ focus_tree = {
 				YEM = {
 					transfer_state = 659
 					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 906
+				}
+				YEM = {
+					transfer_state = 906
+					IF = {
+						limit = {
+							YEM = { NOT = { has_opinion_modifier = ENG_returned_our_territory} }
+						}
+						add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
+					}
 				}
 			}
 			if = {
@@ -3278,38 +3364,59 @@ focus_tree = {
 			has_full_control_of_state = 269
 			has_full_control_of_state = 548
 			has_full_control_of_state = 547
+				has_full_control_of_state = 903
+				has_full_control_of_state = 904
+				has_full_control_of_state = 905
 			has_full_control_of_state = 546
 			has_full_control_of_state = 771
 			has_full_control_of_state = 770
 			has_full_control_of_state = 545
 			has_full_control_of_state = 542
 			has_full_control_of_state = 558
+				has_full_control_of_state = 900
+				has_full_control_of_state = 901
+				has_full_control_of_state = 902
 			has_full_control_of_state = 274
 			has_full_control_of_state = 700
 			has_full_control_of_state = 701
+				has_full_control_of_state = 883
+				has_full_control_of_state = 884
+				has_full_control_of_state = 885
+				has_full_control_of_state = 886
+				has_full_control_of_state = 887
 		}
 		}
 
 		bypass = {
-			NOT = {
-				AND = {
-					owns_state = 767
-					owns_state = 551
-					owns_state = 549
-					owns_state = 269
-					owns_state = 548
-					owns_state = 547
-					owns_state = 546
-					owns_state = 771
-					owns_state = 770
-					owns_state = 545
-					owns_state = 542
-					owns_state = 558
-					owns_state = 274
-					owns_state = 700
-					owns_state = 701
-		}
-			}
+			#NOT = {
+			#	AND = {
+					NOT = { owns_state = 767 }
+					NOT = { owns_state = 551 }
+					NOT = { owns_state = 549 }
+					NOT = { owns_state = 269 }
+					NOT = { owns_state = 548 }
+					NOT = { owns_state = 547 }
+					NOT = { owns_state = 903 }
+					NOT = { owns_state = 904 }
+					NOT = { owns_state = 905 }
+					NOT = { owns_state = 546 }
+					NOT = { owns_state = 771 }
+					NOT = { owns_state = 770 }
+					NOT = { owns_state = 545 }
+					NOT = { owns_state = 542 }
+					NOT = { owns_state = 558 }
+					NOT = { owns_state = 900 }
+					NOT = { owns_state = 901 }
+					NOT = { owns_state = 902 }
+					NOT = { owns_state = 274 }
+					NOT = { owns_state = 700 }
+					NOT = { owns_state = 883 }
+					NOT = { owns_state = 884 }
+					NOT = { owns_state = 885 }
+					NOT = { owns_state = 886 }
+					NOT = { owns_state = 887 }
+				#}
+			#}
 		}
 
 		continue_if_invalid = no
@@ -3331,6 +3438,11 @@ focus_tree = {
 					has_full_control_of_state = 767
 					has_full_control_of_state = 551
 					has_full_control_of_state = 549
+					has_full_control_of_state = 883
+					has_full_control_of_state = 884
+					has_full_control_of_state = 885
+					has_full_control_of_state = 886
+					has_full_control_of_state = 887
 				}
 				release = SUD
 				if = {
@@ -3356,6 +3468,51 @@ focus_tree = {
 					}
 				}
 			}
+			# Kenya
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 547
+						has_full_control_of_state = 903
+						has_full_control_of_state = 904
+						has_full_control_of_state = 905
+					}
+					KEN = { exists = no }
+				}
+				effect_tooltip = {
+					release = KEN 
+				}
+				hidden_effect = {
+					every_owned_state = {
+					limit = {
+							is_core_of = KEN 
+						}
+						KEN = { transfer_state = PREV }
+					}
+					}
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+					set_autonomy = { target = KEN autonomy_state = autonomy_dominion }
+					}
+					if = {
+						limit = {
+							NOT = { has_dlc = "Together for Victory" }
+						}
+					puppet = KEN
+				}
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							has_war_with = ENG
+						}
+						KEN = {
+							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
+						}
+					}
+				}
+			}
 			if = {
 				limit = {
 					has_full_control_of_state = 269
@@ -3364,17 +3521,17 @@ focus_tree = {
 				if = {
 					limit = {
 						SOM = { is_subject = no }
+				}
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
 					}
-					if = {
-						limit = {
-							has_dlc = "Together for Victory"
-						}
 						set_autonomy = { target = SOM autonomy_state = autonomy_dominion }
+				}
+				if = {
+					limit = {
+						NOT = { has_dlc = "Together for Victory" }
 					}
-					if = {
-						limit = {
-							NOT = { has_dlc = "Together for Victory" }
-						}
 						puppet = SOM
 					}
 				}
@@ -3412,34 +3569,6 @@ focus_tree = {
 							has_war_with = ENG
 						}
 						UGA = {
-							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 547
-				}
-				release = KEN
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					set_autonomy = { target = KEN autonomy_state = autonomy_dominion }
-				}
-				if = {
-					limit = {
-						NOT = { has_dlc = "Together for Victory" }
-					}
-					puppet = KEN
-				}
-				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
-						KEN = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
 					}
@@ -3588,6 +3717,9 @@ focus_tree = {
 			if = {
 				limit = {
 					has_full_control_of_state = 558
+					has_full_control_of_state = 900
+					has_full_control_of_state = 901
+					has_full_control_of_state = 902
 				}
 				release = NGA
 				if = {
@@ -3712,6 +3844,7 @@ focus_tree = {
 			has_full_control_of_state = 452
 			has_full_control_of_state = 447
 			has_full_control_of_state = 446
+			has_full_control_of_state = 907
 			has_full_control_of_state = 457
 			has_full_control_of_state = 456
 			has_full_control_of_state = 656
@@ -3728,6 +3861,7 @@ focus_tree = {
 					owns_state = 452
 					owns_state = 447
 					owns_state = 446
+					owns_state = 907
 					owns_state = 457
 					owns_state = 456
 					owns_state = 656
@@ -7436,14 +7570,14 @@ focus_tree = {
 		prerequisite = { focus = ENG_global_defense }
 		available = { 
 			has_country_leader =  {
-				name = "Neville Chamberlain"
+				character = ENG_neville_chamberlain
 				ruling_only = yes
 			}
 		}
 		bypass = {
 			OR = {
 				has_country_leader =  {
-					name = "Winston Churchill"
+					character = ENG_winston_churchill
 					ruling_only = yes
 				}
 				has_country_leader =  {
@@ -7672,9 +7806,9 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}	
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 3
 				category = naval_doctrine
 			}
@@ -7784,9 +7918,9 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}	
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -8058,10 +8192,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			SOV = {
-				add_opinion_modifier = { target = ENG modifier = embargo }
-				add_opinion_modifier = { target = ENG modifier = sanctions_relations } 
-			}
+			send_embargo = SOV
+			custom_effect_tooltip = embargo_relation_tt
 		}
 	}
 	focus = {
@@ -8179,10 +8311,8 @@ focus_tree = {
 			factor = 1
 		}	
 		completion_reward = {
-			GER = {
-				add_opinion_modifier = { target = ENG modifier = embargo }
-				add_opinion_modifier = { target = ENG modifier = sanctions_relations }  
-			}
+			send_embargo = GER
+			custom_effect_tooltip = embargo_relation_tt
 		}
 	}
 
@@ -8752,7 +8882,7 @@ focus_tree = {
 			create_country_leader = {
 				name = "Edward VIII"
 				desc = "POLITICS_EDWARD_EDWARD_DESC"
-				picture = "Portrait_Britain_Edward_VIII.dds"
+				picture = GFX_portrait_Edward_VIII
 				expire = "1965.1.1"
 				ideology = despotism
 				traits = {
@@ -9116,11 +9246,27 @@ focus_tree = {
 			country_exists = ITA
 			NOT = { has_war_together_with = FRA }
 			NOT = { has_war_with = ITA }
+			ITA = { is_in_faction = no }
 		}
 		bypass = {
 			OR = {
 				ITA = { exists = no }
 				ITA = { is_subject = yes }
+				ITA = { is_in_faction = yes }
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					ITA = {
+						OR = {
+							has_completed_focus = ITA_defy_the_duce
+							custom_trigger_tooltip = {
+								tooltip = ITA_RDS_exists_tt
+								tag = RDS
+							}
+						}
+					}
+				}
 			}
 		}
 		icon = GFX_goal_generic_major_alliance
@@ -9681,7 +9827,7 @@ focus_tree = {
 			NOT = { is_in_faction_with = SOV }
 			SOV = { has_government = communism }
 		}
-		will_lead_to_war_with = SOV
+		will_lead_to_war_with = SOU
 		icon = GFX_focus_attack_soviet
 		x = -1
 		y = 1
@@ -10394,7 +10540,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_follow_moscow }
 		available = {
 			is_subject = no
-			NOT = { is_in_faction_with = SOV }
+			NOT = { is_in_faction_with = SOU }
 		}
 		icon = GFX_focus_generic_join_comintern
 		x = -2
@@ -10412,13 +10558,13 @@ focus_tree = {
 			hidden_effect = { news_event = { id = mtg_news.36 days = 1 } }
 			if = {
 				limit = {
-					has_country_leader = { name = "Harry Pollitt" ruling_only = yes }
+					has_country_leader = { character = ENG_harry_pollitt ruling_only = yes }
 				}
 				retire_country_leader = yes
 				create_country_leader = {
 					name = "Rajani Palme Dutt"
 					desc = "POLITICS_PALME_DUTT_DESC"
-					picture = "Portrait_Britain_Palme_Dutt.dds"
+					picture = GFX_portrait_Rajani_Palme_Dutt
 					expire = "1965.1.1"
 					ideology = leninism
 					traits = {
@@ -10428,20 +10574,20 @@ focus_tree = {
 			}
 			add_ai_strategy = {
 				type = alliance
-				id = SOV
+				id = SOU
 				value = -200
 			}
 			add_ai_strategy = {
 				type = befriend
-				id = SOV
+				id = SOU
 				value = -200
 			}
 			add_ai_strategy = {
 				type = protect
-				id = SOV
+				id = SOU
 				value = -200
 			}
-			SOV = {
+			SOU = {
 				add_ai_strategy = {
 					type = alliance
 					id = ROOT
@@ -10796,6 +10942,10 @@ focus_tree = {
 							NOT = { original_tag = ANG }
 							owns_state = 540
 							has_full_control_of_state = 540
+							owns_state = 891
+							has_full_control_of_state = 891
+							owns_state = 892
+							has_full_control_of_state = 892
 						}
 						AND = {
 							NOT = { original_tag = MZB }
@@ -10900,6 +11050,12 @@ focus_tree = {
 							has_full_control_of_state = 538
 							owns_state = 718
 							has_full_control_of_state = 718
+							owns_state = 888
+							has_full_control_of_state = 888
+							owns_state = 889
+							has_full_control_of_state = 889
+							owns_state = 890
+							has_full_control_of_state = 890
 						}
 						COG = {
 							is_subject_of = PREV
@@ -10996,9 +11152,12 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_the_one_true_revolution }
 		available = {
 			is_subject = no
-			country_exists = SOV
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
+			NOT = { has_war_with = SOU }
+			SOU = { 
+				exists = yes
+				has_civil_war = no
+				has_government = communism 
+			}
 		}
 		bypass = {
 			is_in_faction_with = SOV
@@ -11014,9 +11173,9 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					SOV = { NOT = { has_war_with = GER } }
+					SOU = { NOT = { has_war_with = GER } }
 				}
-				SOV = { country_event = { id = mtg_britain.49 hours = 6 } }
+				SOU = { country_event = { id = mtg_britain.49 hours = 6 } }
 			}
 			else = {
 				create_wargoal = {
@@ -11034,14 +11193,14 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_soviet_cooperation }
 		available = {
 			is_subject = no
-			country_exists = SOV
-			NOT = { is_in_faction_with = SOV }
-			SOV = { has_government = communism }
+			country_exists = SOU
+			NOT = { is_in_faction_with = SOU }
+			SOU = { has_government = communism }
 		}
 		bypass = {
-			has_war_with = SOV
+			has_war_with = SOU
 		}
-		will_lead_to_war_with = SOV
+		will_lead_to_war_with = SOU
 		icon = GFX_focus_attack_soviet
 		x = 0
 		y = 1
@@ -11053,7 +11212,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
-				target = SOV
+				target = SOU
 				expire = 0
 			}
 			hidden_effect = { news_event = { id = mtg_news.38 days = 1 } }
@@ -11068,13 +11227,16 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_the_british_communist_alternative }
 		available = {
 			is_subject = no
-			country_exists = SOV
-			NOT = { is_in_faction_with = SOV }
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
+			country_exists = SOu
+			NOT = { is_in_faction_with = SOU }
+			NOT = { has_war_with = SOU }
+			SOU = { 
+				has_government = communism
+				has_civil_war = no
+				}
 		}
 		bypass = {
-			is_in_faction_with = SOV
+			is_in_faction_with = SOU
 			NOT = {
 				focus_progress = {
 					focus = ENG_the_british_communist_alternative
@@ -11093,7 +11255,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 			add_stability = 0.05
-			SOV = { country_event = { id = mtg_britain.52 hours = 6 } }
+			SOU = { country_event = { id = mtg_britain.52 hours = 6 } }
 		}
 	}
 

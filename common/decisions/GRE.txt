@@ -2374,7 +2374,11 @@ GRE_pay_back_debt_to_the_ifc_category = {
 					OR = { 
 						has_completed_focus = ITA_war_with_greece
 						has_completed_focus = ITA_befriend_turkey
+					}
 				}
+			}
+			modifier = {
+				factor = 0
 				NOT = {
 					has_game_rule = {
 						rule = GRE_ai_behavior

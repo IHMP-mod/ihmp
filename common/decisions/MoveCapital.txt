@@ -21,7 +21,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 459
+			set_capital = { state = 459 }
 		}
 	}
 	FRA_move_government_to_Brazzaville = {
@@ -52,7 +52,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 772
+			set_capital = { state = 772 }
 		}
 	}
 	FRA_move_government_to_Bordeaux = {
@@ -82,7 +82,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 19
+			set_capital = { state = 19 }
 		}
 	}
 	FRA_move_government_to_Paris = {
@@ -111,7 +111,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 16
+			set_capital = { state = 16 }
 		}
 	}
 	SOV_move_government_to_Sverdlovsk = {
@@ -138,7 +138,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 653
+			set_capital = { state = 653 }
 		}
 	}
 	SOV_move_government_to_Moscow = {
@@ -164,7 +164,7 @@ political_actions = {
 		}
 		days_re_enable = 30
 		complete_effect = {
-			set_capital = 219
+			set_capital = { state = 219 }
 		}
 	}
 }

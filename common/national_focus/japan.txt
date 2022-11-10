@@ -239,18 +239,7 @@ focus_tree = {
 				}
 			}
 			remove_ideas = JAP_the_unthinkable_option
-			set_capital = 532
-			start_civil_war = {
-				ruling_party = communism
-				ideology = ROOT
-				size = 0.8
-				capital = 282
-				states = { 282 533 536 555 529 530 528 526 524 645 648 646 647 684 633 609 745 527 525 }
-				keep_unit_leaders = {
-					750 751 752
-				}
-			}
-			custom_effect_tooltip = cast_the_die_TT
+			set_capital = { state = 532 }
 			if = {
 				limit = {
 					MEN = { is_subject_of = ROOT }
@@ -272,6 +261,18 @@ focus_tree = {
 				}
 				MAN = { remove_ideas = MAN_kwantung_veto }
 			}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = ROOT
+				size = 0.5	#This was too much for AI
+				capital = 282
+				states = { 282 533 536 555 529 530 528 526 524 645 648 646 647 684 633 609 745 527 525 }
+				keep_unit_leaders = {
+					750 751 752
+				}
+			}
+			custom_effect_tooltip = cast_the_die_TT
+			
 			hidden_effect = {
 				division_template = { name = "Japanese People's Regiment" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
 				532 = {
@@ -547,6 +548,12 @@ focus_tree = {
 				type = puppet_wargoal_focus
 				expire = 0
 			}
+			hidden_effect = {
+				set_country_flag = {
+					flag = JAP_dont_surrender_instantly_lock
+					days = 720
+				}
+			}
 		}
 	}
 
@@ -569,8 +576,7 @@ focus_tree = {
 		available = {
 			has_government = communism
 			is_subject = no
-			NOT = { has_war_with = SOV }
-			NOT = { is_in_faction_with = SOV }
+			SOV_comintern_joinable = yes 
 		}
 
 		bypass = {
@@ -1197,22 +1203,22 @@ focus_tree = {
 			CHI = {
 				surrender_progress > 0.3
 			}
-			OR = {
 				has_war_with = USA
-				NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
-			}	
 		}
 
 		bypass = {
-			CHI = { has_capitulated = yes }
-			PRC = { has_capitulated = yes }
-			SHX = { has_capitulated = yes }
-			GXC = { has_capitulated = yes }
-			YUN = { has_capitulated = yes }
-			XSM = { has_capitulated = yes }
 			OR = {
-				SIK = { has_capitulated = yes }
-				JAP = { NOT = { has_war_with = SIK } }
+				NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
+				CHI = { has_capitulated = yes }
+				PRC = { has_capitulated = yes }
+				SHX = { has_capitulated = yes }
+				GXC = { has_capitulated = yes }
+				YUN = { has_capitulated = yes }
+				XSM = { has_capitulated = yes }
+				OR = {
+					SIK = { has_capitulated = yes }
+					JAP = { NOT = { has_war_with = SIK } }
+				}
 			}
 		}
 
@@ -1329,9 +1335,9 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 100
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_strike_south_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine	
 			}
@@ -1371,6 +1377,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = JAP_strike_south_doctrine
+		dynamic = yes  
 
 		cost = 10
 
@@ -1602,6 +1609,34 @@ focus_tree = {
 					type = conquer
 					id = "INS"
 					value = 200
+				}
+
+				if = {
+					limit = {
+						INS = {
+							any_core_state = {
+								NOT = {
+									is_owned_and_controlled_by = INS
+								}
+							}
+						}
+					}
+
+					INS = { #I see what you are doing you cheeky exploiter
+						every_core_state = {
+							limit = {
+								NOT = { is_owned_and_controlled_by = PREV }
+							}
+
+							ROOT = {
+								create_wargoal = {
+									target = PREV.controller
+									type = annex_everything
+									expire = 0
+								}
+							}
+						}
+					}
 				}
 			}
 			if = {
@@ -1925,6 +1960,7 @@ focus_tree = {
 		}
 
 		bypass = {
+			OR = {
 			custom_trigger_tooltip = {
 				tooltip = JAP_sign_tripartite_pact_bypass_tt
 				OR = {
@@ -1951,6 +1987,17 @@ focus_tree = {
 						has_war_with = ROOT
 					}	
 				}	
+			}
+				AND = {
+					GER = {
+						has_government = fascism
+						has_war_with = ITA
+					}
+					ITA = {
+						has_government = fascism
+						has_war_with = GER
+					}
+				}
 			}
 		}
 
@@ -2190,7 +2237,10 @@ focus_tree = {
 		}
 
 		available = {
-			528 = { is_fully_controlled_by = ROOT }
+			any_controlled_state = {
+				is_core_of = ROOT
+				synthetic_refinery < 3
+			}
 		}
 
 		bypass = {
@@ -2204,7 +2254,17 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			528 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					synthetic_refinery < 3
+					free_building_slots = { #less than 24 unlocked slots
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 528 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = synthetic_refinery
@@ -2482,6 +2542,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			add_ideas = spiritual_mobilization_idea
+			custom_effect_tooltip = peace_conference_spiritual_mob_modifier_japan
 		}
 	}
 
@@ -2508,14 +2569,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
-			has_war_support > 0.8
-			any_enemy_country = {
-				ic_ratio = { 
-					tag = ROOT 
-					ratio > 1.5
-				}
-			}
+
 		}
 
 		bypass = {
@@ -2569,8 +2623,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
 			custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
 			hidden_effect = { set_technology = { suicide_craft = 1 } }
+		}
+			else = {
+				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
+				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
+			}
 		}
 	}
 
@@ -2769,6 +2832,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = JAP_modern_shogunate
+		dynamic = yes  
 
 		cost = 10
 
@@ -2790,9 +2854,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_prepare_for_war_with_the_soviet_union
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine	
 			}
@@ -2958,9 +3022,9 @@ focus_tree = {
 				}
 			}
 			MAN = {
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 					name = JAP_build_up_the_manchurian_army
-					bonus = 1.0
+					cost_reduction = 0.5
 					uses = 2
 					category = land_doctrine	
 				}
@@ -3193,13 +3257,19 @@ focus_tree = {
 				}
 				remove_country_leader_trait = warrior_code
 			}
-			set_rule = { can_create_factions = yes }
-			create_faction = "Imperial Way"
 			random_country = {
 				limit = {
 					original_tag = GER
 					has_government = fascism
 					is_faction_leader = yes
+				}
+				if = {
+					limit = {
+						not = {
+							is_in_faction_with = ROOT
+						}
+					}
+					country_event = generic.2
 				}
 				if = {
 					limit = {
@@ -3252,7 +3322,15 @@ focus_tree = {
 				type = annex_everything
 				expire = 0
 			}
+			IF = {
+				limit = {
+					ROOT = { is_in_faction_with = GER }
+					GER = { has_completed_focus = GER_mol_rib_pact }
+					GER = { NOT = { has_war_with = SOV } }
+					NOT = { has_war_with = SOV }
+				}
 			unlock_decision_tooltip = JAP_war_with_soviet_union
+			}
 			if = {
 				limit = {
 					has_country_leader = { id = 700 ruling_only = yes }
@@ -3907,10 +3985,21 @@ focus_tree = {
 
 
 		completion_reward = {
-			SOV = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
-			PRC = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
-			add_opinion_modifier = { target = SOV modifier = JAP_anti_communist_bulwark }
-			add_opinion_modifier = { target = PRC modifier = JAP_anti_communist_bulwark }
+			every_other_country = {
+				limit = { 
+					OR = {
+						is_major = yes 
+						tag = PRC
+					}
+					has_government = communism
+				}
+				add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark }
+				ROOT = { add_opinion_modifier = { target = PREV modifier = JAP_anti_communist_bulwark } }
+			}
+			# SOV = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
+			# PRC = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
+			# add_opinion_modifier = { target = SOV modifier = JAP_anti_communist_bulwark }
+			# add_opinion_modifier = { target = PRC modifier = JAP_anti_communist_bulwark }
 		}
 	}
 
@@ -4353,7 +4442,10 @@ focus_tree = {
 		}
 
 		available = {
-			MAN = { is_subject_of = ROOT }
+			MAN = { 
+				is_subject_of = ROOT 
+				controls_state = 716
+			}
 		}
 
 		bypass = {
@@ -4365,64 +4457,32 @@ focus_tree = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			MAN = {			
-				random_state = {
-					limit = {
-						has_state_flag = JAP_expand_manchurian_railways_Inf1
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_state = {
-					limit = {
-						has_state_flag = JAP_expand_manchurian_railways_Inf2
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
 
 		completion_reward = {
-			MAN = {
-				random_owned_controlled_state = {
+			MAN = {			
+				if = {
 					limit = {
-						is_fully_controlled_by = PREV						
-						free_building_slots = {
-							building = infrastructure
-							size > 0
-							include_locked = yes
-						}
+						controls_state = 716
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
+					build_railway = { #Mukden-Korean border
+						path = {
+							11771 9885 3895 3839 3970 6981
 					}
-					set_state_flag = JAP_expand_manchurian_railways_Inf1
 				}
-				random_owned_controlled_state = {
+					build_railway = { #Mukden - Dalian
+						path = {
+							11771 987 9781 11764 964 3783 6851 1150
+					}
+					}
+				}
+				if = {
 					limit = {
-						is_fully_controlled_by = PREV						
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-							include_locked = yes
+						controls_state = 716
+						controls_state = 610
 						}
+					build_railway = { #Mukden - Chinese border
+						path = { 11771 6951 11815 9835 6837 11886 3900 }
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					set_state_flag = JAP_expand_manchurian_railways_Inf2
 				}
 			}
 		}
@@ -5051,7 +5111,30 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { set_technology = { cv_fighter2 = 1 } }
+			hidden_effect = { 
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "By Blood Alone"
+						}
+					}
+					set_technology = { cv_fighter2 = 1 } 
+				}
+				else = {
+					create_equipment_variant = {
+						name = "A6M Zero-Sen"
+						type = cv_small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = light_mg_2x
+							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = fuel_tanks_small
+						}
+						icon = "GFX_JAP_cv_fighter2_medium"
+					}
+				}
+			}
 		}
 	}
 
@@ -5430,11 +5513,11 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_carrier_warfare_experiments
-				bonus = 1.00
+				cost_reduction = 0.25
 				uses = 2
-				category = carrier_doctrine
+				category = cat_base_strike
 			}
 		}
 	}
@@ -5676,9 +5759,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_Ultimate_Battleship
-				bonus = 1.00
+				cost_reduction = 0.25
 				uses = 3
 				category = naval_doctrine
 			}

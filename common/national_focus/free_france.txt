@@ -29,7 +29,7 @@
 			factor = 1
 		}
 		available = {
-			has_country_leader = { ruling_only = yes name = "Charles de Gaulle"}
+			has_country_leader = { ruling_only = yes character = FRA_charles_de_gaulle}
 		}
 		
 		bypass = {
@@ -356,7 +356,9 @@
 		}
 		
 		bypass = {
-
+			16 = {
+				is_controlled_by = ROOT
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -578,8 +580,8 @@
 			air_experience = 25
 			SOV = {
 				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 150
+					type = small_plane_airframe
+					amount = 100
 					producer = FRA
 				}
 			}
@@ -626,12 +628,7 @@
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = {
-							has_country_leader = {
-								name = "Charles de Gaulle"
-								ruling_only = yes
-							}
-						}
+						NOT = { has_country_leader = { ruling_only = yes character = FRA_charles_de_gaulle } }
 					}
 					country_event = france.20
 				}

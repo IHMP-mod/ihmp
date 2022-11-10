@@ -36,6 +36,7 @@ JAP_intervene_in_china = {
 					option = JAP_MP_1
 				}
 			}
+		}
 		modifier = {
 
 		}

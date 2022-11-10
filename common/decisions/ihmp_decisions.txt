@@ -429,7 +429,7 @@ operations = {
 				target = CAN
 				transfer_troops = yes
 			}
-			set_capital = 276
+			set_capital = { state = 276 }
 		}
 	}
 
