@@ -143,7 +143,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
 
 		
 		completion_reward = {

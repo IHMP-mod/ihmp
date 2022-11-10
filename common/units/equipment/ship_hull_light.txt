@@ -26,7 +26,7 @@ equipments = {
 		module_slots = {
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { ship_light_battery }
+				allowed_module_categories = { ship_light_battery dp_light_battery}
 			}
 			fixed_ship_anti_air_slot = {
 				required = no
@@ -120,10 +120,11 @@ equipments = {
 			steel = 2
 		}
 		
-		manpower = 125
+		manpower = 250
 	}
 
 	ship_hull_light_1 = {
+		abbreviation = "hdb"
 		year = 1922
 
 		archetype = ship_hull_light
@@ -134,6 +135,7 @@ equipments = {
 	}
 
 	ship_hull_light_2 = {
+		abbreviation = "hdc"
 		year = 1936
 
 		archetype = ship_hull_light
@@ -158,6 +160,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = mid_1_custom_slot
@@ -178,10 +181,11 @@ equipments = {
 		resources = {
 			steel = 2
 		}
-		manpower = 175
+		manpower = 325
 	}
 
 	ship_hull_light_3 = {
+		abbreviation = "hdd"
 		year = 1940
 
 		archetype = ship_hull_light
@@ -203,6 +207,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
@@ -214,6 +219,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = {
@@ -225,6 +231,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 		}
@@ -240,7 +247,7 @@ equipments = {
 		naval_range = 2000
 		max_strength = 65 #was 50
 		build_cost_ic = 420 #was 550
-		manpower = 200
+		manpower = 400
 
 		default_modules = {
 			mid_1_custom_slot = empty
@@ -250,6 +257,7 @@ equipments = {
 	}
 
 	ship_hull_light_4 = {
+		abbreviation = "hde"
 		year = 1944
 
 		archetype = ship_hull_light
@@ -270,6 +278,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
@@ -281,6 +290,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -293,6 +303,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 		}
@@ -308,7 +319,7 @@ equipments = {
 			steel = 2
 			chromium = 1
 		}
-		manpower = 250
+		manpower = 500
 	}
 	destroyer_1 = {
 		year = 1922

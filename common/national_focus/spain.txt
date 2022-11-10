@@ -1102,7 +1102,7 @@ focus_tree = {
 			}
 			add_doctrine_cost_reduction = {
 				name = SPA_doctrinal_advancements
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -2855,62 +2855,41 @@ focus_tree = {
 			custom_effect_tooltip = SPA_facilitate_pyrenees_freight_transports_tt
 			hidden_effect = {
 				793 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
 							type = infrastructure
 							level = 10
 							instant_build = yes
 						}
 					}
-				}
 				794 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
 						add_building_construction = {
 							type = infrastructure
 							level = 10
 							instant_build = yes
 						}
 					}
-				}
 				165 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
 						add_building_construction = {
 							type = infrastructure
 							level = 10
 							instant_build = yes
 						}
 					}
-				}
 				176 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
 						add_building_construction = {
 							type = infrastructure
 							level = 10
 							instant_build = yes
 						}
 					}
-				}
 				792 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
 						add_building_construction = {
 							type = infrastructure
 							level = 10
 							instant_build = yes
 						}
 					}
-				}
 				41 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
 							type = infrastructure
 							level = 10
@@ -2939,8 +2918,8 @@ focus_tree = {
 	focus = {
 		id = SPA_improve_cross_country_railways
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
+			any_allied_country = {
+				is_major = yes
 				has_government = fascism
 			}
 			has_full_control_of_state = 169
